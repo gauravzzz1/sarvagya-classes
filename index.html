@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sarvagya Classes | Gaurav Shinde Sir</title>
+
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <style>
 
@@ -767,6 +771,18 @@ footer p{
     font-weight:bold;
 }
 
+/* PARTIAL STATUS */
+
+.partial{
+    display:inline-block;
+    background:#fef3c7;
+    color:#92400e;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+}
+
 .note-box{
     max-width:1100px;
     margin:0 auto 35px;
@@ -1082,8 +1098,6 @@ footer p{
     <div class="class-grid">
 
 
-        <!-- 7TH -->
-
         <div class="class-card">
 
             <div class="class-number">
@@ -1114,8 +1128,6 @@ footer p{
 
 
 
-        <!-- 8TH -->
-
         <div class="class-card">
 
             <div class="class-number">
@@ -1145,8 +1157,6 @@ footer p{
         </div>
 
 
-
-        <!-- 9TH -->
 
         <div class="class-card">
 
@@ -1207,9 +1217,7 @@ footer p{
 
 
 
-    <!-- =====================================================
-         7TH MATERIAL
-         ===================================================== -->
+    <!-- 7TH MATERIAL -->
 
     <div class="material-class">
 
@@ -1334,9 +1342,7 @@ footer p{
 
 
 
-    <!-- =====================================================
-         8TH MATERIAL
-         ===================================================== -->
+    <!-- 8TH MATERIAL -->
 
     <div class="material-class">
 
@@ -1411,9 +1417,7 @@ footer p{
 
 
 
-    <!-- =====================================================
-         9TH MATERIAL
-         ===================================================== -->
+    <!-- 9TH MATERIAL -->
 
     <div class="material-class">
 
@@ -1457,9 +1461,6 @@ footer p{
             </div>
 
 
-            <!-- =================================================
-                 ADD MORE 9TH FILES HERE
-                 ================================================= -->
 
             <div class="material-item">
 
@@ -1777,23 +1778,7 @@ footer p{
 
 
 <!-- =========================================================
-     STUDENTS & FEES STATUS
-     
-     IMPORTANT:
-     THIS SECTION IS INTENTIONALLY AT THE END.
-
-     You can manually change:
-     1. Student Name
-     2. PAID / PENDING
-
-     Example:
-     <td>Rahul Patil</td>
-     <td><span class="paid">PAID</span></td>
-
-     OR
-
-     <td>Rahul Patil</td>
-     <td><span class="pending">PENDING</span></td>
+     DYNAMIC STUDENTS & FEES STATUS
      ========================================================= -->
 
 <section id="students" class="students-section">
@@ -1809,29 +1794,33 @@ footer p{
         </h2>
 
         <p>
-            Manually update student names and fees status in the code.
+            Students enrolled at Sarvagya Classes.
         </p>
 
     </div>
 
 
-    <div class="note-box">
+    <!-- LOADING MESSAGE -->
 
-        <strong>NOTE:</strong>
+    <div
+        id="studentLoading"
+        class="note-box"
+        style="text-align:center;">
 
-        This section is for your manual record.
-        Replace the sample student names with your actual
-        student names and change PAID/PENDING as required.
+        Loading student records...
 
     </div>
 
 
 
     <!-- =====================================================
-         7TH STANDARD STUDENTS
+         7TH STANDARD
          ===================================================== -->
 
-    <div class="student-class">
+    <div
+        class="student-class"
+        id="class7"
+        style="display:none;">
 
         <h3>
             📘 7th Standard
@@ -1863,73 +1852,10 @@ footer p{
                 </thead>
 
 
-                <tbody>
-
-
-                    <!-- CHANGE रुद्र परदेशी HERE -->
-
-                    <tr>
-
-                        <td>
-                            1
-                        </td>
-
-                        <td>
-                            सिदधीरज जाधव 
-                        </td>
-
-                        <td>
-                            <span class="paid">
-                                pending
-                            </span>
-                        </td>
-
-                    </tr>
-
-
-                    <!-- CHANGE STUDENT 2 HERE -->
-
-                    <tr>
-
-                        <td>
-                            2
-                        </td>
-
-                        <td>
-                            Student Name 2
-                        </td>
-
-                        <td>
-                            <span class="pending">
-                                PENDING
-                            </span>
-                        </td>
-
-                    </tr>
-
-
-                    <!-- ADD MORE STUDENTS BELOW -->
-
-                    <tr>
-
-                        <td>
-                            3
-                        </td>
-
-                        <td>
-                            Student Name 3
-                        </td>
-
-                        <td>
-                            <span class="paid">
-                                PAID
-                            </span>
-                        </td>
-
-                    </tr>
-
+                <tbody id="students7">
 
                 </tbody>
+
 
             </table>
 
@@ -1940,10 +1866,13 @@ footer p{
 
 
     <!-- =====================================================
-         8TH STANDARD STUDENTS
+         8TH STANDARD
          ===================================================== -->
 
-    <div class="student-class">
+    <div
+        class="student-class"
+        id="class8"
+        style="display:none;">
 
         <h3>
             📗 8th Standard
@@ -1975,67 +1904,10 @@ footer p{
                 </thead>
 
 
-                <tbody>
-
-
-                    <tr>
-
-                        <td>
-                            1
-                        </td>
-
-                        <td>
-                            Student Name 1
-                        </td>
-
-                        <td>
-                            <span class="paid">
-                                PAID
-                            </span>
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            2
-                        </td>
-
-                        <td>
-                            Student Name 2
-                        </td>
-
-                        <td>
-                            <span class="pending">
-                                PENDING
-                            </span>
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            3
-                        </td>
-
-                        <td>
-                            Student Name 3
-                        </td>
-
-                        <td>
-                            <span class="paid">
-                                PAID
-                            </span>
-                        </td>
-
-                    </tr>
-
+                <tbody id="students8">
 
                 </tbody>
+
 
             </table>
 
@@ -2046,10 +1918,13 @@ footer p{
 
 
     <!-- =====================================================
-         9TH STANDARD STUDENTS
+         9TH STANDARD
          ===================================================== -->
 
-    <div class="student-class">
+    <div
+        class="student-class"
+        id="class9"
+        style="display:none;">
 
         <h3>
             📕 9th Standard
@@ -2081,67 +1956,10 @@ footer p{
                 </thead>
 
 
-                <tbody>
-
-
-                    <tr>
-
-                        <td>
-                            1
-                        </td>
-
-                        <td>
-                            Student Name 1
-                        </td>
-
-                        <td>
-                            <span class="paid">
-                                PAID
-                            </span>
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            2
-                        </td>
-
-                        <td>
-                            Student Name 2
-                        </td>
-
-                        <td>
-                            <span class="pending">
-                                PENDING
-                            </span>
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            3
-                        </td>
-
-                        <td>
-                            Student Name 3
-                        </td>
-
-                        <td>
-                            <span class="paid">
-                                PAID
-                            </span>
-                        </td>
-
-                    </tr>
-
+                <tbody id="students9">
 
                 </tbody>
+
 
             </table>
 
@@ -2236,5 +2054,342 @@ footer p{
 
 
 
+<!-- =========================================================
+     SUPABASE STUDENT SYSTEM
+     ========================================================= -->
+
+<script>
+
+const SUPABASE_URL =
+"https://dosftayxhqvwqnutrbge.supabase.co";
+
+const SUPABASE_KEY =
+"sb_publishable_saemaeefPQJTpEPLztTw4w_jY0WQLhS";
+
+
+const supabaseClient =
+window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+
+
+
+/* =========================================================
+   LOAD STUDENTS FROM SUPABASE
+   ========================================================= */
+
+async function loadPublicStudents(){
+
+    const loading =
+        document.getElementById("studentLoading");
+
+
+    const { data, error } =
+        await supabaseClient
+        .from("students")
+        .select(
+            "id,name,standard,batch,total_fee,paid_fee"
+        )
+        .order(
+            "created_at",
+            {
+                ascending:true
+            }
+        );
+
+
+    /* =====================================================
+       ERROR
+       ===================================================== */
+
+    if(error){
+
+        loading.style.display = "block";
+
+        loading.innerHTML =
+            "Unable to load student records.";
+
+        console.log(
+            "Supabase Error:",
+            error
+        );
+
+        return;
+    }
+
+
+
+    /* =====================================================
+       HIDE LOADING
+       ===================================================== */
+
+    loading.style.display = "none";
+
+
+    document.getElementById("students7")
+        .innerHTML = "";
+
+    document.getElementById("students8")
+        .innerHTML = "";
+
+    document.getElementById("students9")
+        .innerHTML = "";
+
+
+
+    /* =====================================================
+       COUNTERS
+       ===================================================== */
+
+    let count7 = 0;
+
+    let count8 = 0;
+
+    let count9 = 0;
+
+
+
+    /* =====================================================
+       LOOP STUDENTS
+       ===================================================== */
+
+    data.forEach(function(student){
+
+
+        const total =
+            Number(
+                student.total_fee || 0
+            );
+
+
+        const paid =
+            Number(
+                student.paid_fee || 0
+            );
+
+
+        const remaining =
+            Math.max(
+                total - paid,
+                0
+            );
+
+
+
+        /* =================================================
+           FEES STATUS
+           ================================================= */
+
+        let statusText;
+
+        let statusClass;
+
+
+        if(remaining <= 0){
+
+            statusText = "PAID";
+
+            statusClass = "paid";
+
+        }
+
+        else if(paid > 0){
+
+            statusText = "PARTIAL";
+
+            statusClass = "partial";
+
+        }
+
+        else{
+
+            statusText = "PENDING";
+
+            statusClass = "pending";
+
+        }
+
+
+
+        /* =================================================
+           FIND STANDARD TABLE
+           ================================================= */
+
+        let tbody;
+
+        let count;
+
+
+        if(student.standard === "7th"){
+
+            tbody =
+                document.getElementById(
+                    "students7"
+                );
+
+            count7++;
+
+            count = count7;
+
+        }
+
+        else if(student.standard === "8th"){
+
+            tbody =
+                document.getElementById(
+                    "students8"
+                );
+
+            count8++;
+
+            count = count8;
+
+        }
+
+        else if(student.standard === "9th"){
+
+            tbody =
+                document.getElementById(
+                    "students9"
+                );
+
+            count9++;
+
+            count = count9;
+
+        }
+
+        else{
+
+            return;
+
+        }
+
+
+
+        /* =================================================
+           CREATE TABLE ROW
+           ================================================= */
+
+        const row =
+            document.createElement("tr");
+
+
+        row.innerHTML = `
+
+            <td>
+                ${count}
+            </td>
+
+            <td>
+                ${escapeStudentName(
+                    student.name
+                )}
+            </td>
+
+            <td>
+
+                <span class="${statusClass}">
+                    ${statusText}
+                </span>
+
+            </td>
+
+        `;
+
+
+        tbody.appendChild(row);
+
+
+    });
+
+
+
+    /* =====================================================
+       SHOW STANDARD SECTIONS
+       ===================================================== */
+
+    if(count7 > 0){
+
+        document.getElementById(
+            "class7"
+        ).style.display = "block";
+
+    }
+
+
+    if(count8 > 0){
+
+        document.getElementById(
+            "class8"
+        ).style.display = "block";
+
+    }
+
+
+    if(count9 > 0){
+
+        document.getElementById(
+            "class9"
+        ).style.display = "block";
+
+    }
+
+
+
+    /* =====================================================
+       NO STUDENTS
+       ===================================================== */
+
+    if(
+        count7 === 0 &&
+        count8 === 0 &&
+        count9 === 0
+    ){
+
+        loading.style.display = "block";
+
+        loading.innerHTML =
+            "No student records available.";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   SECURITY
+   ========================================================= */
+
+function escapeStudentName(name){
+
+    const div =
+        document.createElement("div");
+
+
+    div.textContent =
+        name || "";
+
+
+    return div.innerHTML;
+
+}
+
+
+
+/* =========================================================
+   START
+   ========================================================= */
+
+loadPublicStudents();
+
+</script>
+
+
+
 </body>
 </html>
+```
+
