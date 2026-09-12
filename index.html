@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -26,7 +27,9 @@ body{
     line-height:1.6;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header{
     background:#111827;
@@ -66,7 +69,9 @@ nav a:hover{
     color:white;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
     min-height:470px;
@@ -122,7 +127,9 @@ nav a:hover{
     background:#e5e7eb;
 }
 
-/* COMMON SECTION */
+/* =========================
+   COMMON SECTION
+========================= */
 
 .section{
     padding:70px 0;
@@ -149,7 +156,9 @@ nav a:hover{
     font-size:14px;
 }
 
-/* CLASSES */
+/* =========================
+   CLASSES
+========================= */
 
 .classes{
     display:grid;
@@ -204,7 +213,9 @@ nav a:hover{
     color:white;
 }
 
-/* STUDY MATERIAL */
+/* =========================
+   STUDY MATERIAL
+========================= */
 
 .material-section{
     background:#111827;
@@ -296,7 +307,9 @@ nav a:hover{
     color:#111827;
 }
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 
 .about{
     display:grid;
@@ -344,7 +357,9 @@ nav a:hover{
     font-size:16px;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact{
     background:#eef0f3;
@@ -367,7 +382,45 @@ nav a:hover{
     margin-bottom:20px;
 }
 
-/* FOOTER */
+/* CALL BUTTON */
+
+.call-btn{
+    display:inline-block;
+    padding:13px 25px;
+    background:#111827;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+    font-size:14px;
+    margin:5px;
+}
+
+.call-btn:hover{
+    background:#374151;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn{
+    display:inline-block;
+    padding:13px 25px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+    font-size:14px;
+    margin:5px;
+}
+
+.whatsapp-btn:hover{
+    background:#1ebe5d;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#111827;
@@ -381,7 +434,9 @@ footer strong{
     color:white;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:800px){
 
@@ -435,34 +490,58 @@ footer strong{
     .file-button{
         margin-top:3px;
     }
+
+    .call-btn,
+    .whatsapp-btn{
+        display:block;
+        width:90%;
+        max-width:300px;
+        margin:10px auto;
+    }
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- HEADER -->
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
 <div class="logo">
+
 SARVAGYA CLASSES
+
 <span>SINCE 2014</span>
+
 </div>
 
 <nav>
+
 <a href="#home">Home</a>
+
 <a href="#classes">Classes</a>
+
 <a href="#materials">Study Material</a>
+
 <a href="#about">About</a>
+
 <a href="#contact">Contact</a>
+
 </nav>
 
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
@@ -491,7 +570,9 @@ View Study Material
 </section>
 
 
-<!-- CLASSES -->
+<!-- =========================
+     CLASSES
+========================= -->
 
 <section class="section" id="classes">
 
@@ -505,7 +586,11 @@ View Study Material
 
 </div>
 
+
 <div class="classes">
+
+
+<!-- 7TH -->
 
 <div class="class-card">
 
@@ -527,6 +612,8 @@ View Material →
 </div>
 
 
+<!-- 8TH -->
+
 <div class="class-card">
 
 <div class="class-number">
@@ -546,6 +633,8 @@ View Material →
 
 </div>
 
+
+<!-- 9TH -->
 
 <div class="class-card">
 
@@ -573,7 +662,9 @@ View Material →
 </section>
 
 
-<!-- STUDY MATERIAL -->
+<!-- =========================
+     STUDY MATERIAL
+========================= -->
 
 <section class="section material-section" id="materials">
 
@@ -588,7 +679,9 @@ View Material →
 </div>
 
 
-<!-- 7TH -->
+<!-- =========================
+     7TH STANDARD
+========================= -->
 
 <div class="material-card" id="class7">
 
@@ -601,7 +694,7 @@ View Material →
 </div>
 
 
-<!-- 7TH MATH PDF -->
+<!-- 7TH MATH BOOK -->
 
 <div class="file">
 
@@ -637,7 +730,7 @@ Open PDF
 </div>
 
 
-<!-- 7TH SCIENCE PDF -->
+<!-- 7TH SCIENCE BOOK -->
 
 <div class="file">
 
@@ -673,7 +766,7 @@ Open PDF
 </div>
 
 
-<!-- 7TH ENGLISH -->
+<!-- 7TH ENGLISH TEST -->
 
 <div class="file">
 
@@ -747,7 +840,9 @@ Download
 </div>
 
 
-<!-- 8TH -->
+<!-- =========================
+     8TH STANDARD
+========================= -->
 
 <div class="material-card" id="class8">
 
@@ -760,7 +855,7 @@ Download
 </div>
 
 
-<!-- 8TH MATH PDF -->
+<!-- 8TH MATH BOOK -->
 
 <div class="file">
 
@@ -834,7 +929,9 @@ Download
 </div>
 
 
-<!-- 9TH -->
+<!-- =========================
+     9TH STANDARD
+========================= -->
 
 <div class="material-card" id="class9">
 
@@ -889,13 +986,16 @@ Download
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section class="section" id="about">
 
 <div class="container">
 
 <div class="about">
+
 
 <div>
 
@@ -927,9 +1027,12 @@ perform better.
 
 <div class="info-box">
 
+
 <div class="info-row">
 
-<strong>TEACHER</strong>
+<strong>
+TEACHER
+</strong>
 
 <span>
 Gaurav Shinde Sir
@@ -940,7 +1043,9 @@ Gaurav Shinde Sir
 
 <div class="info-row">
 
-<strong>SUBJECTS</strong>
+<strong>
+SUBJECTS
+</strong>
 
 <span>
 Mathematics & Science
@@ -951,7 +1056,9 @@ Mathematics & Science
 
 <div class="info-row">
 
-<strong>STANDARDS</strong>
+<strong>
+STANDARDS
+</strong>
 
 <span>
 7th • 8th • 9th
@@ -962,13 +1069,16 @@ Mathematics & Science
 
 <div class="info-row">
 
-<strong>LOCATION</strong>
+<strong>
+LOCATION
+</strong>
 
 <span>
 Nimgaon Khalu, Shrigonda
 </span>
 
 </div>
+
 
 </div>
 
@@ -979,7 +1089,9 @@ Nimgaon Khalu, Shrigonda
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="section contact" id="contact">
 
@@ -997,11 +1109,26 @@ For admissions and class information
 8262055677
 </div>
 
+
+<!-- CALL BUTTON -->
+
 <a
 href="tel:8262055677"
-class="btn">
+class="call-btn">
 
-Call Gaurav Shinde Sir
+📞 Call Gaurav Shinde Sir
+
+</a>
+
+
+<!-- WHATSAPP BUTTON -->
+
+<a
+href="https://wa.me/918262055677?text=Hello%20Gaurav%20Shinde%20Sir%2C%20I%20want%20information%20about%20Sarvagya%20Classes."
+target="_blank"
+class="whatsapp-btn">
+
+💬 WhatsApp Us
 
 </a>
 
@@ -1010,11 +1137,14 @@ Call Gaurav Shinde Sir
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
 © 2026
+
 <strong>Sarvagya Classes</strong>
 
 <br>
@@ -1024,5 +1154,7 @@ Gaurav Shinde Sir
 
 </footer>
 
+
 </body>
+
 </html>
