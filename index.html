@@ -1,0 +1,1422 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sarvagya Classes | Gaurav Shinde Sir</title>
+
+
+<style>
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f6f8;
+    color:#172033;
+    line-height:1.6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:#111827;
+    color:white;
+
+    padding:20px 8%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 3px 15px rgba(0,0,0,0.15);
+}
+
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.logo span{
+    display:block;
+
+    font-size:12px;
+
+    color:#9ca3af;
+
+    margin-top:2px;
+
+    letter-spacing:2px;
+}
+
+
+nav a{
+    color:#d1d5db;
+
+    text-decoration:none;
+
+    margin-left:28px;
+
+    font-size:14px;
+
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:470px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    background:#111827;
+
+    color:white;
+}
+
+
+.hero-content{
+    max-width:750px;
+}
+
+
+.hero-small{
+    color:#9ca3af;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+}
+
+
+.hero h1{
+
+    font-size:58px;
+
+    letter-spacing:1px;
+
+    margin-bottom:12px;
+}
+
+
+.hero h1 span{
+    color:#9ca3af;
+}
+
+
+.hero p{
+
+    color:#d1d5db;
+
+    font-size:17px;
+
+    margin-bottom:30px;
+}
+
+
+.btn{
+
+    display:inline-block;
+
+    padding:13px 25px;
+
+    background:white;
+
+    color:#111827;
+
+    text-decoration:none;
+
+    border-radius:6px;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+    transition:0.3s;
+}
+
+
+.btn:hover{
+
+    background:#e5e7eb;
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+.section{
+
+    padding:70px 0;
+}
+
+
+.container{
+
+    width:84%;
+
+    max-width:1150px;
+
+    margin:auto;
+}
+
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+
+.section-title h2{
+
+    font-size:32px;
+
+    margin-bottom:7px;
+}
+
+
+.section-title p{
+
+    color:#6b7280;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   CLASSES
+========================= */
+
+.classes{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+}
+
+
+.class-card{
+
+    background:white;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:12px;
+
+    padding:30px;
+
+    transition:0.3s;
+}
+
+
+.class-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+}
+
+
+.class-number{
+
+    font-size:12px;
+
+    color:#9ca3af;
+
+    letter-spacing:2px;
+
+    margin-bottom:7px;
+}
+
+
+.class-card h3{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+}
+
+
+.class-card p{
+
+    color:#6b7280;
+
+    font-size:14px;
+
+    margin-bottom:20px;
+}
+
+
+.view-btn{
+
+    display:inline-block;
+
+    padding:9px 15px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:6px;
+
+    text-decoration:none;
+
+    color:#111827;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+
+.view-btn:hover{
+
+    background:#111827;
+
+    color:white;
+}
+
+
+/* =========================
+   STUDY MATERIAL
+========================= */
+
+.material-section{
+
+    background:#111827;
+
+    color:white;
+}
+
+
+.material-section .section-title p{
+
+    color:#9ca3af;
+}
+
+
+.material-card{
+
+    background:#1f2937;
+
+    border:1px solid #374151;
+
+    border-radius:12px;
+
+    padding:28px;
+
+    margin-bottom:25px;
+}
+
+
+.material-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+}
+
+
+.material-title h3{
+
+    font-size:22px;
+}
+
+
+.material-title span{
+
+    font-size:12px;
+
+    color:#9ca3af;
+}
+
+
+.file{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 0;
+
+    border-bottom:1px solid #374151;
+
+    gap:15px;
+}
+
+
+.file:last-child{
+
+    border-bottom:none;
+}
+
+
+.file-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+
+.file-icon{
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:7px;
+
+    background:#374151;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:17px;
+}
+
+
+.file-name{
+
+    color:#e5e7eb;
+
+    font-size:14px;
+}
+
+
+.file-type{
+
+    color:#9ca3af;
+
+    font-size:11px;
+
+    margin-top:2px;
+}
+
+
+.file-button{
+
+    color:white;
+
+    text-decoration:none;
+
+    border:1px solid #6b7280;
+
+    padding:7px 13px;
+
+    border-radius:5px;
+
+    font-size:12px;
+
+    white-space:nowrap;
+
+    transition:0.3s;
+}
+
+
+.file-button:hover{
+
+    background:white;
+
+    color:#111827;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+
+.about h2{
+
+    font-size:32px;
+
+    margin-bottom:15px;
+}
+
+
+.about p{
+
+    color:#6b7280;
+
+    margin-bottom:12px;
+
+    line-height:1.8;
+}
+
+
+.info-box{
+
+    background:white;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:12px;
+
+    padding:28px;
+}
+
+
+.info-row{
+
+    padding:15px 0;
+
+    border-bottom:1px solid #e5e7eb;
+}
+
+
+.info-row:last-child{
+
+    border-bottom:none;
+}
+
+
+.info-row strong{
+
+    display:block;
+
+    color:#9ca3af;
+
+    font-size:11px;
+
+    letter-spacing:1px;
+
+    margin-bottom:3px;
+}
+
+
+.info-row span{
+
+    font-size:16px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+
+    background:#eef0f3;
+
+    text-align:center;
+}
+
+
+.contact h2{
+
+    font-size:32px;
+
+    margin-bottom:8px;
+}
+
+
+.contact p{
+
+    color:#6b7280;
+
+    margin-bottom:15px;
+}
+
+
+.phone{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#111827;
+
+    color:#9ca3af;
+
+    text-align:center;
+
+    padding:28px 20px;
+
+    font-size:13px;
+}
+
+
+footer strong{
+
+    color:white;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    header{
+
+        padding:18px 5%;
+    }
+
+
+    nav{
+
+        display:none;
+    }
+
+
+    .hero{
+
+        min-height:420px;
+    }
+
+
+    .hero h1{
+
+        font-size:40px;
+    }
+
+
+    .hero p{
+
+        font-size:15px;
+    }
+
+
+    .container{
+
+        width:90%;
+    }
+
+
+    .section{
+
+        padding:55px 0;
+    }
+
+
+    .classes{
+
+        grid-template-columns:1fr;
+    }
+
+
+    .about{
+
+        grid-template-columns:1fr;
+
+        gap:30px;
+    }
+
+
+    .material-title{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+        gap:5px;
+    }
+
+
+    .file{
+
+        align-items:flex-start;
+    }
+
+
+    .file-button{
+
+        margin-top:3px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     HEADER
+================================= -->
+
+<header>
+
+    <div class="logo">
+
+        SARVAGYA CLASSES
+
+        <span>SINCE 2014</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#classes">Classes</a>
+
+        <a href="#materials">Study Material</a>
+
+        <a href="#about">About</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =================================
+     HERO
+================================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            Mathematics & Science
+        </div>
+
+
+        <h1>
+            Sarvagya <span>Classes</span>
+        </h1>
+
+
+        <p>
+            Quality Education • Strong Concepts • Regular Tests
+            <br>
+            7th • 8th • 9th Standard
+        </p>
+
+
+        <a href="#materials" class="btn">
+            View Study Material
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     CLASSES
+================================= -->
+
+<section class="section" id="classes">
+
+<div class="container">
+
+
+    <div class="section-title">
+
+        <h2>Our Classes</h2>
+
+        <p>
+            Select your standard
+        </p>
+
+    </div>
+
+
+
+    <div class="classes">
+
+
+        <!-- 7TH -->
+
+        <div class="class-card">
+
+            <div class="class-number">
+                STANDARD
+            </div>
+
+            <h3>7th</h3>
+
+            <p>
+                Mathematics & Science
+                tests, books and study material.
+            </p>
+
+            <a href="#class7" class="view-btn">
+                View Material →
+            </a>
+
+        </div>
+
+
+
+        <!-- 8TH -->
+
+        <div class="class-card">
+
+            <div class="class-number">
+                STANDARD
+            </div>
+
+            <h3>8th</h3>
+
+            <p>
+                Mathematics & Science
+                tests, books and study material.
+            </p>
+
+            <a href="#class8" class="view-btn">
+                View Material →
+            </a>
+
+        </div>
+
+
+
+        <!-- 9TH -->
+
+        <div class="class-card">
+
+            <div class="class-number">
+                STANDARD
+            </div>
+
+            <h3>9th</h3>
+
+            <p>
+                Mathematics & Science
+                tests and study material.
+            </p>
+
+            <a href="#class9" class="view-btn">
+                View Material →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================
+     STUDY MATERIAL
+================================= -->
+
+<section class="section material-section" id="materials">
+
+<div class="container">
+
+
+    <div class="section-title">
+
+        <h2>Study Material</h2>
+
+        <p>
+            Tests, books and notes
+        </p>
+
+    </div>
+
+
+
+    <!-- ==========================
+         7TH STANDARD
+    =========================== -->
+
+    <div class="material-card" id="class7">
+
+
+        <div class="material-title">
+
+            <h3>📘 7th Standard</h3>
+
+            <span>
+                TESTS & NOTES
+            </span>
+
+        </div>
+
+
+
+        <!-- 7TH MATH BOOK -->
+
+        <div class="file">
+
+            <div class="file-info">
+
+                <div class="file-icon">
+                    PDF
+                </div>
+
+                <div>
+
+                    <div class="file-name">
+                        7TH Math Book
+                    </div>
+
+                    <div class="file-type">
+                        PDF
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="upload/7TH MATH BOOK.pdf"
+                target="_blank"
+                class="file-button">
+
+                Open
+
+            </a>
+
+        </div>
+
+
+
+        <!-- 7TH SCIENCE BOOK -->
+
+        <div class="file">
+
+            <div class="file-info">
+
+                <div class="file-icon">
+                    PDF
+                </div>
+
+                <div>
+
+                    <div class="file-name">
+                        7TH Science Book
+                    </div>
+
+                    <div class="file-type">
+                        PDF
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="upload/7TH SCIENCE BOOK.pdf"
+                target="_blank"
+                class="file-button">
+
+                Open
+
+            </a>
+
+        </div>
+
+
+
+        <!-- 7TH TEST EI -->
+
+        <div class="file">
+
+            <div class="file-info">
+
+                <div class="file-icon">
+                    DOC
+                </div>
+
+                <div>
+
+                    <div class="file-name">
+                        7th Test - English
+                    </div>
+
+                    <div class="file-type">
+                        DOCX
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="upload/7th test ei.docx"
+                download
+                class="file-button">
+
+                Download
+
+            </a>
+
+        </div>
+
+
+
+        <!-- 7TH TEST MM -->
+
+        <div class="file">
+
+            <div class="file-info">
+
+                <div class="file-icon">
+                    DOC
+                </div>
+
+                <div>
+
+                    <div class="file-name">
+                        7th Test - Mathematics
+                    </div>
+
+                    <div class="file-type">
+                        DOCX
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="upload/7th test mm.docx"
+                download
+                class="file-button">
+
+                Download
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ==========================
+         8TH STANDARD
+    =========================== -->
+
+    <div class="material-card" id="class8">
+
+
+        <div class="material-title">
+
+            <h3>📗 8th Standard</h3>
+
+            <span>
+                TESTS & NOTES
+            </span>
+
+        </div>
+
+
+
+        <!-- 8TH MATH BOOK -->
+
+        <div class="file">
+
+            <div class="file-info">
+
+                <div class="file-icon">
+                    PDF
+                </div>
+
+                <div>
+
+                    <div class="file-name">
+                        8TH Math Book
+                    </div>
+
+                    <div class="file-type">
+                        PDF
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="upload/8TH MATH BOOK.pdf"
+                target="_blank"
+                class="file-button">
+
+                Open
+
+            </a>
+
+        </div>
+
+
+
+        <!-- 8TH TEST -->
+
+        <div class="file">
+
+            <div class="file-info">
+
+                <div class="file-icon">
+                    DOC
+                </div>
+
+                <div>
+
+                    <div class="file-name">
+                        8th Test 1
+                    </div>
+
+                    <div class="file-type">
+                        DOCX
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="upload/8th test 1.docx"
+                download
+                class="file-button">
+
+                Download
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ==========================
+         9TH STANDARD
+    =========================== -->
+
+    <div class="material-card" id="class9">
+
+
+        <div class="material-title">
+
+            <h3>📕 9th Standard</h3>
+
+            <span>
+                TESTS & NOTES
+            </span>
+
+        </div>
+
+
+
+        <!-- 9TH EXAM -->
+
+        <div class="file">
+
+            <div class="file-info">
+
+                <div class="file-icon">
+                    DOC
+                </div>
+
+                <div>
+
+                    <div class="file-name">
+                        9th Exam - 13 September
+                    </div>
+
+                    <div class="file-type">
+                        DOCX
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="upload/9th exam 13 sep.docx"
+                download
+                class="file-button">
+
+                Download
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =================================
+     ABOUT
+================================= -->
+
+<section class="section" id="about">
+
+<div class="container">
+
+
+    <div class="about">
+
+
+        <div>
+
+            <h2>
+                About Sarvagya Classes
+            </h2>
+
+
+            <p>
+                Sarvagya Classes is focused on
+                building strong concepts in
+                Mathematics and Science.
+            </p>
+
+
+            <p>
+                Students get regular tests,
+                study material and notes
+                to improve their preparation.
+            </p>
+
+
+            <p>
+                Our aim is simple —
+                understand the concept,
+                practice regularly and
+                perform better.
+            </p>
+
+        </div>
+
+
+
+        <div class="info-box">
+
+
+            <div class="info-row">
+
+                <strong>
+                    TEACHER
+                </strong>
+
+                <span>
+                    Gaurav Shinde Sir
+                </span>
+
+            </div>
+
+
+
+            <div class="info-row">
+
+                <strong>
+                    SUBJECTS
+                </strong>
+
+                <span>
+                    Mathematics & Science
+                </span>
+
+            </div>
+
+
+
+            <div class="info-row">
+
+                <strong>
+                    STANDARDS
+                </strong>
+
+                <span>
+                    7th • 8th • 9th
+                </span>
+
+            </div>
+
+
+
+            <div class="info-row">
+
+                <strong>
+                    LOCATION
+                </strong>
+
+                <span>
+                    Nimgaon Khalu, Shrigonda
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================
+     CONTACT
+================================= -->
+
+<section class="section contact" id="contact">
+
+<div class="container">
+
+
+    <h2>
+        Contact
+    </h2>
+
+
+    <p>
+        For admissions and class information
+    </p>
+
+
+    <div class="phone">
+        8262055677
+    </div>
+
+
+    <a
+        href="tel:8262055677"
+        class="btn">
+
+        Call Gaurav Shinde Sir
+
+    </a>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =================================
+     FOOTER
+================================= -->
+
+<footer>
+
+    © 2026
+    <strong>Sarvagya Classes</strong>
+
+    <br>
+
+    Gaurav Shinde Sir
+    • Nimgaon Khalu, Shrigonda
+
+</footer>
+
+
+
+</body>
+
+</html>
