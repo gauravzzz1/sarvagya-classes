@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sarvagya Classes | Gaurav Shinde Sir</title>
 
 <style>
+
+/* =========================================================
+   SARVAGYA CLASSES
+   Complete Responsive Website
+   ========================================================= */
 
 *{
     margin:0;
@@ -22,385 +25,563 @@ html{
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#f5f6f8;
+    background:#f4f7fb;
     color:#172033;
     line-height:1.6;
 }
 
-/* =========================
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root{
+    --dark:#172033;
+    --dark2:#26364d;
+    --primary:#2563eb;
+    --primary2:#1d4ed8;
+    --yellow:#ffd43b;
+    --green:#16a34a;
+    --red:#dc2626;
+    --white:#ffffff;
+    --light:#f4f7fb;
+    --gray:#64748b;
+    --border:#e2e8f0;
+    --shadow:0 10px 30px rgba(15,23,42,.08);
+}
+
+/* =========================================================
    HEADER
-========================= */
+   ========================================================= */
 
 header{
-    background:#111827;
-    color:white;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,0.15);
-}
-
-.logo{
-    font-size:25px;
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
-.logo span{
-    display:block;
-    font-size:12px;
-    color:#9ca3af;
-    margin-top:2px;
-    letter-spacing:2px;
-}
-
-nav a{
-    color:#d1d5db;
-    text-decoration:none;
-    margin-left:28px;
-    font-size:14px;
-}
-
-nav a:hover{
+    background:rgba(23,32,51,.97);
     color:white;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    min-height:470px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:60px 20px;
-    background:#111827;
-    color:white;
-}
-
-.hero-content{
-    max-width:750px;
-}
-
-.hero-small{
-    color:#9ca3af;
-    font-size:14px;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    margin-bottom:15px;
-}
-
-.hero h1{
-    font-size:58px;
-    letter-spacing:1px;
-    margin-bottom:12px;
-}
-
-.hero h1 span{
-    color:#9ca3af;
-}
-
-.hero p{
-    color:#d1d5db;
-    font-size:17px;
-    margin-bottom:30px;
-}
-
-.btn{
-    display:inline-block;
-    padding:13px 25px;
-    background:white;
-    color:#111827;
-    text-decoration:none;
-    border-radius:6px;
-    font-weight:bold;
-    font-size:14px;
-}
-
-.btn:hover{
-    background:#e5e7eb;
-}
-
-/* =========================
-   COMMON SECTION
-========================= */
-
-.section{
-    padding:70px 0;
-}
-
-.container{
-    width:84%;
-    max-width:1150px;
-    margin:auto;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.section-title h2{
-    font-size:32px;
-    margin-bottom:7px;
-}
-
-.section-title p{
-    color:#6b7280;
-    font-size:14px;
-}
-
-/* =========================
-   CLASSES
-========================= */
-
-.classes{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.class-card{
-    background:white;
-    border:1px solid #e5e7eb;
-    border-radius:12px;
-    padding:30px;
-    transition:0.3s;
-}
-
-.class-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(0,0,0,0.08);
-}
-
-.class-number{
-    font-size:12px;
-    color:#9ca3af;
-    letter-spacing:2px;
-    margin-bottom:7px;
-}
-
-.class-card h3{
-    font-size:28px;
-    margin-bottom:10px;
-}
-
-.class-card p{
-    color:#6b7280;
-    font-size:14px;
-    margin-bottom:20px;
-}
-
-.view-btn{
-    display:inline-block;
-    padding:9px 15px;
-    border:1px solid #d1d5db;
-    border-radius:6px;
-    text-decoration:none;
-    color:#111827;
-    font-size:13px;
-    font-weight:bold;
-}
-
-.view-btn:hover{
-    background:#111827;
-    color:white;
-}
-
-/* =========================
-   STUDY MATERIAL
-========================= */
-
-.material-section{
-    background:#111827;
-    color:white;
-}
-
-.material-section .section-title p{
-    color:#9ca3af;
-}
-
-.material-card{
-    background:#1f2937;
-    border:1px solid #374151;
-    border-radius:12px;
-    padding:28px;
-    margin-bottom:25px;
-}
-
-.material-title{
+    padding:15px 7%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:18px;
+    gap:20px;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
 
-.material-title h3{
-    font-size:22px;
-}
-
-.material-title span{
-    font-size:12px;
-    color:#9ca3af;
-}
-
-.file{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:14px 0;
-    border-bottom:1px solid #374151;
-    gap:15px;
-}
-
-.file:last-child{
-    border-bottom:none;
-}
-
-.file-info{
+.logo-area{
     display:flex;
     align-items:center;
     gap:12px;
 }
 
-.file-icon{
-    width:38px;
-    height:38px;
-    border-radius:7px;
-    background:#374151;
+.logo-icon{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:var(--yellow);
+    color:var(--dark);
     display:flex;
-    justify-content:center;
     align-items:center;
-    font-size:12px;
+    justify-content:center;
     font-weight:bold;
+    font-size:18px;
 }
 
-.file-name{
-    color:#e5e7eb;
-    font-size:14px;
+.logo-text h1{
+    font-size:21px;
+    letter-spacing:1px;
 }
 
-.file-type{
-    color:#9ca3af;
+.logo-text p{
     font-size:11px;
-    margin-top:2px;
+    opacity:.75;
 }
 
-.file-button{
+nav{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+nav a{
     color:white;
     text-decoration:none;
-    border:1px solid #6b7280;
-    padding:7px 13px;
-    border-radius:5px;
-    font-size:12px;
-    white-space:nowrap;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
 }
 
-.file-button:hover{
-    background:white;
-    color:#111827;
+nav a:hover{
+    color:var(--yellow);
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* =========================================================
+   HERO
+   ========================================================= */
 
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
+.hero{
+    min-height:620px;
+    display:flex;
     align-items:center;
-}
-
-.about h2{
-    font-size:32px;
-    margin-bottom:15px;
-}
-
-.about p{
-    color:#6b7280;
-    margin-bottom:12px;
-    line-height:1.8;
-}
-
-.info-box{
-    background:white;
-    border:1px solid #e5e7eb;
-    border-radius:12px;
-    padding:28px;
-}
-
-.info-row{
-    padding:15px 0;
-    border-bottom:1px solid #e5e7eb;
-}
-
-.info-row:last-child{
-    border-bottom:none;
-}
-
-.info-row strong{
-    display:block;
-    color:#9ca3af;
-    font-size:11px;
-    letter-spacing:1px;
-    margin-bottom:3px;
-}
-
-.info-row span{
-    font-size:16px;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-    background:#eef0f3;
+    justify-content:center;
     text-align:center;
+    padding:80px 20px;
+    color:white;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(37,99,235,.35),transparent 30%),
+    radial-gradient(circle at 80% 70%,rgba(255,212,59,.15),transparent 25%),
+    linear-gradient(135deg,#111827,#26364d,#172033);
 }
 
-.contact h2{
-    font-size:32px;
-    margin-bottom:8px;
+.hero-content{
+    max-width:850px;
 }
 
-.contact p{
-    color:#6b7280;
+.badge{
+    display:inline-block;
+    padding:8px 16px;
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:30px;
+    margin-bottom:22px;
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+.hero h2{
+    font-size:54px;
+    line-height:1.15;
+    margin-bottom:18px;
+}
+
+.hero h2 span{
+    color:var(--yellow);
+}
+
+.hero h3{
+    font-size:27px;
     margin-bottom:15px;
 }
 
-.phone{
-    font-size:24px;
+.hero p{
+    font-size:17px;
+    opacity:.9;
+    max-width:650px;
+    margin:auto;
+}
+
+.hero-buttons{
+    margin-top:32px;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:var(--yellow);
+    color:var(--dark);
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.5);
+    color:white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:var(--dark);
+}
+
+/* =========================================================
+   GENERAL SECTION
+   ========================================================= */
+
+section{
+    padding:75px 7%;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-heading .small{
+    color:var(--primary);
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:12px;
+}
+
+.section-heading h2{
+    font-size:35px;
+    margin-top:7px;
+}
+
+.section-heading p{
+    color:var(--gray);
+    margin-top:8px;
+}
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.stats{
+    margin-top:-50px;
+    position:relative;
+    z-index:5;
+}
+
+.stats-grid{
+    max-width:1050px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background:white;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+}
+
+.stat{
+    padding:28px 15px;
+    text-align:center;
+    border-right:1px solid var(--border);
+}
+
+.stat:last-child{
+    border-right:none;
+}
+
+.stat strong{
+    display:block;
+    font-size:30px;
+    color:var(--primary);
+}
+
+.stat span{
+    font-size:13px;
+    color:var(--gray);
+}
+
+/* =========================================================
+   CLASSES
+   ========================================================= */
+
+.class-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.class-card{
+    background:white;
+    border-radius:15px;
+    padding:32px;
+    box-shadow:var(--shadow);
+    transition:.3s;
+    border:1px solid transparent;
+}
+
+.class-card:hover{
+    transform:translateY(-7px);
+    border-color:#dbeafe;
+}
+
+.class-number{
+    width:55px;
+    height:55px;
+    border-radius:12px;
+    background:#eff6ff;
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
     font-weight:bold;
     margin-bottom:20px;
 }
 
-/* CALL BUTTON */
+.class-card h3{
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.class-card p{
+    color:var(--gray);
+    font-size:14px;
+}
+
+.class-card ul{
+    margin-top:18px;
+    list-style:none;
+}
+
+.class-card li{
+    padding:7px 0;
+    font-size:14px;
+}
+
+.class-card li::before{
+    content:"✓";
+    color:var(--green);
+    font-weight:bold;
+    margin-right:8px;
+}
+
+/* =========================================================
+   STUDY MATERIAL
+   ========================================================= */
+
+.material-section{
+    background:#eef3f9;
+}
+
+.material-class{
+    background:white;
+    padding:30px;
+    margin-bottom:30px;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+}
+
+.material-title{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+    padding-bottom:15px;
+    border-bottom:1px solid var(--border);
+}
+
+.material-title h3{
+    font-size:24px;
+}
+
+.material-icon{
+    width:45px;
+    height:45px;
+    border-radius:10px;
+    background:#eff6ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+}
+
+.material-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.material-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:15px;
+    background:#f8fafc;
+    border:1px solid var(--border);
+    border-radius:9px;
+}
+
+.material-name{
+    font-size:14px;
+    font-weight:bold;
+}
+
+.material-type{
+    font-size:11px;
+    color:var(--gray);
+    margin-top:3px;
+}
+
+.open-btn{
+    flex-shrink:0;
+    padding:8px 13px;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.open-btn:hover{
+    background:var(--primary2);
+}
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.feature{
+    text-align:center;
+    background:white;
+    padding:28px 20px;
+    border-radius:12px;
+    box-shadow:var(--shadow);
+}
+
+.feature-icon{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.feature h3{
+    font-size:17px;
+    margin-bottom:7px;
+}
+
+.feature p{
+    color:var(--gray);
+    font-size:13px;
+}
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about{
+    background:white;
+}
+
+.about-grid{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:45px;
+    align-items:center;
+}
+
+.teacher-card{
+    background:linear-gradient(135deg,#172033,#34495e);
+    color:white;
+    padding:45px 30px;
+    text-align:center;
+    border-radius:18px;
+}
+
+.teacher-avatar{
+    width:110px;
+    height:110px;
+    margin:auto;
+    border-radius:50%;
+    background:var(--yellow);
+    color:var(--dark);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:35px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.teacher-card h3{
+    font-size:25px;
+}
+
+.teacher-card p{
+    opacity:.8;
+    font-size:14px;
+}
+
+.about-text h2{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.about-text p{
+    color:var(--gray);
+    margin-bottom:15px;
+}
+
+.about-list{
+    list-style:none;
+    margin-top:20px;
+}
+
+.about-list li{
+    margin:9px 0;
+}
+
+.about-list li::before{
+    content:"✓";
+    color:var(--green);
+    font-weight:bold;
+    margin-right:10px;
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact{
+    background:#eef3f9;
+}
+
+.contact-box{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:45px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+}
+
+.contact-box h2{
+    font-size:32px;
+}
+
+.contact-box p{
+    color:var(--gray);
+    margin:8px 0;
+}
+
+.contact-buttons{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
 
 .call-btn{
     display:inline-block;
     padding:13px 25px;
-    background:#111827;
+    background:var(--dark);
     color:white;
     text-decoration:none;
-    border-radius:6px;
+    border-radius:7px;
     font-weight:bold;
-    font-size:14px;
-    margin:5px;
 }
 
 .call-btn:hover{
-    background:#374151;
+    background:#000;
 }
-
-/* WHATSAPP BUTTON */
 
 .whatsapp-btn{
     display:inline-block;
@@ -408,753 +589,1652 @@ nav a:hover{
     background:#25D366;
     color:white;
     text-decoration:none;
-    border-radius:6px;
+    border-radius:7px;
     font-weight:bold;
-    font-size:14px;
-    margin:5px;
+    transition:.3s;
 }
 
 .whatsapp-btn:hover{
-    background:#1ebe5d;
+    background:#128C7E;
+    transform:translateY(-2px);
 }
 
-/* =========================
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.location-box{
+    margin-top:25px;
+    padding:18px;
+    background:#f8fafc;
+    border-radius:8px;
+}
+
+/* =========================================================
    FOOTER
-========================= */
+   ========================================================= */
 
 footer{
     background:#111827;
-    color:#9ca3af;
+    color:white;
     text-align:center;
-    padding:28px 20px;
+    padding:35px 20px;
+}
+
+.footer-logo{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+footer p{
+    opacity:.7;
     font-size:13px;
 }
 
-footer strong{
-    color:white;
+.footer-links{
+    margin:18px 0;
 }
 
-/* =========================
-   MOBILE
-========================= */
+.footer-links a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:13px;
+}
 
-@media(max-width:800px){
+.footer-links a:hover{
+    color:var(--yellow);
+}
+
+/* =========================================================
+   FLOATING WHATSAPP
+   ========================================================= */
+
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+    box-shadow:0 6px 20px rgba(0,0,0,.25);
+    z-index:2000;
+    transition:.3s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.08);
+    background:#128C7E;
+}
+
+/* =========================================================
+   BACK TO TOP
+   ========================================================= */
+
+.top-btn{
+    position:fixed;
+    right:20px;
+    bottom:90px;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:var(--dark);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-weight:bold;
+    z-index:1500;
+}
+
+/* =========================================================
+   STUDENT FEES
+   ========================================================= */
+
+.students-section{
+    background:#f8fafc;
+}
+
+.student-class{
+    max-width:1100px;
+    margin:0 auto 30px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+}
+
+.student-class h3{
+    font-size:23px;
+    margin-bottom:18px;
+}
+
+.student-table-wrapper{
+    width:100%;
+    overflow-x:auto;
+}
+
+.student-table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:550px;
+}
+
+.student-table th{
+    background:var(--dark);
+    color:white;
+    padding:13px;
+    text-align:left;
+    font-size:13px;
+}
+
+.student-table td{
+    padding:12px 13px;
+    border-bottom:1px solid var(--border);
+    font-size:14px;
+}
+
+.student-table tr:hover{
+    background:#f8fafc;
+}
+
+.paid{
+    display:inline-block;
+    background:#dcfce7;
+    color:#166534;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.pending{
+    display:inline-block;
+    background:#fee2e2;
+    color:#991b1b;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.note-box{
+    max-width:1100px;
+    margin:0 auto 35px;
+    padding:15px 20px;
+    background:#fff7ed;
+    border-left:4px solid #f97316;
+    border-radius:7px;
+    color:#7c2d12;
+    font-size:13px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:950px){
 
     header{
-        padding:18px 5%;
+        padding:15px 4%;
     }
 
     nav{
-        display:none;
+        gap:12px;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat:nth-child(2){
+        border-right:none;
+    }
+
+    .class-grid{
+        grid-template-columns:1fr;
+    }
+
+    .feature-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:650px){
+
+    header{
+        position:relative;
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .logo-area{
+        justify-content:center;
+    }
+
+    nav{
+        justify-content:center;
     }
 
     .hero{
-        min-height:420px;
+        min-height:550px;
+        padding:60px 18px;
     }
 
-    .hero h1{
-        font-size:40px;
+    .hero h2{
+        font-size:38px;
+    }
+
+    .hero h3{
+        font-size:21px;
     }
 
     .hero p{
         font-size:15px;
     }
 
-    .container{
-        width:90%;
+    .stats{
+        margin-top:-25px;
+        padding-left:15px;
+        padding-right:15px;
     }
 
-    .section{
-        padding:55px 0;
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .classes{
+    .stat{
+        padding:20px 10px;
+    }
+
+    .stat strong{
+        font-size:24px;
+    }
+
+    .section-heading h2{
+        font-size:28px;
+    }
+
+    .material-grid{
         grid-template-columns:1fr;
     }
 
-    .about{
+    .feature-grid{
         grid-template-columns:1fr;
-        gap:30px;
     }
 
-    .material-title{
+    .material-item{
         align-items:flex-start;
+    }
+
+    .contact-box{
+        padding:30px 20px;
+    }
+
+    .contact-buttons{
         flex-direction:column;
-        gap:5px;
-    }
-
-    .file{
-        align-items:flex-start;
-    }
-
-    .file-button{
-        margin-top:3px;
     }
 
     .call-btn,
     .whatsapp-btn{
-        display:block;
-        width:90%;
-        max-width:300px;
-        margin:10px auto;
+        width:100%;
     }
 
+    .whatsapp-float{
+        width:55px;
+        height:55px;
+        right:15px;
+        bottom:15px;
+    }
 }
 
 </style>
-
 </head>
+
 
 <body>
 
 
-<!-- =========================
+<!-- =========================================================
      HEADER
-========================= -->
+     ========================================================= -->
 
-<header>
+<header id="home">
 
-<div class="logo">
+    <div class="logo-area">
 
-SARVAGYA CLASSES
+        <div class="logo-icon">
+            SC
+        </div>
 
-<span>SINCE 2014</span>
+        <div class="logo-text">
 
-</div>
+            <h1>SARVAGYA CLASSES</h1>
 
-<nav>
+            <p>SINCE 2014 • Gaurav Shinde Sir</p>
 
-<a href="#home">Home</a>
+        </div>
 
-<a href="#classes">Classes</a>
+    </div>
 
-<a href="#materials">Study Material</a>
 
-<a href="#about">About</a>
+    <nav>
 
-<a href="#contact">Contact</a>
+        <a href="#home">Home</a>
 
-</nav>
+        <a href="#classes">Classes</a>
+
+        <a href="#material">Study Material</a>
+
+        <a href="#about">About</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
 
 </header>
 
 
-<!-- =========================
+
+<!-- =========================================================
      HERO
-========================= -->
+     ========================================================= -->
 
-<section class="hero" id="home">
+<section class="hero">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<div class="hero-small">
-Mathematics & Science
-</div>
+        <div class="badge">
+            QUALITY EDUCATION • STRONG CONCEPTS
+        </div>
 
-<h1>
-Sarvagya <span>Classes</span>
-</h1>
+        <h2>
+            Learn Today.<br>
+            <span>Lead Tomorrow.</span>
+        </h2>
 
-<p>
-Quality Education • Strong Concepts • Regular Tests
-<br>
-7th • 8th • 9th Standard
-</p>
+        <h3>
+            Mathematics & Science
+        </h3>
 
-<a href="#materials" class="btn">
-View Study Material
-</a>
+        <p>
+            Sarvagya Classes provides concept-based learning,
+            regular tests and quality study material for
+            7th, 8th and 9th standard students.
+        </p>
 
-</div>
+
+        <div class="hero-buttons">
+
+            <a href="#material" class="btn btn-primary">
+                📚 Study Material
+            </a>
+
+            <a href="#classes" class="btn btn-outline">
+                🎓 View Classes
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- =========================
+
+<!-- =========================================================
+     STATS
+     ========================================================= -->
+
+<section class="stats">
+
+    <div class="stats-grid">
+
+        <div class="stat">
+
+            <strong>2014</strong>
+
+            <span>
+                Since
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>3</strong>
+
+            <span>
+                Standards
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>2</strong>
+
+            <span>
+                Main Subjects
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>100%</strong>
+
+            <span>
+                Concept Focus
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
      CLASSES
-========================= -->
+     ========================================================= -->
 
-<section class="section" id="classes">
+<section id="classes">
 
-<div class="container">
+    <div class="section-heading">
 
-<div class="section-title">
+        <div class="small">
+            Our Classes
+        </div>
 
-<h2>Our Classes</h2>
+        <h2>
+            Choose Your Standard
+        </h2>
 
-<p>Select your standard</p>
+        <p>
+            Mathematics and Science learning for school students.
+        </p>
 
-</div>
-
-
-<div class="classes">
-
-
-<!-- 7TH -->
-
-<div class="class-card">
-
-<div class="class-number">
-STANDARD
-</div>
-
-<h3>7th</h3>
-
-<p>
-Mathematics & Science
-tests, books and study material.
-</p>
-
-<a href="#class7" class="view-btn">
-View Material →
-</a>
-
-</div>
+    </div>
 
 
-<!-- 8TH -->
-
-<div class="class-card">
-
-<div class="class-number">
-STANDARD
-</div>
-
-<h3>8th</h3>
-
-<p>
-Mathematics & Science
-tests, books and study material.
-</p>
-
-<a href="#class8" class="view-btn">
-View Material →
-</a>
-
-</div>
+    <div class="class-grid">
 
 
-<!-- 9TH -->
+        <!-- 7TH -->
 
-<div class="class-card">
+        <div class="class-card">
 
-<div class="class-number">
-STANDARD
-</div>
+            <div class="class-number">
+                07
+            </div>
 
-<h3>9th</h3>
+            <h3>
+                7th Standard
+            </h3>
 
-<p>
-Mathematics & Science
-tests and study material.
-</p>
+            <p>
+                Foundation level learning with clear concepts.
+            </p>
 
-<a href="#class9" class="view-btn">
-View Material →
-</a>
+            <ul>
 
-</div>
+                <li>Mathematics</li>
 
-</div>
+                <li>Science</li>
 
-</div>
+                <li>Regular Tests</li>
+
+                <li>Practice Material</li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- 8TH -->
+
+        <div class="class-card">
+
+            <div class="class-number">
+                08
+            </div>
+
+            <h3>
+                8th Standard
+            </h3>
+
+            <p>
+                Strong conceptual preparation for higher classes.
+            </p>
+
+            <ul>
+
+                <li>Mathematics</li>
+
+                <li>Science</li>
+
+                <li>Regular Tests</li>
+
+                <li>Practice Material</li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- 9TH -->
+
+        <div class="class-card">
+
+            <div class="class-number">
+                09
+            </div>
+
+            <h3>
+                9th Standard
+            </h3>
+
+            <p>
+                Exam-oriented learning with strong fundamentals.
+            </p>
+
+            <ul>
+
+                <li>Mathematics</li>
+
+                <li>Science</li>
+
+                <li>Regular Tests</li>
+
+                <li>Exam Preparation</li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
 
 </section>
 
 
-<!-- =========================
+
+<!-- =========================================================
      STUDY MATERIAL
-========================= -->
+     ========================================================= -->
 
-<section class="section material-section" id="materials">
+<section id="material" class="material-section">
 
-<div class="container">
+    <div class="section-heading">
 
-<div class="section-title">
+        <div class="small">
+            Study Material
+        </div>
 
-<h2>Study Material</h2>
+        <h2>
+            Books & Test Papers
+        </h2>
 
-<p>Tests, books and notes</p>
+        <p>
+            Click on any material to open it.
+        </p>
 
-</div>
+    </div>
 
 
-<!-- =========================
-     7TH STANDARD
-========================= -->
 
-<div class="material-card" id="class7">
+    <!-- =====================================================
+         7TH MATERIAL
+         ===================================================== -->
 
-<div class="material-title">
+    <div class="material-class">
 
-<h3>📘 7th Standard</h3>
+        <div class="material-title">
 
-<span>TESTS & NOTES</span>
+            <div class="material-icon">
+                📘
+            </div>
 
-</div>
+            <h3>
+                7th Standard
+            </h3>
 
+        </div>
 
-<!-- 7TH MATH BOOK -->
 
-<div class="file">
+        <div class="material-grid">
 
-<div class="file-info">
 
-<div class="file-icon">
-PDF
-</div>
+            <div class="material-item">
 
-<div>
+                <div>
 
-<div class="file-name">
-7TH Math Book
-</div>
+                    <div class="material-name">
+                        7th Mathematics Book
+                    </div>
 
-<div class="file-type">
-PDF
-</div>
+                    <div class="material-type">
+                        PDF • Mathematics
+                    </div>
 
-</div>
+                </div>
 
-</div>
+                <a
+                    href="./7TH MATH BOOK.pdf"
+                    target="_blank"
+                    class="open-btn">
+                    OPEN
+                </a>
 
-<a
-href="./7TH MATH BOOK.pdf"
-target="_blank"
-class="file-button">
+            </div>
 
-Open PDF
 
-</a>
 
-</div>
+            <div class="material-item">
 
+                <div>
 
-<!-- 7TH SCIENCE BOOK -->
+                    <div class="material-name">
+                        7th Science Book
+                    </div>
 
-<div class="file">
+                    <div class="material-type">
+                        PDF • Science
+                    </div>
 
-<div class="file-info">
+                </div>
 
-<div class="file-icon">
-PDF
-</div>
+                <a
+                    href="./7TH SCIENCE BOOK.pdf"
+                    target="_blank"
+                    class="open-btn">
+                    OPEN
+                </a>
 
-<div>
+            </div>
 
-<div class="file-name">
-7TH Science Book
-</div>
 
-<div class="file-type">
-PDF
-</div>
 
-</div>
+            <div class="material-item">
 
-</div>
+                <div>
 
-<a
-href="./7TH SCIENCE BOOK.pdf"
-target="_blank"
-class="file-button">
+                    <div class="material-name">
+                        7th Test - English
+                    </div>
 
-Open PDF
+                    <div class="material-type">
+                        DOCX • Test Paper
+                    </div>
 
-</a>
+                </div>
 
-</div>
+                <a
+                    href="./7th test ei.docx"
+                    target="_blank"
+                    class="open-btn">
+                    OPEN
+                </a>
 
+            </div>
 
-<!-- 7TH ENGLISH TEST -->
 
-<div class="file">
 
-<div class="file-info">
+            <div class="material-item">
 
-<div class="file-icon">
-DOC
-</div>
+                <div>
 
-<div>
+                    <div class="material-name">
+                        7th Test - Marathi
+                    </div>
 
-<div class="file-name">
-7th Test - English
-</div>
+                    <div class="material-type">
+                        DOCX • Test Paper
+                    </div>
 
-<div class="file-type">
-DOCX
-</div>
+                </div>
 
-</div>
+                <a
+                    href="./7th test mm.docx"
+                    target="_blank"
+                    class="open-btn">
+                    OPEN
+                </a>
 
-</div>
+            </div>
 
-<a
-href="./7th test ei.docx"
-download
-class="file-button">
 
-Download
+        </div>
 
-</a>
+    </div>
 
-</div>
 
 
-<!-- 7TH MATH TEST -->
+    <!-- =====================================================
+         8TH MATERIAL
+         ===================================================== -->
 
-<div class="file">
+    <div class="material-class">
 
-<div class="file-info">
+        <div class="material-title">
 
-<div class="file-icon">
-DOC
-</div>
+            <div class="material-icon">
+                📗
+            </div>
 
-<div>
+            <h3>
+                8th Standard
+            </h3>
 
-<div class="file-name">
-7th Test - Mathematics
-</div>
+        </div>
 
-<div class="file-type">
-DOCX
-</div>
 
-</div>
+        <div class="material-grid">
 
-</div>
 
-<a
-href="./7th test mm.docx"
-download
-class="file-button">
+            <div class="material-item">
 
-Download
+                <div>
 
-</a>
+                    <div class="material-name">
+                        8th Mathematics Book
+                    </div>
 
-</div>
+                    <div class="material-type">
+                        PDF • Mathematics
+                    </div>
 
-</div>
+                </div>
 
+                <a
+                    href="./8TH MATH BOOK.pdf"
+                    target="_blank"
+                    class="open-btn">
+                    OPEN
+                </a>
 
-<!-- =========================
-     8TH STANDARD
-========================= -->
+            </div>
 
-<div class="material-card" id="class8">
 
-<div class="material-title">
 
-<h3>📗 8th Standard</h3>
+            <div class="material-item">
 
-<span>TESTS & NOTES</span>
+                <div>
 
-</div>
+                    <div class="material-name">
+                        8th Test 1
+                    </div>
 
+                    <div class="material-type">
+                        DOCX • Test Paper
+                    </div>
 
-<!-- 8TH MATH BOOK -->
+                </div>
 
-<div class="file">
+                <a
+                    href="./8th test 1.docx"
+                    target="_blank"
+                    class="open-btn">
+                    OPEN
+                </a>
 
-<div class="file-info">
+            </div>
 
-<div class="file-icon">
-PDF
-</div>
 
-<div>
+        </div>
 
-<div class="file-name">
-8TH Math Book
-</div>
+    </div>
 
-<div class="file-type">
-PDF
-</div>
 
-</div>
 
-</div>
+    <!-- =====================================================
+         9TH MATERIAL
+         ===================================================== -->
 
-<a
-href="./8TH MATH BOOK.pdf"
-target="_blank"
-class="file-button">
+    <div class="material-class">
 
-Open PDF
+        <div class="material-title">
 
-</a>
+            <div class="material-icon">
+                📕
+            </div>
 
-</div>
+            <h3>
+                9th Standard
+            </h3>
 
+        </div>
 
-<!-- 8TH TEST -->
 
-<div class="file">
+        <div class="material-grid">
 
-<div class="file-info">
 
-<div class="file-icon">
-DOC
-</div>
+            <div class="material-item">
 
-<div>
+                <div>
 
-<div class="file-name">
-8th Test 1
-</div>
+                    <div class="material-name">
+                        9th Exam - 13 September
+                    </div>
 
-<div class="file-type">
-DOCX
-</div>
+                    <div class="material-type">
+                        DOCX • Examination Paper
+                    </div>
 
-</div>
+                </div>
 
-</div>
+                <a
+                    href="./9th exam 13 sep.docx"
+                    target="_blank"
+                    class="open-btn">
+                    OPEN
+                </a>
 
-<a
-href="./8th test 1.docx"
-download
-class="file-button">
+            </div>
 
-Download
 
-</a>
+            <!-- =================================================
+                 ADD MORE 9TH FILES HERE
+                 ================================================= -->
 
-</div>
+            <div class="material-item">
 
-</div>
+                <div>
 
+                    <div class="material-name">
+                        More Study Material
+                    </div>
 
-<!-- =========================
-     9TH STANDARD
-========================= -->
+                    <div class="material-type">
+                        Add your PDF/DOCX here
+                    </div>
 
-<div class="material-card" id="class9">
+                </div>
 
-<div class="material-title">
+                <span class="open-btn">
+                    SOON
+                </span>
 
-<h3>📕 9th Standard</h3>
+            </div>
 
-<span>TESTS & NOTES</span>
 
-</div>
+        </div>
 
-
-<!-- 9TH EXAM -->
-
-<div class="file">
-
-<div class="file-info">
-
-<div class="file-icon">
-DOC
-</div>
-
-<div>
-
-<div class="file-name">
-9th Exam - 13 September
-</div>
-
-<div class="file-type">
-DOCX
-</div>
-
-</div>
-
-</div>
-
-<a
-href="./9th exam 13 sep.docx"
-download
-class="file-button">
-
-Download
-
-</a>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
+
+<!-- =========================================================
+     WHY SARVAGYA
+     ========================================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <div class="small">
+            Why Sarvagya Classes
+        </div>
+
+        <h2>
+            Learning That Builds Confidence
+        </h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🎯
+            </div>
+
+            <h3>
+                Strong Concepts
+            </h3>
+
+            <p>
+                Focus on understanding concepts instead of memorising.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                📝
+            </div>
+
+            <h3>
+                Regular Tests
+            </h3>
+
+            <p>
+                Regular practice helps students prepare confidently.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                📚
+            </div>
+
+            <h3>
+                Study Material
+            </h3>
+
+            <p>
+                Useful books, tests and practice material in one place.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                👨‍🏫
+            </div>
+
+            <h3>
+                Personal Guidance
+            </h3>
+
+            <p>
+                Proper guidance for Mathematics and Science.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
      ABOUT
-========================= -->
+     ========================================================= -->
 
-<section class="section" id="about">
+<section id="about" class="about">
 
-<div class="container">
-
-<div class="about">
+    <div class="about-grid">
 
 
-<div>
+        <div class="teacher-card">
 
-<h2>
-About Sarvagya Classes
-</h2>
+            <div class="teacher-avatar">
+                GS
+            </div>
 
-<p>
-Sarvagya Classes is focused on
-building strong concepts in
-Mathematics and Science.
-</p>
+            <h3>
+                Gaurav Shinde Sir
+            </h3>
 
-<p>
-Students get regular tests,
-study material and notes
-to improve their preparation.
-</p>
+            <p>
+                Mathematics & Science Teacher
+            </p>
 
-<p>
-Our aim is simple —
-understand the concept,
-practice regularly and
-perform better.
-</p>
+            <p>
+                Sarvagya Classes
+            </p>
 
-</div>
+        </div>
 
 
-<div class="info-box">
+
+        <div class="about-text">
+
+            <h2>
+                About Sarvagya Classes
+            </h2>
+
+            <p>
+                Sarvagya Classes is focused on providing
+                quality Mathematics and Science education
+                for school students.
+            </p>
+
+            <p>
+                Our aim is to make difficult concepts simple,
+                improve problem-solving ability and develop
+                confidence through regular practice.
+            </p>
 
 
-<div class="info-row">
+            <ul class="about-list">
 
-<strong>
-TEACHER
-</strong>
+                <li>
+                    7th, 8th and 9th Standard
+                </li>
 
-<span>
-Gaurav Shinde Sir
-</span>
+                <li>
+                    Mathematics & Science
+                </li>
 
-</div>
+                <li>
+                    Concept-based teaching
+                </li>
 
+                <li>
+                    Regular tests and practice
+                </li>
 
-<div class="info-row">
+                <li>
+                    Quality study material
+                </li>
 
-<strong>
-SUBJECTS
-</strong>
+            </ul>
 
-<span>
-Mathematics & Science
-</span>
-
-</div>
-
-
-<div class="info-row">
-
-<strong>
-STANDARDS
-</strong>
-
-<span>
-7th • 8th • 9th
-</span>
-
-</div>
+        </div>
 
 
-<div class="info-row">
-
-<strong>
-LOCATION
-</strong>
-
-<span>
-Nimgaon Khalu, Shrigonda
-</span>
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
+
+<!-- =========================================================
+     LOCATION
+     ========================================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <div class="small">
+            Our Location
+        </div>
+
+        <h2>
+            Sarvagya Classes
+        </h2>
+
+    </div>
+
+
+    <div class="location-box">
+
+        <p style="text-align:center;">
+
+            📍 <strong>Nimgaon Khalu, Shrigonda</strong>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
      CONTACT
-========================= -->
+     ========================================================= -->
 
-<section class="section contact" id="contact">
+<section id="contact" class="contact">
 
-<div class="container">
+    <div class="section-heading">
 
-<h2>
-Contact
-</h2>
+        <div class="small">
+            Contact
+        </div>
 
-<p>
-For admissions and class information
-</p>
+        <h2>
+            Get In Touch
+        </h2>
 
-<div class="phone">
-8262055677
-</div>
+        <p>
+            For admission and class information, contact us.
+        </p>
 
-
-<!-- CALL BUTTON -->
-
-<a
-href="tel:8262055677"
-class="call-btn">
-
-📞 Call Gaurav Shinde Sir
-
-</a>
+    </div>
 
 
-<!-- WHATSAPP BUTTON -->
+    <div class="contact-box">
 
-<a
-href="https://wa.me/918262055677?text=Hello%20Gaurav%20Shinde%20Sir%2C%20I%20want%20information%20about%20Sarvagya%20Classes."
-target="_blank"
-class="whatsapp-btn">
+        <h2>
+            Gaurav Shinde Sir
+        </h2>
 
-💬 WhatsApp Us
+        <p>
+            Mathematics & Science
+        </p>
 
-</a>
+        <p>
+            📍 Nimgaon Khalu, Shrigonda
+        </p>
 
-</div>
+        <p>
+            📞 <strong>8262055677</strong>
+        </p>
+
+
+        <div class="contact-buttons">
+
+            <a
+                href="tel:8262055677"
+                class="call-btn">
+
+                📞 Call Now
+
+            </a>
+
+
+            <a
+                href="https://wa.me/918262055677?text=Hello%20Gaurav%20Shinde%20Sir%2C%20I%20want%20information%20about%20Sarvagya%20Classes."
+                target="_blank"
+                rel="noopener"
+                class="whatsapp-btn">
+
+                💬 WhatsApp
+
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- =========================
+
+<!-- =========================================================
+     STUDENTS & FEES STATUS
+     
+     IMPORTANT:
+     THIS SECTION IS INTENTIONALLY AT THE END.
+
+     You can manually change:
+     1. Student Name
+     2. PAID / PENDING
+
+     Example:
+     <td>Rahul Patil</td>
+     <td><span class="paid">PAID</span></td>
+
+     OR
+
+     <td>Rahul Patil</td>
+     <td><span class="pending">PENDING</span></td>
+     ========================================================= -->
+
+<section id="students" class="students-section">
+
+    <div class="section-heading">
+
+        <div class="small">
+            Student Records
+        </div>
+
+        <h2>
+            Students & Fees Status
+        </h2>
+
+        <p>
+            Manually update student names and fees status in the code.
+        </p>
+
+    </div>
+
+
+    <div class="note-box">
+
+        <strong>NOTE:</strong>
+
+        This section is for your manual record.
+        Replace the sample student names with your actual
+        student names and change PAID/PENDING as required.
+
+    </div>
+
+
+
+    <!-- =====================================================
+         7TH STANDARD STUDENTS
+         ===================================================== -->
+
+    <div class="student-class">
+
+        <h3>
+            📘 7th Standard
+        </h3>
+
+
+        <div class="student-table-wrapper">
+
+            <table class="student-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Sr. No.
+                        </th>
+
+                        <th>
+                            Student Name
+                        </th>
+
+                        <th>
+                            Fees Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <!-- CHANGE STUDENT 1 HERE -->
+
+                    <tr>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            Student Name 1
+                        </td>
+
+                        <td>
+                            <span class="paid">
+                                PAID
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <!-- CHANGE STUDENT 2 HERE -->
+
+                    <tr>
+
+                        <td>
+                            2
+                        </td>
+
+                        <td>
+                            Student Name 2
+                        </td>
+
+                        <td>
+                            <span class="pending">
+                                PENDING
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <!-- ADD MORE STUDENTS BELOW -->
+
+                    <tr>
+
+                        <td>
+                            3
+                        </td>
+
+                        <td>
+                            Student Name 3
+                        </td>
+
+                        <td>
+                            <span class="paid">
+                                PAID
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         8TH STANDARD STUDENTS
+         ===================================================== -->
+
+    <div class="student-class">
+
+        <h3>
+            📗 8th Standard
+        </h3>
+
+
+        <div class="student-table-wrapper">
+
+            <table class="student-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Sr. No.
+                        </th>
+
+                        <th>
+                            Student Name
+                        </th>
+
+                        <th>
+                            Fees Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            Student Name 1
+                        </td>
+
+                        <td>
+                            <span class="paid">
+                                PAID
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            2
+                        </td>
+
+                        <td>
+                            Student Name 2
+                        </td>
+
+                        <td>
+                            <span class="pending">
+                                PENDING
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            3
+                        </td>
+
+                        <td>
+                            Student Name 3
+                        </td>
+
+                        <td>
+                            <span class="paid">
+                                PAID
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         9TH STANDARD STUDENTS
+         ===================================================== -->
+
+    <div class="student-class">
+
+        <h3>
+            📕 9th Standard
+        </h3>
+
+
+        <div class="student-table-wrapper">
+
+            <table class="student-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Sr. No.
+                        </th>
+
+                        <th>
+                            Student Name
+                        </th>
+
+                        <th>
+                            Fees Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            Student Name 1
+                        </td>
+
+                        <td>
+                            <span class="paid">
+                                PAID
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            2
+                        </td>
+
+                        <td>
+                            Student Name 2
+                        </td>
+
+                        <td>
+                            <span class="pending">
+                                PENDING
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            3
+                        </td>
+
+                        <td>
+                            Student Name 3
+                        </td>
+
+                        <td>
+                            <span class="paid">
+                                PAID
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
      FOOTER
-========================= -->
+     ========================================================= -->
 
 <footer>
 
-© 2026
+    <div class="footer-logo">
+        SARVAGYA CLASSES
+    </div>
 
-<strong>Sarvagya Classes</strong>
+    <p>
+        Gaurav Shinde Sir • Mathematics & Science
+    </p>
 
-<br>
+    <div class="footer-links">
 
-Gaurav Shinde Sir
-• Nimgaon Khalu, Shrigonda
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#classes">
+            Classes
+        </a>
+
+        <a href="#material">
+            Study Material
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </div>
+
+    <p>
+        © 2026 Sarvagya Classes. All Rights Reserved.
+    </p>
+
+    <p>
+        Nimgaon Khalu, Shrigonda
+    </p>
 
 </footer>
 
 
-</body>
 
+<!-- =========================================================
+     FLOATING WHATSAPP
+     ========================================================= -->
+
+<a
+    href="https://wa.me/918262055677?text=Hello%20Gaurav%20Shinde%20Sir%2C%20I%20want%20information%20about%20Sarvagya%20Classes."
+    target="_blank"
+    rel="noopener"
+    class="whatsapp-float"
+    aria-label="WhatsApp">
+
+    💬
+
+</a>
+
+
+
+<!-- =========================================================
+     BACK TO TOP
+     ========================================================= -->
+
+<a
+    href="#home"
+    class="top-btn"
+    aria-label="Back to top">
+
+    ↑
+
+</a>
+
+
+
+</body>
 </html>
