@@ -1,1148 +1,1632 @@
-﻿<!DOCTYPE html>
+```html
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sarvagya Classes - Admin Panel</title>
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Sarvagya Classes | Admin</title>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
+
 <style>
+
 *{
     box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
+
 
 body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f3f5f7;
-    color:#222;
-}
-
-.header{
-    background:#17202a;
-    color:white;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f7fb;
+    color:#172033;
     padding:20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
 }
 
-.header h1{
-    margin:0;
-    font-size:24px;
-}
-
-.header p{
-    margin:5px 0 0;
-    color:#ccc;
-}
-
-button{
-    border:none;
-    padding:10px 16px;
-    border-radius:6px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.logout{
-    background:#e74c3c;
-    color:white;
-}
 
 .container{
-    max-width:1200px;
-    margin:30px auto;
-    padding:0 15px;
+    max-width:700px;
+    margin:auto;
 }
 
-.login-box{
-    max-width:400px;
-    margin:70px auto;
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 5px 25px rgba(0,0,0,0.12);
-}
 
-.login-box h2{
-    text-align:center;
-    margin-top:0;
-}
-
-input, select{
-    width:100%;
-    padding:12px;
-    margin:7px 0 15px;
-    border:1px solid #ccc;
-    border-radius:6px;
-    font-size:15px;
-}
-
-.login-btn{
-    width:100%;
-    background:#17202a;
+.header{
+    background:#172033;
     color:white;
-    font-size:16px;
-}
-
-.error{
-    color:#d63031;
-    margin-top:10px;
+    padding:25px;
+    border-radius:15px;
     text-align:center;
+    margin-bottom:20px;
 }
 
-.success{
-    color:#198754;
-    margin-top:10px;
-    text-align:center;
+
+.header h1{
+    font-size:25px;
+    margin-bottom:5px;
 }
 
-.hidden{
-    display:none;
+
+.header p{
+    font-size:13px;
+    opacity:.8;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    margin-bottom:25px;
-}
 
 .card{
     background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
-}
-
-.card h3{
-    margin:0;
-    font-size:14px;
-    color:#777;
-}
-
-.card p{
-    margin:8px 0 0;
-    font-size:25px;
-    font-weight:bold;
-}
-
-.form-box{
-    background:white;
     padding:25px;
-    border-radius:10px;
-    margin-bottom:25px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
-}
-
-.form-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.form-group label{
-    font-weight:bold;
-    display:block;
-}
-
-.save-btn{
-    background:#198754;
-    color:white;
-}
-
-.cancel-btn{
-    background:#777;
-    color:white;
-    margin-left:8px;
-}
-
-.table-box{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    overflow-x:auto;
-}
-
-.search{
-    max-width:350px;
-    margin-bottom:15px;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    min-width:850px;
-}
-
-th, td{
-    padding:12px 10px;
-    border-bottom:1px solid #ddd;
-    text-align:left;
-}
-
-th{
-    background:#17202a;
-    color:white;
-}
-
-.badge{
-    padding:5px 9px;
     border-radius:15px;
-    font-size:12px;
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+    margin-bottom:20px;
+}
+
+
+.card h2{
+    margin-bottom:20px;
+    font-size:21px;
+}
+
+
+label{
+    display:block;
     font-weight:bold;
+    font-size:14px;
+    margin-bottom:7px;
 }
 
-.paid{
-    background:#d1e7dd;
-    color:#0f5132;
+
+input,
+select{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #dbe2ea;
+
+    border-radius:7px;
+
+    font-size:14px;
+
+    margin-bottom:18px;
+
 }
 
-.partial{
-    background:#fff3cd;
-    color:#664d03;
+
+input:focus,
+select:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
 }
 
-.pending{
-    background:#f8d7da;
-    color:#842029;
-}
 
-.edit-btn{
-    background:#0d6efd;
+.upload-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:7px;
+
+    background:#2563eb;
+
     color:white;
-    margin-right:5px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
 }
+
+
+.upload-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+.upload-btn:disabled{
+
+    background:#94a3b8;
+
+    cursor:not-allowed;
+
+}
+
+
+.message{
+
+    margin-top:15px;
+
+    padding:12px;
+
+    border-radius:7px;
+
+    display:none;
+
+    font-size:14px;
+
+}
+
+
+.success{
+
+    display:block;
+
+    background:#dcfce7;
+
+    color:#166534;
+
+}
+
+
+.error{
+
+    display:block;
+
+    background:#fee2e2;
+
+    color:#991b1b;
+
+}
+
+
+.material-list{
+
+    margin-top:10px;
+
+}
+
+
+.material{
+
+    padding:15px;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:8px;
+
+    margin-bottom:10px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+.material-info{
+
+    flex:1;
+
+}
+
+
+.material-title{
+
+    font-weight:bold;
+
+    font-size:14px;
+
+}
+
+
+.material-details{
+
+    color:#64748b;
+
+    font-size:12px;
+
+    margin-top:4px;
+
+}
+
+
+.material-file{
+
+    color:#94a3b8;
+
+    font-size:11px;
+
+    margin-top:5px;
+
+    word-break:break-all;
+
+}
+
+
+.action-area{
+
+    display:flex;
+
+    gap:5px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.open-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 12px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    font-size:12px;
+
+    text-decoration:none;
+
+    display:inline-block;
+
+}
+
 
 .delete-btn{
-    background:#dc3545;
+
+    background:#dc2626;
+
     color:white;
+
+    border:none;
+
+    padding:8px 12px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    font-size:12px;
+
 }
 
-.footer{
+
+.home-btn{
+
+    display:block;
+
     text-align:center;
-    color:#777;
-    margin:30px 0;
+
+    margin-top:15px;
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+    font-size:14px;
+
 }
 
-@media(max-width:800px){
-    .cards{
-        grid-template-columns:repeat(2,1fr);
-    }
 
-    .form-grid{
-        grid-template-columns:1fr;
-    }
+.loading{
+
+    text-align:center;
+
+    color:#64748b;
+
+    padding:15px;
+
 }
+
 
 @media(max-width:500px){
-    .cards{
-        grid-template-columns:1fr;
+
+    body{
+
+        padding:10px;
+
     }
 
-    .header{
-        display:block;
+
+    .card{
+
+        padding:18px;
+
     }
 
-    .logout{
-        margin-top:15px;
+
+    .material{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
     }
+
+
+    .action-area{
+
+        width:100%;
+
+    }
+
+
+    .open-btn,
+    .delete-btn{
+
+        flex:1;
+
+        text-align:center;
+
+    }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
-<!-- LOGIN PAGE -->
-<div id="loginPage">
 
-    <div class="login-box">
-
-        <h2>🔐 Admin Login</h2>
-
-        <p style="text-align:center;color:#777;">
-            Sarvagya Classes
-        </p>
-
-        <label>Email</label>
-        <input type="email" id="email" placeholder="Admin Email">
-
-        <label>Password</label>
-        <input type="password" id="password" placeholder="Password">
-
-        <button class="login-btn" onclick="login()">
-            Login
-        </button>
-
-        <div id="loginMessage"></div>
-
-    </div>
-
-</div>
+<div class="container">
 
 
-<!-- ADMIN DASHBOARD -->
-<div id="dashboard" class="hidden">
+    <!-- HEADER -->
 
     <div class="header">
 
-        <div>
-            <h1>SARVAGYA CLASSES</h1>
-            <p>Student & Fee Management</p>
-        </div>
+        <h1>SARVAGYA CLASSES</h1>
 
-        <button class="logout" onclick="logout()">
-            Logout
+        <p>Study Material Admin Panel</p>
+
+    </div>
+
+
+
+    <!-- UPLOAD CARD -->
+
+    <div class="card">
+
+        <h2>📤 Upload Study Material</h2>
+
+
+        <!-- STANDARD -->
+
+        <label>
+
+            Standard
+
+        </label>
+
+
+        <select id="standard">
+
+            <option value="7th">
+
+                7th Standard
+
+            </option>
+
+
+            <option value="8th">
+
+                8th Standard
+
+            </option>
+
+
+            <option value="9th">
+
+                9th Standard
+
+            </option>
+
+        </select>
+
+
+
+        <!-- SUBJECT -->
+
+        <label>
+
+            Subject
+
+        </label>
+
+
+        <select id="subject">
+
+            <option value="Mathematics">
+
+                Mathematics
+
+            </option>
+
+
+            <option value="Science">
+
+                Science
+
+            </option>
+
+
+            <option value="Test Paper">
+
+                Test Paper
+
+            </option>
+
+
+            <option value="Other">
+
+                Other
+
+            </option>
+
+        </select>
+
+
+
+        <!-- TITLE -->
+
+        <label>
+
+            Material Name
+
+        </label>
+
+
+        <input
+
+            type="text"
+
+            id="title"
+
+            placeholder="Example: Chapter 3 Test Paper"
+
+        >
+
+
+
+        <!-- FILE -->
+
+        <label>
+
+            Select PDF / DOCX
+
+        </label>
+
+
+        <input
+
+            type="file"
+
+            id="file"
+
+            accept=".pdf,.doc,.docx"
+
+        >
+
+
+
+        <!-- UPLOAD BUTTON -->
+
+        <button
+
+            class="upload-btn"
+
+            id="uploadBtn"
+
+            onclick="uploadMaterial()"
+
+        >
+
+            📤 UPLOAD MATERIAL
+
         </button>
 
+
+
+        <!-- MESSAGE -->
+
+        <div
+
+            id="message"
+
+            class="message"
+
+        >
+
+        </div>
+
     </div>
 
 
-    <div class="container">
 
-        <!-- STATISTICS -->
+    <!-- MATERIAL LIST -->
 
-        <div class="cards">
+    <div class="card">
 
-            <div class="card">
-                <h3>Total Students</h3>
-                <p id="totalStudents">0</p>
-            </div>
+        <h2>
 
-            <div class="card">
-                <h3>Total Fees</h3>
-                <p>₹<span id="totalFees">0</span></p>
-            </div>
+            📚 Uploaded Materials
 
-            <div class="card">
-                <h3>Collected</h3>
-                <p>₹<span id="collectedFees">0</span></p>
-            </div>
-
-            <div class="card">
-                <h3>Remaining</h3>
-                <p>₹<span id="remainingFees">0</span></p>
-            </div>
-
-        </div>
+        </h2>
 
 
-        <!-- ADD / EDIT STUDENT -->
+        <div
 
-        <div class="form-box">
+            id="materialList"
 
-            <h2 id="formTitle">➕ Add Student</h2>
+            class="material-list"
 
-            <input type="hidden" id="studentId">
+        >
 
-            <div class="form-grid">
+            <div class="loading">
 
-                <div class="form-group">
-
-                    <label>Student Name</label>
-
-                    <input
-                        type="text"
-                        id="studentName"
-                        placeholder="Enter student name"
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>Standard</label>
-
-                    <select id="standard">
-
-                        <option value="">Select Standard</option>
-
-                        <option value="7th">7th</option>
-
-                        <option value="8th">8th</option>
-
-                        <option value="9th">9th</option>
-
-                        <option value="10th">10th</option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>Batch</label>
-
-                    <input
-                        type="text"
-                        id="batch"
-                        placeholder="Example: Morning / Evening"
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>Total Fee</label>
-
-                    <input
-                        type="number"
-                        id="totalFee"
-                        placeholder="Total fee"
-                        min="0"
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>Paid Fee</label>
-
-                    <input
-                        type="number"
-                        id="paidFee"
-                        placeholder="Paid fee"
-                        min="0"
-                    >
-
-                </div>
+                Loading...
 
             </div>
 
-
-            <button class="save-btn" onclick="saveStudent()">
-                Save Student
-            </button>
-
-            <button
-                class="cancel-btn hidden"
-                id="cancelBtn"
-                onclick="cancelEdit()"
-            >
-                Cancel
-            </button>
-
-            <div id="formMessage"></div>
-
-        </div>
-
-
-        <!-- STUDENT TABLE -->
-
-        <div class="table-box">
-
-            <h2>👨‍🎓 Student Records</h2>
-
-            <input
-                class="search"
-                type="text"
-                id="search"
-                placeholder="Search student..."
-                onkeyup="filterStudents()"
-            >
-
-            <table>
-
-                <thead>
-
-                    <tr>
-
-                        <th>Sr.</th>
-                        <th>Name</th>
-                        <th>Standard</th>
-                        <th>Batch</th>
-                        <th>Total Fee</th>
-                        <th>Paid</th>
-                        <th>Remaining</th>
-                        <th>Status</th>
-                        <th>Action</th>
-
-                    </tr>
-
-                </thead>
-
-                <tbody id="studentTable">
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-
-        <div class="footer">
-            © 2014–2026 Sarvagya Classes | Gaurav Shinde Sir
         </div>
 
     </div>
+
+
+
+    <!-- HOME -->
+
+    <a
+
+        href="./index.html"
+
+        class="home-btn"
+
+    >
+
+        ← Back to Website
+
+    </a>
+
 
 </div>
+
 
 
 <script>
 
-/* ==========================================
-   SUPABASE CONNECTION
-========================================== */
+
+/* =====================================================
+   SUPABASE CONFIGURATION
+   ===================================================== */
+
 
 const SUPABASE_URL =
+
 "https://dosftayxhqvwqnutrbge.supabase.co";
 
+
 const SUPABASE_KEY =
+
 "sb_publishable_saemaeefPQJTpEPLztTw4w_jY0WQLhS";
 
+
+const BUCKET_NAME =
+
+"study material";
+
+
+const TABLE_NAME =
+
+"study_materials";
+
+
 const supabaseClient =
+
 window.supabase.createClient(
+
     SUPABASE_URL,
+
     SUPABASE_KEY
+
 );
 
 
-/* ==========================================
-   LOGIN
-========================================== */
 
-async function login(){
+/* =====================================================
+   UPLOAD MATERIAL
+   ===================================================== */
 
-    const email =
-        document.getElementById("email").value.trim();
 
-    const password =
-        document.getElementById("password").value;
+async function uploadMaterial(){
 
-    const message =
-        document.getElementById("loginMessage");
-
-    if(!email || !password){
-
-        message.className = "error";
-        message.innerHTML =
-            "Please enter email and password.";
-
-        return;
-    }
-
-    message.innerHTML = "Logging in...";
-
-    const { data, error } =
-        await supabaseClient.auth.signInWithPassword({
-
-            email: email,
-            password: password
-
-        });
-
-    if(error){
-
-        message.className = "error";
-        message.innerHTML =
-            "Login failed: " + error.message;
-
-        return;
-    }
-
-    message.className = "success";
-    message.innerHTML =
-        "Login successful!";
-
-    showDashboard();
-
-}
-
-
-/* ==========================================
-   LOGOUT
-========================================== */
-
-async function logout(){
-
-    await supabaseClient.auth.signOut();
-
-    document.getElementById("dashboard")
-        .classList.add("hidden");
-
-    document.getElementById("loginPage")
-        .classList.remove("hidden");
-
-}
-
-
-/* ==========================================
-   SHOW DASHBOARD
-========================================== */
-
-function showDashboard(){
-
-    document.getElementById("loginPage")
-        .classList.add("hidden");
-
-    document.getElementById("dashboard")
-        .classList.remove("hidden");
-
-    loadStudents();
-
-}
-
-
-/* ==========================================
-   LOAD STUDENTS
-========================================== */
-
-let students = [];
-
-async function loadStudents(){
-
-    const { data, error } =
-        await supabaseClient
-            .from("students")
-            .select("*")
-            .order("created_at", { ascending:false });
-
-    if(error){
-
-        alert(
-            "Could not load students: " +
-            error.message
-        );
-
-        return;
-    }
-
-    students = data || [];
-
-    displayStudents(students);
-
-    updateStatistics(students);
-
-}
-
-
-/* ==========================================
-   DISPLAY STUDENTS
-========================================== */
-
-function displayStudents(list){
-
-    const table =
-        document.getElementById("studentTable");
-
-    table.innerHTML = "";
-
-    if(list.length === 0){
-
-        table.innerHTML = `
-            <tr>
-                <td colspan="9" style="text-align:center;">
-                    No students found.
-                </td>
-            </tr>
-        `;
-
-        return;
-    }
-
-
-    list.forEach(function(student, index){
-
-        const total =
-            Number(student.total_fee || 0);
-
-        const paid =
-            Number(student.paid_fee || 0);
-
-        const remaining =
-            Math.max(total - paid, 0);
-
-
-        let status = "";
-        let statusClass = "";
-
-        if(remaining <= 0){
-
-            status = "PAID";
-            statusClass = "paid";
-
-        }
-        else if(paid > 0){
-
-            status = "PARTIAL";
-            statusClass = "partial";
-
-        }
-        else{
-
-            status = "PENDING";
-            statusClass = "pending";
-
-        }
-
-
-        const row = document.createElement("tr");
-
-        row.innerHTML = `
-
-            <td>${index + 1}</td>
-
-            <td>${escapeHtml(student.name)}</td>
-
-            <td>${escapeHtml(student.standard)}</td>
-
-            <td>${escapeHtml(student.batch || "-")}</td>
-
-            <td>₹${total.toLocaleString("en-IN")}</td>
-
-            <td>₹${paid.toLocaleString("en-IN")}</td>
-
-            <td>
-                <b>₹${remaining.toLocaleString("en-IN")}</b>
-            </td>
-
-            <td>
-                <span class="badge ${statusClass}">
-                    ${status}
-                </span>
-            </td>
-
-            <td>
-
-                <button
-                    class="edit-btn"
-                    onclick="editStudent(${student.id})"
-                >
-                    Edit
-                </button>
-
-                <button
-                    class="delete-btn"
-                    onclick="deleteStudent(${student.id})"
-                >
-                    Delete
-                </button>
-
-            </td>
-        `;
-
-        table.appendChild(row);
-
-    });
-
-}
-
-
-/* ==========================================
-   ADD / EDIT STUDENT
-========================================== */
-
-async function saveStudent(){
-
-    const id =
-        document.getElementById("studentId").value;
-
-    const name =
-        document.getElementById("studentName")
-        .value.trim();
 
     const standard =
-        document.getElementById("standard").value;
 
-    const batch =
-        document.getElementById("batch")
-        .value.trim();
+        document.getElementById(
 
-    const total =
-        Number(document.getElementById("totalFee").value);
+            "standard"
 
-    const paid =
-        Number(document.getElementById("paidFee").value);
+        ).value;
+
+
+    const subject =
+
+        document.getElementById(
+
+            "subject"
+
+        ).value;
+
+
+    const title =
+
+        document.getElementById(
+
+            "title"
+
+        ).value.trim();
+
+
+    const fileInput =
+
+        document.getElementById(
+
+            "file"
+
+        );
+
+
+    const file =
+
+        fileInput.files[0];
+
+
+    const button =
+
+        document.getElementById(
+
+            "uploadBtn"
+
+        );
 
 
     const message =
-        document.getElementById("formMessage");
 
+        document.getElementById(
 
-    if(!name || !standard){
+            "message"
 
-        message.className = "error";
-        message.innerHTML =
-            "Please enter student name and standard.";
-
-        return;
-    }
-
-
-    if(total < 0 || paid < 0){
-
-        message.className = "error";
-        message.innerHTML =
-            "Fee cannot be negative.";
-
-        return;
-    }
-
-
-    if(paid > total){
-
-        message.className = "error";
-        message.innerHTML =
-            "Paid fee cannot be greater than total fee.";
-
-        return;
-    }
-
-
-    message.innerHTML = "Saving...";
-
-
-    const studentData = {
-
-        name: name,
-
-        standard: standard,
-
-        batch: batch,
-
-        total_fee: total,
-
-        paid_fee: paid
-
-    };
-
-
-    let result;
-
-
-    if(id){
-
-        result =
-            await supabaseClient
-                .from("students")
-                .update(studentData)
-                .eq("id", id);
-
-    }
-    else{
-
-        result =
-            await supabaseClient
-                .from("students")
-                .insert([studentData]);
-
-    }
-
-
-    if(result.error){
-
-        message.className = "error";
-
-        message.innerHTML =
-            result.error.message;
-
-        return;
-    }
-
-
-    message.className = "success";
-
-    message.innerHTML =
-        id
-        ? "Student updated successfully!"
-        : "Student added successfully!";
-
-
-    clearForm();
-
-    loadStudents();
-
-}
-
-
-/* ==========================================
-   EDIT STUDENT
-========================================== */
-
-function editStudent(id){
-
-    const student =
-        students.find(function(item){
-
-            return String(item.id) === String(id);
-
-        });
-
-
-    if(!student) return;
-
-
-    document.getElementById("studentId").value =
-        student.id;
-
-    document.getElementById("studentName").value =
-        student.name;
-
-    document.getElementById("standard").value =
-        student.standard;
-
-    document.getElementById("batch").value =
-        student.batch || "";
-
-    document.getElementById("totalFee").value =
-        student.total_fee || 0;
-
-    document.getElementById("paidFee").value =
-        student.paid_fee || 0;
-
-
-    document.getElementById("formTitle")
-        .innerHTML = "✏️ Edit Student";
-
-
-    document.getElementById("cancelBtn")
-        .classList.remove("hidden");
-
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
-
-
-/* ==========================================
-   DELETE STUDENT
-========================================== */
-
-async function deleteStudent(id){
-
-    const confirmDelete =
-        confirm(
-            "Are you sure you want to delete this student?"
         );
 
-    if(!confirmDelete) return;
 
 
-    const { error } =
-        await supabaseClient
-            .from("students")
-            .delete()
-            .eq("id", id);
+    /* RESET MESSAGE */
+
+    message.className =
+
+        "message";
+
+    message.innerHTML = "";
 
 
-    if(error){
 
-        alert(
-            "Delete failed: " +
-            error.message
-        );
+    /* CHECK TITLE */
+
+    if(!title){
+
+        message.className =
+
+            "message error";
+
+        message.innerHTML =
+
+            "Please enter material name.";
 
         return;
+
     }
 
 
-    loadStudents();
 
-}
+    /* CHECK FILE */
 
+    if(!file){
 
-/* ==========================================
-   CANCEL EDIT
-========================================== */
+        message.className =
 
-function cancelEdit(){
+            "message error";
 
-    clearForm();
+        message.innerHTML =
 
-}
+            "Please select a PDF or DOC/DOCX file.";
 
+        return;
 
-/* ==========================================
-   CLEAR FORM
-========================================== */
-
-function clearForm(){
-
-    document.getElementById("studentId").value = "";
-
-    document.getElementById("studentName").value = "";
-
-    document.getElementById("standard").value = "";
-
-    document.getElementById("batch").value = "";
-
-    document.getElementById("totalFee").value = "";
-
-    document.getElementById("paidFee").value = "";
-
-    document.getElementById("formTitle")
-        .innerHTML = "➕ Add Student";
-
-    document.getElementById("cancelBtn")
-        .classList.add("hidden");
-
-}
+    }
 
 
-/* ==========================================
-   STATISTICS
-========================================== */
 
-function updateStatistics(list){
-
-    let totalStudents = list.length;
-
-    let totalFees = 0;
-
-    let collected = 0;
-
-    let remaining = 0;
+    /* =================================================
+       CHECK EXTENSION
+       ================================================= */
 
 
-    list.forEach(function(student){
+    const extension =
 
-        const total =
-            Number(student.total_fee || 0);
+        file.name
 
-        const paid =
-            Number(student.paid_fee || 0);
+        .split(".")
 
-        totalFees += total;
+        .pop()
 
-        collected += paid;
-
-        remaining += Math.max(total - paid, 0);
-
-    });
-
-
-    document.getElementById("totalStudents")
-        .innerText = totalStudents;
-
-    document.getElementById("totalFees")
-        .innerText =
-            totalFees.toLocaleString("en-IN");
-
-    document.getElementById("collectedFees")
-        .innerText =
-            collected.toLocaleString("en-IN");
-
-    document.getElementById("remainingFees")
-        .innerText =
-            remaining.toLocaleString("en-IN");
-
-}
-
-
-/* ==========================================
-   SEARCH
-========================================== */
-
-function filterStudents(){
-
-    const search =
-        document.getElementById("search")
-        .value
         .toLowerCase();
 
 
-    const filtered =
-        students.filter(function(student){
+    const allowedExtensions = [
 
-            return (
+        "pdf",
 
-                student.name
-                    .toLowerCase()
-                    .includes(search)
+        "doc",
 
-                ||
+        "docx"
 
-                student.standard
-                    .toLowerCase()
-                    .includes(search)
+    ];
 
-                ||
 
-                (student.batch || "")
-                    .toLowerCase()
-                    .includes(search)
+    if(
+
+        !allowedExtensions.includes(
+
+            extension
+
+        )
+
+    ){
+
+        message.className =
+
+            "message error";
+
+        message.innerHTML =
+
+            "Only PDF, DOC and DOCX files are allowed.";
+
+        return;
+
+    }
+
+
+
+    /* =================================================
+       FILE SIZE
+       ================================================= */
+
+
+    if(
+
+        file.size >
+
+        20 * 1024 * 1024
+
+    ){
+
+        message.className =
+
+            "message error";
+
+        message.innerHTML =
+
+            "File size must be below 20 MB.";
+
+        return;
+
+    }
+
+
+
+    /* DISABLE BUTTON */
+
+    button.disabled = true;
+
+    button.innerHTML =
+
+        "⏳ Uploading...";
+
+
+
+    try{
+
+
+        /* =================================================
+           CREATE SAFE FILE NAME
+
+           Original filename is NOT used as storage key.
+
+           This prevents errors caused by:
+           Marathi
+           Spaces
+           &
+           Special characters
+           ================================================= */
+
+
+        const safeFileName =
+
+            Date.now() +
+
+            "_" +
+
+            Math.random()
+
+            .toString(36)
+
+            .substring(2,10) +
+
+            "." +
+
+            extension;
+
+
+
+        /* STORAGE PATH */
+
+        const filePath =
+
+            standard +
+
+            "/" +
+
+            safeFileName;
+
+
+
+        console.log(
+
+            "Uploading:",
+
+            filePath
+
+        );
+
+
+
+        /* =================================================
+           UPLOAD FILE TO STORAGE
+           ================================================= */
+
+
+        const {
+
+            error: uploadError
+
+        } = await supabaseClient
+
+            .storage
+
+            .from(
+
+                BUCKET_NAME
+
+            )
+
+            .upload(
+
+                filePath,
+
+                file,
+
+                {
+
+                    cacheControl:"3600",
+
+                    upsert:false
+
+                }
 
             );
 
-        });
+
+        if(uploadError){
+
+            throw uploadError;
+
+        }
 
 
-    displayStudents(filtered);
+
+        /* =================================================
+           GET PUBLIC URL
+           ================================================= */
+
+
+        const {
+
+            data: publicData
+
+        } = supabaseClient
+
+            .storage
+
+            .from(
+
+                BUCKET_NAME
+
+            )
+
+            .getPublicUrl(
+
+                filePath
+
+            );
+
+
+        if(
+
+            !publicData ||
+
+            !publicData.publicUrl
+
+        ){
+
+            throw new Error(
+
+                "Unable to create public URL."
+
+            );
+
+        }
+
+
+        const fileUrl =
+
+            publicData.publicUrl;
+
+
+
+        /* =================================================
+           SAVE DATABASE RECORD
+           ================================================= */
+
+
+        const {
+
+            error: dbError
+
+        } = await supabaseClient
+
+            .from(
+
+                TABLE_NAME
+
+            )
+
+            .insert({
+
+                title:title,
+
+                standard:standard,
+
+                subject:subject,
+
+                file_name:file.name,
+
+                file_url:fileUrl
+
+            });
+
+
+        /* =================================================
+           DATABASE ERROR
+           ================================================= */
+
+
+        if(dbError){
+
+            /* Remove uploaded file */
+
+            await supabaseClient
+
+                .storage
+
+                .from(
+
+                    BUCKET_NAME
+
+                )
+
+                .remove([
+
+                    filePath
+
+                ]);
+
+
+            throw dbError;
+
+        }
+
+
+
+        /* =================================================
+           SUCCESS
+           ================================================= */
+
+
+        message.className =
+
+            "message success";
+
+
+        message.innerHTML =
+
+            "✅ Material uploaded successfully!";
+
+
+        /* CLEAR TITLE */
+
+        document.getElementById(
+
+            "title"
+
+        ).value = "";
+
+
+        /* CLEAR FILE */
+
+        fileInput.value = "";
+
+
+        /* REFRESH LIST */
+
+        await loadMaterials();
+
+
+    }
+
+    catch(error){
+
+
+        console.log(
+
+            "UPLOAD ERROR:",
+
+            error
+
+        );
+
+
+        message.className =
+
+            "message error";
+
+
+        message.innerHTML =
+
+            "❌ Upload failed: " +
+
+            error.message;
+
+
+    }
+
+
+
+    /* ENABLE BUTTON */
+
+    button.disabled = false;
+
+    button.innerHTML =
+
+        "📤 UPLOAD MATERIAL";
 
 }
 
 
-/* ==========================================
-   SECURITY - ESCAPE HTML
-========================================== */
 
-function escapeHtml(text){
+/* =====================================================
+   LOAD MATERIALS
+   ===================================================== */
+
+
+async function loadMaterials(){
+
+
+    const list =
+
+        document.getElementById(
+
+            "materialList"
+
+        );
+
+
+    list.innerHTML =
+
+        '<div class="loading">Loading...</div>';
+
+
+
+    const {
+
+        data,
+
+        error
+
+    } = await supabaseClient
+
+        .from(
+
+            TABLE_NAME
+
+        )
+
+        .select("*")
+
+        .order(
+
+            "created_at",
+
+            {
+
+                ascending:false
+
+            }
+
+        );
+
+
+
+    /* ERROR */
+
+    if(error){
+
+        console.log(
+
+            "LOAD ERROR:",
+
+            error
+
+        );
+
+
+        list.innerHTML =
+
+            '<div class="loading">Unable to load materials.</div>';
+
+        return;
+
+    }
+
+
+
+    /* NO DATA */
+
+    if(
+
+        !data ||
+
+        data.length === 0
+
+    ){
+
+        list.innerHTML =
+
+            '<div class="loading">No materials uploaded yet.</div>';
+
+        return;
+
+    }
+
+
+
+    /* CLEAR */
+
+    list.innerHTML = "";
+
+
+
+    /* CREATE ITEMS */
+
+    data.forEach(
+
+        function(material){
+
+
+            const div =
+
+                document.createElement(
+
+                    "div"
+
+                );
+
+
+            div.className =
+
+                "material";
+
+
+
+            div.innerHTML = `
+
+                <div class="material-info">
+
+                    <div class="material-title">
+
+                        ${escapeHTML(material.title)}
+
+                    </div>
+
+
+                    <div class="material-details">
+
+                        ${escapeHTML(material.standard)}
+
+                        • 
+
+                        ${escapeHTML(material.subject || "")}
+
+                    </div>
+
+
+                    <div class="material-file">
+
+                        ${escapeHTML(material.file_name)}
+
+                    </div>
+
+                </div>
+
+
+                <div class="action-area">
+
+                    <a
+
+                        href="${escapeHTML(material.file_url)}"
+
+                        target="_blank"
+
+                        class="open-btn"
+
+                    >
+
+                        OPEN
+
+                    </a>
+
+
+                    <button
+
+                        class="delete-btn"
+
+                        onclick="deleteMaterial(
+
+                            '${material.id}',
+
+                            '${encodeURIComponent(material.file_url)}'
+
+                        )"
+
+                    >
+
+                        DELETE
+
+                    </button>
+
+                </div>
+
+            `;
+
+
+            list.appendChild(
+
+                div
+
+            );
+
+        }
+
+    );
+
+}
+
+
+
+/* =====================================================
+   DELETE MATERIAL
+   ===================================================== */
+
+
+async function deleteMaterial(
+
+    id,
+
+    encodedUrl
+
+){
+
+
+    if(
+
+        !confirm(
+
+            "Are you sure you want to delete this material?"
+
+        )
+
+    ){
+
+        return;
+
+    }
+
+
+
+    try{
+
+
+        /* DECODE URL */
+
+        const fileUrl =
+
+            decodeURIComponent(
+
+                encodedUrl
+
+            );
+
+
+        const url =
+
+            new URL(
+
+                fileUrl
+
+            );
+
+
+        /* =================================================
+           FIND STORAGE PATH
+
+           Example URL:
+
+           /storage/v1/object/public/study%20material/7th/file.pdf
+
+           We extract:
+
+           7th/file.pdf
+           ================================================= */
+
+
+        const pathMarker =
+
+            "/study%20material/";
+
+
+        const decodedPath =
+
+            decodeURIComponent(
+
+                url.pathname
+
+            );
+
+
+        const marker =
+
+            "/study material/";
+
+
+        const markerIndex =
+
+            decodedPath.indexOf(
+
+                marker
+
+            );
+
+
+        if(markerIndex === -1){
+
+            throw new Error(
+
+                "Storage file path not found."
+
+            );
+
+        }
+
+
+        const filePath =
+
+            decodedPath.substring(
+
+                markerIndex +
+
+                marker.length
+
+            );
+
+
+
+        console.log(
+
+            "Deleting:",
+
+            filePath
+
+        );
+
+
+
+        /* =================================================
+           DELETE STORAGE FILE
+           ================================================= */
+
+
+        const {
+
+            error: storageError
+
+        } = await supabaseClient
+
+            .storage
+
+            .from(
+
+                BUCKET_NAME
+
+            )
+
+            .remove([
+
+                filePath
+
+            ]);
+
+
+
+        if(storageError){
+
+            console.log(
+
+                "Storage delete error:",
+
+                storageError
+
+            );
+
+        }
+
+
+
+        /* =================================================
+           DELETE DATABASE RECORD
+           ================================================= */
+
+
+        const {
+
+            error: dbError
+
+        } = await supabaseClient
+
+            .from(
+
+                TABLE_NAME
+
+            )
+
+            .delete()
+
+            .eq(
+
+                "id",
+
+                id
+
+            );
+
+
+        if(dbError){
+
+            throw dbError;
+
+        }
+
+
+
+        /* REFRESH */
+
+        await loadMaterials();
+
+
+    }
+
+    catch(error){
+
+
+        console.log(
+
+            "DELETE ERROR:",
+
+            error
+
+        );
+
+
+        alert(
+
+            "Delete failed: " +
+
+            error.message
+
+        );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   ESCAPE HTML
+   ===================================================== */
+
+
+function escapeHTML(value){
+
 
     const div =
-        document.createElement("div");
+
+        document.createElement(
+
+            "div"
+
+        );
+
 
     div.textContent =
-        text || "";
+
+        value || "";
+
 
     return div.innerHTML;
 
 }
 
 
-/* ==========================================
-   CHECK EXISTING SESSION
-========================================== */
 
-async function checkLogin(){
-
-    const { data } =
-        await supabaseClient.auth.getSession();
+/* =====================================================
+   START
+   ===================================================== */
 
 
-    if(
-        data &&
-        data.session
-    ){
-
-        showDashboard();
-
-    }
-
-}
-
-
-checkLogin();
-
-
-/* ==========================================
-   AUTH STATE
-========================================== */
-
-supabaseClient.auth.onAuthStateChange(
-    function(event, session){
-
-        if(session){
-
-            showDashboard();
-
-        }
-
-    }
-);
+loadMaterials();
 
 </script>
 
+
 </body>
+
 </html>
+```
