@@ -1,20 +1,29 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Sarvagya Classes | Gaurav Shinde Sir</title>
 
-<!-- SUPABASE -->
+
+<!-- =========================================================
+     SUPABASE
+     ========================================================= -->
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 
 <style>
 
 /* =========================================================
    SARVAGYA CLASSES
-   Complete Responsive Website
+   COMPLETE RESPONSIVE WEBSITE
    ========================================================= */
 
 *{
@@ -23,776 +32,1452 @@
     box-sizing:border-box;
 }
 
+
 html{
     scroll-behavior:smooth;
 }
 
+
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:#f4f7fb;
     color:#172033;
     line-height:1.6;
 }
+
 
 /* =========================================================
    VARIABLES
    ========================================================= */
 
 :root{
+
     --dark:#172033;
+
     --dark2:#26364d;
+
     --primary:#2563eb;
+
     --primary2:#1d4ed8;
+
     --yellow:#ffd43b;
+
     --green:#16a34a;
+
     --red:#dc2626;
+
     --white:#ffffff;
+
     --light:#f4f7fb;
+
     --gray:#64748b;
+
     --border:#e2e8f0;
+
     --shadow:0 10px 30px rgba(15,23,42,.08);
+
 }
+
 
 /* =========================================================
    HEADER
    ========================================================= */
 
 header{
+
     position:sticky;
+
     top:0;
+
     z-index:1000;
+
     background:rgba(23,32,51,.97);
+
     color:white;
+
     padding:15px 7%;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
     gap:20px;
+
     box-shadow:0 3px 15px rgba(0,0,0,.15);
+
 }
+
 
 .logo-area{
+
     display:flex;
+
     align-items:center;
+
     gap:12px;
+
 }
+
 
 .logo-icon{
+
     width:48px;
+
     height:48px;
+
     border-radius:50%;
+
     background:var(--yellow);
+
     color:var(--dark);
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     font-weight:bold;
+
     font-size:18px;
+
 }
+
 
 .logo-text h1{
+
     font-size:21px;
+
     letter-spacing:1px;
+
 }
+
 
 .logo-text p{
+
     font-size:11px;
+
     opacity:.75;
+
 }
+
 
 nav{
+
     display:flex;
+
     align-items:center;
+
     gap:20px;
+
     flex-wrap:wrap;
+
 }
+
 
 nav a{
+
     color:white;
+
     text-decoration:none;
+
     font-size:14px;
+
     font-weight:bold;
+
     transition:.3s;
+
 }
 
+
 nav a:hover{
+
     color:var(--yellow);
+
 }
+
 
 /* =========================================================
    HERO
    ========================================================= */
 
 .hero{
+
     min-height:620px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     text-align:center;
+
     padding:80px 20px;
+
     color:white;
+
     background:
-    radial-gradient(circle at 20% 20%,rgba(37,99,235,.35),transparent 30%),
-    radial-gradient(circle at 80% 70%,rgba(255,212,59,.15),transparent 25%),
-    linear-gradient(135deg,#111827,#26364d,#172033);
+
+    radial-gradient(
+
+        circle at 20% 20%,
+
+        rgba(37,99,235,.35),
+
+        transparent 30%
+
+    ),
+
+    radial-gradient(
+
+        circle at 80% 70%,
+
+        rgba(255,212,59,.15),
+
+        transparent 25%
+
+    ),
+
+    linear-gradient(
+
+        135deg,
+
+        #111827,
+
+        #26364d,
+
+        #172033
+
+    );
+
 }
+
 
 .hero-content{
+
     max-width:850px;
+
 }
+
 
 .badge{
+
     display:inline-block;
+
     padding:8px 16px;
+
     border:1px solid rgba(255,255,255,.3);
+
     border-radius:30px;
+
     margin-bottom:22px;
+
     font-size:13px;
+
     letter-spacing:1px;
+
 }
+
 
 .hero h2{
+
     font-size:54px;
+
     line-height:1.15;
+
     margin-bottom:18px;
+
 }
+
 
 .hero h2 span{
+
     color:var(--yellow);
+
 }
+
 
 .hero h3{
+
     font-size:27px;
+
     margin-bottom:15px;
+
 }
+
 
 .hero p{
+
     font-size:17px;
+
     opacity:.9;
+
     max-width:650px;
+
     margin:auto;
+
 }
+
 
 .hero-buttons{
+
     margin-top:32px;
+
     display:flex;
+
     justify-content:center;
+
     gap:12px;
+
     flex-wrap:wrap;
+
 }
+
 
 .btn{
+
     display:inline-block;
+
     padding:14px 25px;
+
     border-radius:7px;
+
     text-decoration:none;
+
     font-weight:bold;
+
     transition:.3s;
+
 }
+
 
 .btn-primary{
+
     background:var(--yellow);
+
     color:var(--dark);
+
 }
+
 
 .btn-primary:hover{
+
     transform:translateY(-3px);
+
 }
+
 
 .btn-outline{
+
     border:1px solid rgba(255,255,255,.5);
+
     color:white;
+
 }
 
+
 .btn-outline:hover{
+
     background:white;
+
     color:var(--dark);
+
 }
+
 
 /* =========================================================
    GENERAL SECTION
    ========================================================= */
 
 section{
+
     padding:75px 7%;
+
 }
+
 
 .section-heading{
+
     text-align:center;
+
     margin-bottom:45px;
+
 }
+
 
 .section-heading .small{
+
     color:var(--primary);
+
     font-weight:bold;
+
     text-transform:uppercase;
+
     letter-spacing:2px;
+
     font-size:12px;
+
 }
+
 
 .section-heading h2{
+
     font-size:35px;
+
     margin-top:7px;
+
 }
 
+
 .section-heading p{
+
     color:var(--gray);
+
     margin-top:8px;
+
 }
+
 
 /* =========================================================
    STATS
    ========================================================= */
 
 .stats{
+
     margin-top:-50px;
+
     position:relative;
+
     z-index:5;
+
 }
+
 
 .stats-grid{
+
     max-width:1050px;
+
     margin:auto;
+
     display:grid;
+
     grid-template-columns:repeat(4,1fr);
+
     background:white;
+
     border-radius:15px;
+
     box-shadow:var(--shadow);
+
     overflow:hidden;
+
 }
+
 
 .stat{
+
     padding:28px 15px;
+
     text-align:center;
+
     border-right:1px solid var(--border);
+
 }
+
 
 .stat:last-child{
+
     border-right:none;
+
 }
+
 
 .stat strong{
+
     display:block;
+
     font-size:30px;
+
     color:var(--primary);
+
 }
 
+
 .stat span{
+
     font-size:13px;
+
     color:var(--gray);
+
 }
+
 
 /* =========================================================
    CLASSES
    ========================================================= */
 
 .class-grid{
+
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
+
     gap:25px;
+
 }
+
 
 .class-card{
+
     background:white;
+
     border-radius:15px;
+
     padding:32px;
+
     box-shadow:var(--shadow);
+
     transition:.3s;
+
     border:1px solid transparent;
+
 }
+
 
 .class-card:hover{
+
     transform:translateY(-7px);
+
     border-color:#dbeafe;
+
 }
+
 
 .class-number{
+
     width:55px;
+
     height:55px;
+
     border-radius:12px;
+
     background:#eff6ff;
+
     color:var(--primary);
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     font-size:21px;
+
     font-weight:bold;
+
     margin-bottom:20px;
+
 }
+
 
 .class-card h3{
+
     font-size:24px;
+
     margin-bottom:8px;
+
 }
+
 
 .class-card p{
+
     color:var(--gray);
+
     font-size:14px;
+
 }
+
 
 .class-card ul{
+
     margin-top:18px;
+
     list-style:none;
+
 }
+
 
 .class-card li{
+
     padding:7px 0;
+
     font-size:14px;
+
 }
 
+
 .class-card li::before{
+
     content:"✓";
+
     color:var(--green);
+
     font-weight:bold;
+
     margin-right:8px;
+
 }
+
 
 /* =========================================================
    STUDY MATERIAL
    ========================================================= */
 
 .material-section{
+
     background:#eef3f9;
+
 }
+
 
 .material-class{
+
+    max-width:1100px;
+
+    margin:0 auto 30px;
+
     background:white;
+
     padding:30px;
-    margin-bottom:30px;
+
     border-radius:15px;
+
     box-shadow:var(--shadow);
+
 }
+
 
 .material-title{
+
     display:flex;
+
     align-items:center;
+
     gap:12px;
+
     margin-bottom:20px;
+
     padding-bottom:15px;
+
     border-bottom:1px solid var(--border);
+
 }
+
 
 .material-title h3{
+
     font-size:24px;
+
 }
+
 
 .material-icon{
+
     width:45px;
+
     height:45px;
+
     border-radius:10px;
+
     background:#eff6ff;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     font-size:22px;
+
 }
+
 
 .material-grid{
+
     display:grid;
+
     grid-template-columns:repeat(2,1fr);
+
     gap:12px;
+
 }
+
 
 .material-item{
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
+
     gap:15px;
+
     padding:15px;
+
     background:#f8fafc;
+
     border:1px solid var(--border);
+
     border-radius:9px;
+
 }
+
+
+.material-info{
+
+    min-width:0;
+
+    flex:1;
+
+}
+
 
 .material-name{
+
     font-size:14px;
+
     font-weight:bold;
+
+    word-break:break-word;
+
 }
+
 
 .material-type{
+
     font-size:11px;
+
     color:var(--gray);
+
     margin-top:3px;
+
 }
+
+
+.material-loading{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:var(--gray);
+
+}
+
+
+.material-empty{
+
+    text-align:center;
+
+    padding:20px;
+
+    color:var(--gray);
+
+    background:#f8fafc;
+
+    border-radius:8px;
+
+}
+
 
 .open-btn{
+
     flex-shrink:0;
+
     padding:8px 13px;
+
     background:var(--primary);
+
     color:white;
+
     text-decoration:none;
+
     border-radius:5px;
+
     font-size:12px;
+
     font-weight:bold;
+
+    transition:.3s;
+
 }
 
+
 .open-btn:hover{
+
     background:var(--primary2);
+
 }
+
 
 /* =========================================================
    FEATURES
    ========================================================= */
 
 .feature-grid{
+
     display:grid;
+
     grid-template-columns:repeat(4,1fr);
+
     gap:20px;
+
 }
+
 
 .feature{
+
     text-align:center;
+
     background:white;
+
     padding:28px 20px;
+
     border-radius:12px;
+
     box-shadow:var(--shadow);
+
 }
+
 
 .feature-icon{
+
     font-size:32px;
+
     margin-bottom:12px;
+
 }
+
 
 .feature h3{
+
     font-size:17px;
+
     margin-bottom:7px;
+
 }
 
+
 .feature p{
+
     color:var(--gray);
+
     font-size:13px;
+
 }
+
 
 /* =========================================================
    ABOUT
    ========================================================= */
 
 .about{
+
     background:white;
+
 }
+
 
 .about-grid{
+
     max-width:1000px;
+
     margin:auto;
+
     display:grid;
+
     grid-template-columns:1fr 1.5fr;
+
     gap:45px;
+
     align-items:center;
+
 }
+
 
 .teacher-card{
-    background:linear-gradient(135deg,#172033,#34495e);
+
+    background:linear-gradient(
+
+        135deg,
+
+        #172033,
+
+        #34495e
+
+    );
+
     color:white;
+
     padding:45px 30px;
+
     text-align:center;
+
     border-radius:18px;
+
 }
+
 
 .teacher-avatar{
+
     width:110px;
+
     height:110px;
+
     margin:auto;
+
     border-radius:50%;
+
     background:var(--yellow);
+
     color:var(--dark);
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     font-size:35px;
+
     font-weight:bold;
+
     margin-bottom:20px;
+
 }
+
 
 .teacher-card h3{
+
     font-size:25px;
+
 }
+
 
 .teacher-card p{
+
     opacity:.8;
+
     font-size:14px;
+
 }
+
 
 .about-text h2{
+
     font-size:34px;
+
     margin-bottom:15px;
+
 }
+
 
 .about-text p{
+
     color:var(--gray);
+
     margin-bottom:15px;
+
 }
+
 
 .about-list{
+
     list-style:none;
+
     margin-top:20px;
+
 }
+
 
 .about-list li{
+
     margin:9px 0;
+
 }
 
+
 .about-list li::before{
+
     content:"✓";
+
     color:var(--green);
+
     font-weight:bold;
+
     margin-right:10px;
+
 }
+
 
 /* =========================================================
    CONTACT
    ========================================================= */
 
 .contact{
+
     background:#eef3f9;
+
 }
+
 
 .contact-box{
+
     max-width:850px;
+
     margin:auto;
+
     background:white;
+
     padding:45px;
+
     text-align:center;
+
     border-radius:18px;
+
     box-shadow:var(--shadow);
+
 }
+
 
 .contact-box h2{
+
     font-size:32px;
+
 }
+
 
 .contact-box p{
+
     color:var(--gray);
+
     margin:8px 0;
+
 }
+
 
 .contact-buttons{
+
     margin-top:25px;
+
     display:flex;
+
     justify-content:center;
+
     gap:12px;
+
     flex-wrap:wrap;
+
 }
+
 
 .call-btn{
+
     display:inline-block;
+
     padding:13px 25px;
+
     background:var(--dark);
+
     color:white;
+
     text-decoration:none;
+
     border-radius:7px;
+
     font-weight:bold;
+
 }
+
 
 .call-btn:hover{
+
     background:#000;
+
 }
+
 
 .whatsapp-btn{
+
     display:inline-block;
+
     padding:13px 25px;
+
     background:#25D366;
+
     color:white;
+
     text-decoration:none;
+
     border-radius:7px;
+
     font-weight:bold;
+
     transition:.3s;
+
 }
 
+
 .whatsapp-btn:hover{
+
     background:#128C7E;
+
     transform:translateY(-2px);
+
 }
+
 
 /* =========================================================
    LOCATION
    ========================================================= */
 
 .location-box{
-    margin-top:25px;
+
+    max-width:850px;
+
+    margin:25px auto 0;
+
     padding:18px;
+
     background:#f8fafc;
+
     border-radius:8px;
+
 }
+
+
+/* =========================================================
+   STUDENTS & FEES
+   ========================================================= */
+
+.students-section{
+
+    background:#f8fafc;
+
+}
+
+
+.student-class{
+
+    max-width:1100px;
+
+    margin:0 auto 30px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.student-class h3{
+
+    font-size:23px;
+
+    margin-bottom:18px;
+
+}
+
+
+.student-table-wrapper{
+
+    width:100%;
+
+    overflow-x:auto;
+
+}
+
+
+.student-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    min-width:550px;
+
+}
+
+
+.student-table th{
+
+    background:var(--dark);
+
+    color:white;
+
+    padding:13px;
+
+    text-align:left;
+
+    font-size:13px;
+
+}
+
+
+.student-table td{
+
+    padding:12px 13px;
+
+    border-bottom:1px solid var(--border);
+
+    font-size:14px;
+
+}
+
+
+.student-table tr:hover{
+
+    background:#f8fafc;
+
+}
+
+
+.paid{
+
+    display:inline-block;
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+}
+
+
+.pending{
+
+    display:inline-block;
+
+    background:#fee2e2;
+
+    color:#991b1b;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+}
+
+
+.partial{
+
+    display:inline-block;
+
+    background:#fef3c7;
+
+    color:#92400e;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+}
+
+
+.note-box{
+
+    max-width:1100px;
+
+    margin:0 auto 35px;
+
+    padding:15px 20px;
+
+    background:#fff7ed;
+
+    border-left:4px solid #f97316;
+
+    border-radius:7px;
+
+    color:#7c2d12;
+
+    font-size:13px;
+
+}
+
 
 /* =========================================================
    FOOTER
    ========================================================= */
 
 footer{
+
     background:#111827;
+
     color:white;
+
     text-align:center;
+
     padding:35px 20px;
+
 }
+
 
 .footer-logo{
+
     font-size:22px;
+
     font-weight:bold;
+
     margin-bottom:8px;
+
 }
+
 
 footer p{
+
     opacity:.7;
+
     font-size:13px;
+
 }
+
 
 .footer-links{
+
     margin:18px 0;
+
 }
+
 
 .footer-links a{
+
     color:white;
+
     text-decoration:none;
+
     margin:0 10px;
+
     font-size:13px;
+
 }
 
+
 .footer-links a:hover{
+
     color:var(--yellow);
+
 }
+
 
 /* =========================================================
    FLOATING WHATSAPP
    ========================================================= */
 
 .whatsapp-float{
+
     position:fixed;
+
     right:20px;
+
     bottom:20px;
+
     width:60px;
+
     height:60px;
+
     border-radius:50%;
+
     background:#25D366;
+
     color:white;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     text-decoration:none;
+
     font-size:28px;
+
     box-shadow:0 6px 20px rgba(0,0,0,.25);
+
     z-index:2000;
+
     transition:.3s;
+
 }
 
+
 .whatsapp-float:hover{
+
     transform:scale(1.08);
+
     background:#128C7E;
+
 }
+
 
 /* =========================================================
    BACK TO TOP
    ========================================================= */
 
 .top-btn{
+
     position:fixed;
+
     right:20px;
+
     bottom:90px;
+
     width:42px;
+
     height:42px;
+
     border-radius:50%;
+
     background:var(--dark);
+
     color:white;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     text-decoration:none;
+
     font-weight:bold;
+
     z-index:1500;
+
 }
 
-/* =========================================================
-   STUDENT FEES
-   ========================================================= */
-
-.students-section{
-    background:#f8fafc;
-}
-
-.student-class{
-    max-width:1100px;
-    margin:0 auto 30px;
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:var(--shadow);
-}
-
-.student-class h3{
-    font-size:23px;
-    margin-bottom:18px;
-}
-
-.student-table-wrapper{
-    width:100%;
-    overflow-x:auto;
-}
-
-.student-table{
-    width:100%;
-    border-collapse:collapse;
-    min-width:550px;
-}
-
-.student-table th{
-    background:var(--dark);
-    color:white;
-    padding:13px;
-    text-align:left;
-    font-size:13px;
-}
-
-.student-table td{
-    padding:12px 13px;
-    border-bottom:1px solid var(--border);
-    font-size:14px;
-}
-
-.student-table tr:hover{
-    background:#f8fafc;
-}
-
-.paid{
-    display:inline-block;
-    background:#dcfce7;
-    color:#166534;
-    padding:5px 10px;
-    border-radius:20px;
-    font-size:11px;
-    font-weight:bold;
-}
-
-.pending{
-    display:inline-block;
-    background:#fee2e2;
-    color:#991b1b;
-    padding:5px 10px;
-    border-radius:20px;
-    font-size:11px;
-    font-weight:bold;
-}
-
-/* PARTIAL STATUS */
-
-.partial{
-    display:inline-block;
-    background:#fef3c7;
-    color:#92400e;
-    padding:5px 10px;
-    border-radius:20px;
-    font-size:11px;
-    font-weight:bold;
-}
-
-.note-box{
-    max-width:1100px;
-    margin:0 auto 35px;
-    padding:15px 20px;
-    background:#fff7ed;
-    border-left:4px solid #f97316;
-    border-radius:7px;
-    color:#7c2d12;
-    font-size:13px;
-}
 
 /* =========================================================
    RESPONSIVE
@@ -801,127 +1486,218 @@ footer p{
 @media(max-width:950px){
 
     header{
+
         padding:15px 4%;
+
     }
+
 
     nav{
+
         gap:12px;
+
     }
+
 
     section{
+
         padding:60px 5%;
+
     }
+
 
     .stats-grid{
+
         grid-template-columns:repeat(2,1fr);
+
     }
+
 
     .stat:nth-child(2){
+
         border-right:none;
+
     }
+
 
     .class-grid{
+
         grid-template-columns:1fr;
+
     }
+
 
     .feature-grid{
+
         grid-template-columns:repeat(2,1fr);
+
     }
 
+
     .about-grid{
+
         grid-template-columns:1fr;
+
     }
+
 }
+
 
 @media(max-width:650px){
 
     header{
+
         position:relative;
+
         flex-direction:column;
+
         text-align:center;
+
     }
+
 
     .logo-area{
+
         justify-content:center;
+
     }
+
 
     nav{
+
         justify-content:center;
+
     }
+
 
     .hero{
+
         min-height:550px;
+
         padding:60px 18px;
+
     }
+
 
     .hero h2{
+
         font-size:38px;
+
     }
+
 
     .hero h3{
+
         font-size:21px;
+
     }
+
 
     .hero p{
+
         font-size:15px;
+
     }
+
 
     .stats{
+
         margin-top:-25px;
+
         padding-left:15px;
+
         padding-right:15px;
+
     }
+
 
     .stats-grid{
+
         grid-template-columns:repeat(2,1fr);
+
     }
+
 
     .stat{
+
         padding:20px 10px;
+
     }
+
 
     .stat strong{
+
         font-size:24px;
+
     }
+
 
     .section-heading h2{
+
         font-size:28px;
+
     }
+
 
     .material-grid{
+
         grid-template-columns:1fr;
+
     }
+
 
     .feature-grid{
+
         grid-template-columns:1fr;
+
     }
+
 
     .material-item{
+
         align-items:flex-start;
+
     }
+
 
     .contact-box{
+
         padding:30px 20px;
+
     }
 
+
     .contact-buttons{
+
         flex-direction:column;
+
     }
+
 
     .call-btn,
     .whatsapp-btn{
+
         width:100%;
+
     }
 
+
     .whatsapp-float{
+
         width:55px;
+
         height:55px;
+
         right:15px;
+
         bottom:15px;
+
     }
+
 }
 
 </style>
+
 </head>
 
 
@@ -937,14 +1713,26 @@ footer p{
     <div class="logo-area">
 
         <div class="logo-icon">
+
             SC
+
         </div>
+
 
         <div class="logo-text">
 
-            <h1>SARVAGYA CLASSES</h1>
+            <h1>
 
-            <p>SINCE 2014 • Gaurav Shinde Sir</p>
+                SARVAGYA CLASSES
+
+            </h1>
+
+
+            <p>
+
+                SINCE 2014 • Gaurav Shinde Sir
+
+            </p>
 
         </div>
 
@@ -953,15 +1741,39 @@ footer p{
 
     <nav>
 
-        <a href="#home">Home</a>
+        <a href="#home">
 
-        <a href="#classes">Classes</a>
+            Home
 
-        <a href="#material">Study Material</a>
+        </a>
 
-        <a href="#about">About</a>
 
-        <a href="#contact">Contact</a>
+        <a href="#classes">
+
+            Classes
+
+        </a>
+
+
+        <a href="#material">
+
+            Study Material
+
+        </a>
+
+
+        <a href="#about">
+
+            About
+
+        </a>
+
+
+        <a href="#contact">
+
+            Contact
+
+        </a>
 
     </nav>
 
@@ -977,35 +1789,65 @@ footer p{
 
     <div class="hero-content">
 
+
         <div class="badge">
+
             QUALITY EDUCATION • STRONG CONCEPTS
+
         </div>
 
+
         <h2>
+
             Learn Today.<br>
-            <span>Lead Tomorrow.</span>
+
+            <span>
+
+                Lead Tomorrow.
+
+            </span>
+
         </h2>
 
+
         <h3>
+
             Mathematics & Science
+
         </h3>
 
+
         <p>
+
             Sarvagya Classes provides concept-based learning,
+
             regular tests and quality study material for
+
             7th, 8th and 9th standard students.
+
         </p>
 
 
         <div class="hero-buttons">
 
-            <a href="#material" class="btn btn-primary">
+
+            <a
+                href="#material"
+                class="btn btn-primary">
+
                 📚 Study Material
+
             </a>
 
-            <a href="#classes" class="btn btn-outline">
+
+            <a
+                href="#classes"
+                class="btn btn-outline">
+
                 🎓 View Classes
+
             </a>
+
 
         </div>
 
@@ -1023,12 +1865,19 @@ footer p{
 
     <div class="stats-grid">
 
+
         <div class="stat">
 
-            <strong>2014</strong>
+            <strong>
+
+                2014
+
+            </strong>
 
             <span>
+
                 Since
+
             </span>
 
         </div>
@@ -1036,10 +1885,16 @@ footer p{
 
         <div class="stat">
 
-            <strong>3</strong>
+            <strong>
+
+                3
+
+            </strong>
 
             <span>
+
                 Standards
+
             </span>
 
         </div>
@@ -1047,10 +1902,16 @@ footer p{
 
         <div class="stat">
 
-            <strong>2</strong>
+            <strong>
+
+                2
+
+            </strong>
 
             <span>
+
                 Main Subjects
+
             </span>
 
         </div>
@@ -1058,10 +1919,16 @@ footer p{
 
         <div class="stat">
 
-            <strong>100%</strong>
+            <strong>
+
+                100%
+
+            </strong>
 
             <span>
+
                 Concept Focus
+
             </span>
 
         </div>
@@ -1078,21 +1945,32 @@ footer p{
 
 <section id="classes">
 
+
     <div class="section-heading">
 
+
         <div class="small">
+
             Our Classes
+
         </div>
 
+
         <h2>
+
             Choose Your Standard
+
         </h2>
 
+
         <p>
+
             Mathematics and Science learning for school students.
+
         </p>
 
     </div>
+
 
 
     <div class="class-grid">
@@ -1100,27 +1978,56 @@ footer p{
 
         <div class="class-card">
 
+
             <div class="class-number">
+
                 07
+
             </div>
 
+
             <h3>
+
                 7th Standard
+
             </h3>
 
+
             <p>
+
                 Foundation level learning with clear concepts.
+
             </p>
+
 
             <ul>
 
-                <li>Mathematics</li>
+                <li>
 
-                <li>Science</li>
+                    Mathematics
 
-                <li>Regular Tests</li>
+                </li>
 
-                <li>Practice Material</li>
+
+                <li>
+
+                    Science
+
+                </li>
+
+
+                <li>
+
+                    Regular Tests
+
+                </li>
+
+
+                <li>
+
+                    Practice Material
+
+                </li>
 
             </ul>
 
@@ -1130,27 +2037,56 @@ footer p{
 
         <div class="class-card">
 
+
             <div class="class-number">
+
                 08
+
             </div>
 
+
             <h3>
+
                 8th Standard
+
             </h3>
 
+
             <p>
+
                 Strong conceptual preparation for higher classes.
+
             </p>
+
 
             <ul>
 
-                <li>Mathematics</li>
+                <li>
 
-                <li>Science</li>
+                    Mathematics
 
-                <li>Regular Tests</li>
+                </li>
 
-                <li>Practice Material</li>
+
+                <li>
+
+                    Science
+
+                </li>
+
+
+                <li>
+
+                    Regular Tests
+
+                </li>
+
+
+                <li>
+
+                    Practice Material
+
+                </li>
 
             </ul>
 
@@ -1160,27 +2096,56 @@ footer p{
 
         <div class="class-card">
 
+
             <div class="class-number">
+
                 09
+
             </div>
 
+
             <h3>
+
                 9th Standard
+
             </h3>
 
+
             <p>
+
                 Exam-oriented learning with strong fundamentals.
+
             </p>
+
 
             <ul>
 
-                <li>Mathematics</li>
+                <li>
 
-                <li>Science</li>
+                    Mathematics
 
-                <li>Regular Tests</li>
+                </li>
 
-                <li>Exam Preparation</li>
+
+                <li>
+
+                    Science
+
+                </li>
+
+
+                <li>
+
+                    Regular Tests
+
+                </li>
+
+
+                <li>
+
+                    Exam Preparation
+
+                </li>
 
             </ul>
 
@@ -1194,147 +2159,79 @@ footer p{
 
 
 <!-- =========================================================
-     STUDY MATERIAL
+     DYNAMIC STUDY MATERIAL
      ========================================================= -->
 
-<section id="material" class="material-section">
+<section
+    id="material"
+    class="material-section">
+
 
     <div class="section-heading">
 
+
         <div class="small">
+
             Study Material
+
         </div>
 
+
         <h2>
+
             Books & Test Papers
+
         </h2>
 
+
         <p>
-            Click on any material to open it.
+
+            New study material is added regularly.
+
         </p>
 
     </div>
 
 
 
-    <!-- 7TH MATERIAL -->
+    <!-- =====================================================
+         7TH STANDARD MATERIAL
+         ===================================================== -->
 
-    <div class="material-class">
+    <div
+        class="material-class"
+        id="material7">
+
 
         <div class="material-title">
 
+
             <div class="material-icon">
+
                 📘
+
             </div>
 
+
             <h3>
+
                 7th Standard
+
             </h3>
+
 
         </div>
 
 
-        <div class="material-grid">
+        <div
+            id="materials7"
+            class="material-grid">
 
+            <div class="material-loading">
 
-            <div class="material-item">
-
-                <div>
-
-                    <div class="material-name">
-                        7th Mathematics Book
-                    </div>
-
-                    <div class="material-type">
-                        PDF • Mathematics
-                    </div>
-
-                </div>
-
-                <a
-                    href="./7TH MATH BOOK.pdf"
-                    target="_blank"
-                    class="open-btn">
-                    OPEN
-                </a>
+                Loading materials...
 
             </div>
-
-
-
-            <div class="material-item">
-
-                <div>
-
-                    <div class="material-name">
-                        7th Science Book
-                    </div>
-
-                    <div class="material-type">
-                        PDF • Science
-                    </div>
-
-                </div>
-
-                <a
-                    href="./7TH SCIENCE BOOK.pdf"
-                    target="_blank"
-                    class="open-btn">
-                    OPEN
-                </a>
-
-            </div>
-
-
-
-            <div class="material-item">
-
-                <div>
-
-                    <div class="material-name">
-                        7th Test - English
-                    </div>
-
-                    <div class="material-type">
-                        DOCX • Test Paper
-                    </div>
-
-                </div>
-
-                <a
-                    href="./7th test ei.docx"
-                    target="_blank"
-                    class="open-btn">
-                    OPEN
-                </a>
-
-            </div>
-
-
-
-            <div class="material-item">
-
-                <div>
-
-                    <div class="material-name">
-                        7th Test - Marathi
-                    </div>
-
-                    <div class="material-type">
-                        DOCX • Test Paper
-                    </div>
-
-                </div>
-
-                <a
-                    href="./7th test mm.docx"
-                    target="_blank"
-                    class="open-btn">
-                    OPEN
-                </a>
-
-            </div>
-
 
         </div>
 
@@ -1342,74 +2239,44 @@ footer p{
 
 
 
-    <!-- 8TH MATERIAL -->
+    <!-- =====================================================
+         8TH STANDARD MATERIAL
+         ===================================================== -->
 
-    <div class="material-class">
+    <div
+        class="material-class"
+        id="material8">
+
 
         <div class="material-title">
 
+
             <div class="material-icon">
+
                 📗
+
             </div>
 
+
             <h3>
+
                 8th Standard
+
             </h3>
+
 
         </div>
 
 
-        <div class="material-grid">
+        <div
+            id="materials8"
+            class="material-grid">
 
+            <div class="material-loading">
 
-            <div class="material-item">
-
-                <div>
-
-                    <div class="material-name">
-                        8th Mathematics Book
-                    </div>
-
-                    <div class="material-type">
-                        PDF • Mathematics
-                    </div>
-
-                </div>
-
-                <a
-                    href="./8TH MATH BOOK.pdf"
-                    target="_blank"
-                    class="open-btn">
-                    OPEN
-                </a>
+                Loading materials...
 
             </div>
-
-
-
-            <div class="material-item">
-
-                <div>
-
-                    <div class="material-name">
-                        8th Test 1
-                    </div>
-
-                    <div class="material-type">
-                        DOCX • Test Paper
-                    </div>
-
-                </div>
-
-                <a
-                    href="./8th test 1.docx"
-                    target="_blank"
-                    class="open-btn">
-                    OPEN
-                </a>
-
-            </div>
-
 
         </div>
 
@@ -1417,71 +2284,44 @@ footer p{
 
 
 
-    <!-- 9TH MATERIAL -->
+    <!-- =====================================================
+         9TH STANDARD MATERIAL
+         ===================================================== -->
 
-    <div class="material-class">
+    <div
+        class="material-class"
+        id="material9">
+
 
         <div class="material-title">
 
+
             <div class="material-icon">
+
                 📕
+
+
             </div>
 
+
             <h3>
+
                 9th Standard
+
             </h3>
 
         </div>
 
 
-        <div class="material-grid">
+        <div
+            id="materials9"
+            class="material-grid">
 
+            <div class="material-loading">
 
-            <div class="material-item">
-
-                <div>
-
-                    <div class="material-name">
-                        9th Exam - 13 September
-                    </div>
-
-                    <div class="material-type">
-                        DOCX • Examination Paper
-                    </div>
-
-                </div>
-
-                <a
-                    href="./9th exam 13 sep.docx"
-                    target="_blank"
-                    class="open-btn">
-                    OPEN
-                </a>
+                Loading materials...
 
             </div>
-
-
-
-            <div class="material-item">
-
-                <div>
-
-                    <div class="material-name">
-                        More Study Material
-                    </div>
-
-                    <div class="material-type">
-                        Add your PDF/DOCX here
-                    </div>
-
-                </div>
-
-                <span class="open-btn">
-                    SOON
-                </span>
-
-            </div>
-
 
         </div>
 
@@ -1497,17 +2337,25 @@ footer p{
 
 <section>
 
+
     <div class="section-heading">
 
+
         <div class="small">
+
             Why Sarvagya Classes
+
         </div>
 
+
         <h2>
+
             Learning That Builds Confidence
+
         </h2>
 
     </div>
+
 
 
     <div class="feature-grid">
@@ -1515,16 +2363,25 @@ footer p{
 
         <div class="feature">
 
+
             <div class="feature-icon">
+
                 🎯
+
             </div>
 
+
             <h3>
+
                 Strong Concepts
+
             </h3>
 
+
             <p>
+
                 Focus on understanding concepts instead of memorising.
+
             </p>
 
         </div>
@@ -1533,16 +2390,25 @@ footer p{
 
         <div class="feature">
 
+
             <div class="feature-icon">
+
                 📝
+
             </div>
 
+
             <h3>
+
                 Regular Tests
+
             </h3>
 
+
             <p>
+
                 Regular practice helps students prepare confidently.
+
             </p>
 
         </div>
@@ -1551,16 +2417,25 @@ footer p{
 
         <div class="feature">
 
+
             <div class="feature-icon">
+
                 📚
+
             </div>
 
+
             <h3>
+
                 Study Material
+
             </h3>
 
+
             <p>
+
                 Useful books, tests and practice material in one place.
+
             </p>
 
         </div>
@@ -1569,16 +2444,25 @@ footer p{
 
         <div class="feature">
 
+
             <div class="feature-icon">
+
                 👨‍🏫
+
             </div>
 
+
             <h3>
+
                 Personal Guidance
+
             </h3>
 
+
             <p>
+
                 Proper guidance for Mathematics and Science.
+
             </p>
 
         </div>
@@ -1594,27 +2478,42 @@ footer p{
      ABOUT
      ========================================================= -->
 
-<section id="about" class="about">
+<section
+    id="about"
+    class="about">
+
 
     <div class="about-grid">
 
 
         <div class="teacher-card">
 
+
             <div class="teacher-avatar">
+
                 GS
+
             </div>
 
+
             <h3>
+
                 Gaurav Shinde Sir
+
             </h3>
 
-            <p>
-                Mathematics & Science Teacher
-            </p>
 
             <p>
+
+                Mathematics & Science Teacher
+
+            </p>
+
+
+            <p>
+
                 Sarvagya Classes
+
             </p>
 
         </div>
@@ -1623,44 +2522,73 @@ footer p{
 
         <div class="about-text">
 
+
             <h2>
+
                 About Sarvagya Classes
+
             </h2>
 
-            <p>
-                Sarvagya Classes is focused on providing
-                quality Mathematics and Science education
-                for school students.
-            </p>
 
             <p>
+
+                Sarvagya Classes is focused on providing
+
+                quality Mathematics and Science education
+
+                for school students.
+
+            </p>
+
+
+            <p>
+
                 Our aim is to make difficult concepts simple,
+
                 improve problem-solving ability and develop
+
                 confidence through regular practice.
+
             </p>
 
 
             <ul class="about-list">
 
+
                 <li>
+
                     7th, 8th and 9th Standard
+
                 </li>
 
+
                 <li>
+
                     Mathematics & Science
+
                 </li>
 
+
                 <li>
+
                     Concept-based teaching
+
                 </li>
 
+
                 <li>
+
                     Regular tests and practice
+
                 </li>
 
+
                 <li>
+
                     Quality study material
+
                 </li>
+
 
             </ul>
 
@@ -1679,14 +2607,21 @@ footer p{
 
 <section>
 
+
     <div class="section-heading">
 
+
         <div class="small">
+
             Our Location
+
         </div>
 
+
         <h2>
+
             Sarvagya Classes
+
         </h2>
 
     </div>
@@ -1694,9 +2629,14 @@ footer p{
 
     <div class="location-box">
 
+
         <p style="text-align:center;">
 
-            📍 <strong>Nimgaon Khalu, Shrigonda</strong>
+            📍 <strong>
+
+                Nimgaon Khalu, Shrigonda
+
+            </strong>
 
         </p>
 
@@ -1710,45 +2650,76 @@ footer p{
      CONTACT
      ========================================================= -->
 
-<section id="contact" class="contact">
+<section
+    id="contact"
+    class="contact">
+
 
     <div class="section-heading">
 
+
         <div class="small">
+
             Contact
+
         </div>
 
+
         <h2>
+
             Get In Touch
+
         </h2>
 
+
         <p>
+
             For admission and class information, contact us.
+
         </p>
 
     </div>
 
 
+
     <div class="contact-box">
 
+
         <h2>
+
             Gaurav Shinde Sir
+
         </h2>
 
+
         <p>
+
             Mathematics & Science
+
         </p>
 
+
         <p>
+
             📍 Nimgaon Khalu, Shrigonda
+
         </p>
 
+
         <p>
-            📞 <strong>8262055677</strong>
+
+            📞 <strong>
+
+                8262055677
+
+            </strong>
+
         </p>
+
 
 
         <div class="contact-buttons">
+
 
             <a
                 href="tel:8262055677"
@@ -1778,29 +2749,40 @@ footer p{
 
 
 <!-- =========================================================
-     DYNAMIC STUDENTS & FEES STATUS
+     STUDENT RECORDS
      ========================================================= -->
 
-<section id="students" class="students-section">
+<section
+    id="students"
+    class="students-section">
+
 
     <div class="section-heading">
 
+
         <div class="small">
+
             Student Records
+
         </div>
 
+
         <h2>
+
             Students & Fees Status
+
         </h2>
 
+
         <p>
+
             Students enrolled at Sarvagya Classes.
+
         </p>
 
     </div>
 
 
-    <!-- LOADING MESSAGE -->
 
     <div
         id="studentLoading"
@@ -1813,38 +2795,49 @@ footer p{
 
 
 
-    <!-- =====================================================
-         7TH STANDARD
-         ===================================================== -->
+    <!-- 7TH -->
 
     <div
         class="student-class"
         id="class7"
         style="display:none;">
 
+
         <h3>
+
             📘 7th Standard
+
         </h3>
 
 
         <div class="student-table-wrapper">
 
+
             <table class="student-table">
+
 
                 <thead>
 
                     <tr>
 
                         <th>
+
                             Sr. No.
+
                         </th>
 
+
                         <th>
+
                             Student Name
+
                         </th>
 
+
                         <th>
+
                             Fees Status
+
                         </th>
 
                     </tr>
@@ -1865,38 +2858,49 @@ footer p{
 
 
 
-    <!-- =====================================================
-         8TH STANDARD
-         ===================================================== -->
+    <!-- 8TH -->
 
     <div
         class="student-class"
         id="class8"
         style="display:none;">
 
+
         <h3>
+
             📗 8th Standard
+
         </h3>
 
 
         <div class="student-table-wrapper">
 
+
             <table class="student-table">
+
 
                 <thead>
 
                     <tr>
 
                         <th>
+
                             Sr. No.
+
                         </th>
 
+
                         <th>
+
                             Student Name
+
                         </th>
 
+
                         <th>
+
                             Fees Status
+
                         </th>
 
                     </tr>
@@ -1917,38 +2921,49 @@ footer p{
 
 
 
-    <!-- =====================================================
-         9TH STANDARD
-         ===================================================== -->
+    <!-- 9TH -->
 
     <div
         class="student-class"
         id="class9"
         style="display:none;">
 
+
         <h3>
+
             📕 9th Standard
+
         </h3>
 
 
         <div class="student-table-wrapper">
 
+
             <table class="student-table">
+
 
                 <thead>
 
                     <tr>
 
                         <th>
+
                             Sr. No.
+
                         </th>
 
+
                         <th>
+
                             Student Name
+
                         </th>
 
+
                         <th>
+
                             Fees Status
+
                         </th>
 
                     </tr>
@@ -1978,44 +2993,72 @@ footer p{
 
 <footer>
 
+
     <div class="footer-logo">
+
         SARVAGYA CLASSES
+
     </div>
 
+
     <p>
+
         Gaurav Shinde Sir • Mathematics & Science
+
     </p>
+
 
     <div class="footer-links">
 
+
         <a href="#home">
+
             Home
+
         </a>
+
 
         <a href="#classes">
+
             Classes
+
         </a>
+
 
         <a href="#material">
+
             Study Material
+
         </a>
+
 
         <a href="#about">
+
             About
+
         </a>
 
+
         <a href="#contact">
+
             Contact
+
         </a>
 
     </div>
 
-    <p>
-        © 2026 Sarvagya Classes. All Rights Reserved.
-    </p>
 
     <p>
+
+        © 2026 Sarvagya Classes. All Rights Reserved.
+
+    </p>
+
+
+    <p>
+
         Nimgaon Khalu, Shrigonda
+
     </p>
 
 </footer>
@@ -2023,7 +3066,7 @@ footer p{
 
 
 <!-- =========================================================
-     FLOATING WHATSAPP
+     WHATSAPP
      ========================================================= -->
 
 <a
@@ -2055,92 +3098,188 @@ footer p{
 
 
 <!-- =========================================================
-     SUPABASE STUDENT SYSTEM
+     SUPABASE SYSTEM
      ========================================================= -->
 
 <script>
 
+
+/* =========================================================
+   SUPABASE CONFIG
+   ========================================================= */
+
+
 const SUPABASE_URL =
+
 "https://dosftayxhqvwqnutrbge.supabase.co";
 
+
 const SUPABASE_KEY =
+
 "sb_publishable_saemaeefPQJTpEPLztTw4w_jY0WQLhS";
 
 
 const supabaseClient =
+
 window.supabase.createClient(
+
     SUPABASE_URL,
+
     SUPABASE_KEY
+
 );
 
 
 
 /* =========================================================
-   LOAD STUDENTS FROM SUPABASE
+   LOAD STUDY MATERIAL
    ========================================================= */
 
-async function loadPublicStudents(){
 
-    const loading =
-        document.getElementById("studentLoading");
+async function loadStudyMaterials(){
 
 
-    const { data, error } =
-        await supabaseClient
-        .from("students")
+    const containers = {
+
+        "7th":
+            document.getElementById("materials7"),
+
+        "8th":
+            document.getElementById("materials8"),
+
+        "9th":
+            document.getElementById("materials9")
+
+    };
+
+
+    /* SHOW LOADING */
+
+    containers["7th"].innerHTML =
+
+        '<div class="material-loading">Loading materials...</div>';
+
+    containers["8th"].innerHTML =
+
+        '<div class="material-loading">Loading materials...</div>';
+
+    containers["9th"].innerHTML =
+
+        '<div class="material-loading">Loading materials...</div>';
+
+
+
+    /* =====================================================
+       GET MATERIALS FROM SUPABASE
+       ===================================================== */
+
+
+    const {
+
+        data,
+
+        error
+
+    } = await supabaseClient
+
+        .from("study_materials")
+
         .select(
-            "id,name,standard,batch,total_fee,paid_fee"
+
+            "id,title,standard,subject,file_name,file_url,created_at"
+
         )
+
         .order(
+
             "created_at",
+
             {
-                ascending:true
+
+                ascending:false
+
             }
+
         );
+
 
 
     /* =====================================================
        ERROR
        ===================================================== */
 
+
     if(error){
 
-        loading.style.display = "block";
-
-        loading.innerHTML =
-            "Unable to load student records.";
-
         console.log(
-            "Supabase Error:",
+
+            "Study Material Error:",
+
             error
+
         );
 
+
+        containers["7th"].innerHTML =
+
+            '<div class="material-empty">Unable to load materials.</div>';
+
+        containers["8th"].innerHTML =
+
+            '<div class="material-empty">Unable to load materials.</div>';
+
+        containers["9th"].innerHTML =
+
+            '<div class="material-empty">Unable to load materials.</div>';
+
         return;
+
     }
 
 
 
     /* =====================================================
-       HIDE LOADING
+       EMPTY
        ===================================================== */
 
-    loading.style.display = "none";
+
+    if(
+
+        !data ||
+
+        data.length === 0
+
+    ){
+
+        containers["7th"].innerHTML =
+
+            '<div class="material-empty">No study material available yet.</div>';
+
+        containers["8th"].innerHTML =
+
+            '<div class="material-empty">No study material available yet.</div>';
+
+        containers["9th"].innerHTML =
+
+            '<div class="material-empty">No study material available yet.</div>';
+
+        return;
+
+    }
 
 
-    document.getElementById("students7")
-        .innerHTML = "";
 
-    document.getElementById("students8")
-        .innerHTML = "";
+    /* CLEAR */
 
-    document.getElementById("students9")
-        .innerHTML = "";
+    containers["7th"].innerHTML = "";
+
+    containers["8th"].innerHTML = "";
+
+    containers["9th"].innerHTML = "";
 
 
 
-    /* =====================================================
-       COUNTERS
-       ===================================================== */
+    /* COUNTERS */
 
     let count7 = 0;
 
@@ -2151,170 +3290,636 @@ async function loadPublicStudents(){
 
 
     /* =====================================================
-       LOOP STUDENTS
+       LOOP
        ===================================================== */
 
-    data.forEach(function(student){
+
+    data.forEach(
+
+        function(material){
 
 
-        const total =
-            Number(
-                student.total_fee || 0
+            const standard =
+
+                material.standard;
+
+
+            /* IGNORE OTHER STANDARDS */
+
+            if(
+
+                !containers[standard]
+
+            ){
+
+                return;
+
+            }
+
+
+
+            /* =================================================
+               CREATE MATERIAL CARD
+               ================================================= */
+
+
+            const item =
+
+                document.createElement(
+
+                    "div"
+
+                );
+
+
+            item.className =
+
+                "material-item";
+
+
+
+            /* =================================================
+               FILE TYPE
+               ================================================= */
+
+
+            let fileType =
+
+                "FILE";
+
+
+            if(material.file_name){
+
+                const extension =
+
+                    material.file_name
+
+                    .split(".")
+
+                    .pop()
+
+                    .toUpperCase();
+
+
+                if(extension){
+
+                    fileType = extension;
+
+                }
+
+            }
+
+
+
+            /* =================================================
+               SUBJECT
+               ================================================= */
+
+
+            const subject =
+
+                material.subject ||
+
+                "Study Material";
+
+
+
+            /* =================================================
+               SAFE HTML
+               ================================================= */
+
+
+            const safeTitle =
+
+                escapeMaterialHTML(
+
+                    material.title
+
+                );
+
+
+            const safeSubject =
+
+                escapeMaterialHTML(
+
+                    subject
+
+                );
+
+
+            const safeFileType =
+
+                escapeMaterialHTML(
+
+                    fileType
+
+                );
+
+
+            const safeFileUrl =
+
+                escapeMaterialHTML(
+
+                    material.file_url
+
+                );
+
+
+
+            /* =================================================
+               CARD HTML
+               ================================================= */
+
+
+            item.innerHTML = `
+
+                <div class="material-info">
+
+
+                    <div class="material-name">
+
+                        ${safeTitle}
+
+                    </div>
+
+
+                    <div class="material-type">
+
+                        ${safeFileType}
+
+                        •
+                        ${safeSubject}
+
+                    </div>
+
+
+                </div>
+
+
+                <a
+
+                    href="${safeFileUrl}"
+
+                    target="_blank"
+
+                    rel="noopener"
+
+                    class="open-btn">
+
+                    OPEN
+
+                </a>
+
+            `;
+
+
+
+            containers[standard].appendChild(
+
+                item
+
             );
 
 
-        const paid =
-            Number(
-                student.paid_fee || 0
-            );
+
+            /* COUNTERS */
+
+            if(standard === "7th"){
+
+                count7++;
+
+            }
 
 
-        const remaining =
-            Math.max(
-                total - paid,
-                0
-            );
+            if(standard === "8th"){
+
+                count8++;
+
+            }
 
 
+            if(standard === "9th"){
 
-        /* =================================================
-           FEES STATUS
-           ================================================= */
+                count9++;
 
-        let statusText;
-
-        let statusClass;
-
-
-        if(remaining <= 0){
-
-            statusText = "PAID";
-
-            statusClass = "paid";
+            }
 
         }
 
-        else if(paid > 0){
-
-            statusText = "PARTIAL";
-
-            statusClass = "partial";
-
-        }
-
-        else{
-
-            statusText = "PENDING";
-
-            statusClass = "pending";
-
-        }
-
-
-
-        /* =================================================
-           FIND STANDARD TABLE
-           ================================================= */
-
-        let tbody;
-
-        let count;
-
-
-        if(student.standard === "7th"){
-
-            tbody =
-                document.getElementById(
-                    "students7"
-                );
-
-            count7++;
-
-            count = count7;
-
-        }
-
-        else if(student.standard === "8th"){
-
-            tbody =
-                document.getElementById(
-                    "students8"
-                );
-
-            count8++;
-
-            count = count8;
-
-        }
-
-        else if(student.standard === "9th"){
-
-            tbody =
-                document.getElementById(
-                    "students9"
-                );
-
-            count9++;
-
-            count = count9;
-
-        }
-
-        else{
-
-            return;
-
-        }
-
-
-
-        /* =================================================
-           CREATE TABLE ROW
-           ================================================= */
-
-        const row =
-            document.createElement("tr");
-
-
-        row.innerHTML = `
-
-            <td>
-                ${count}
-            </td>
-
-            <td>
-                ${escapeStudentName(
-                    student.name
-                )}
-            </td>
-
-            <td>
-
-                <span class="${statusClass}">
-                    ${statusText}
-                </span>
-
-            </td>
-
-        `;
-
-
-        tbody.appendChild(row);
-
-
-    });
+    );
 
 
 
     /* =====================================================
-       SHOW STANDARD SECTIONS
+       EMPTY STANDARD MESSAGE
        ===================================================== */
+
+
+    if(count7 === 0){
+
+        containers["7th"].innerHTML =
+
+            '<div class="material-empty">No material uploaded for 7th Standard yet.</div>';
+
+    }
+
+
+    if(count8 === 0){
+
+        containers["8th"].innerHTML =
+
+            '<div class="material-empty">No material uploaded for 8th Standard yet.</div>';
+
+    }
+
+
+    if(count9 === 0){
+
+        containers["9th"].innerHTML =
+
+            '<div class="material-empty">No material uploaded for 9th Standard yet.</div>';
+
+    }
+
+}
+
+
+
+/* =========================================================
+   ESCAPE MATERIAL HTML
+   ========================================================= */
+
+
+function escapeMaterialHTML(value){
+
+
+    const div =
+
+        document.createElement(
+
+            "div"
+
+        );
+
+
+    div.textContent =
+
+        value || "";
+
+
+    return div.innerHTML;
+
+}
+
+
+
+/* =========================================================
+   LOAD STUDENTS
+   ========================================================= */
+
+
+async function loadPublicStudents(){
+
+
+    const loading =
+
+        document.getElementById(
+
+            "studentLoading"
+
+        );
+
+
+    const {
+
+        data,
+
+        error
+
+    } = await supabaseClient
+
+        .from("students")
+
+        .select(
+
+            "id,name,standard,batch,total_fee,paid_fee"
+
+        )
+
+        .order(
+
+            "created_at",
+
+            {
+
+                ascending:true
+
+            }
+
+        );
+
+
+
+    /* ERROR */
+
+    if(error){
+
+        loading.style.display =
+
+            "block";
+
+
+        loading.innerHTML =
+
+            "Unable to load student records.";
+
+
+        console.log(
+
+            "Student Supabase Error:",
+
+            error
+
+        );
+
+
+        return;
+
+    }
+
+
+
+    /* HIDE LOADING */
+
+    loading.style.display =
+
+        "none";
+
+
+
+    /* CLEAR TABLES */
+
+    document.getElementById(
+
+        "students7"
+
+    ).innerHTML = "";
+
+
+    document.getElementById(
+
+        "students8"
+
+    ).innerHTML = "";
+
+
+    document.getElementById(
+
+        "students9"
+
+    ).innerHTML = "";
+
+
+
+    /* COUNTERS */
+
+    let count7 = 0;
+
+    let count8 = 0;
+
+    let count9 = 0;
+
+
+
+    /* =====================================================
+       STUDENTS LOOP
+       ===================================================== */
+
+
+    data.forEach(
+
+        function(student){
+
+
+            const total =
+
+                Number(
+
+                    student.total_fee || 0
+
+                );
+
+
+            const paid =
+
+                Number(
+
+                    student.paid_fee || 0
+
+                );
+
+
+            const remaining =
+
+                Math.max(
+
+                    total - paid,
+
+                    0
+
+                );
+
+
+
+            /* =================================================
+               FEE STATUS
+               ================================================= */
+
+
+            let statusText;
+
+            let statusClass;
+
+
+            if(remaining <= 0){
+
+                statusText =
+
+                    "PAID";
+
+                statusClass =
+
+                    "paid";
+
+            }
+
+            else if(paid > 0){
+
+                statusText =
+
+                    "PARTIAL";
+
+                statusClass =
+
+                    "partial";
+
+            }
+
+            else{
+
+                statusText =
+
+                    "PENDING";
+
+                statusClass =
+
+                    "pending";
+
+            }
+
+
+
+            /* =================================================
+               STANDARD
+               ================================================= */
+
+
+            let tbody;
+
+            let count;
+
+
+            if(student.standard === "7th"){
+
+                tbody =
+
+                    document.getElementById(
+
+                        "students7"
+
+                    );
+
+                count7++;
+
+                count = count7;
+
+            }
+
+            else if(student.standard === "8th"){
+
+                tbody =
+
+                    document.getElementById(
+
+                        "students8"
+
+                    );
+
+                count8++;
+
+                count = count8;
+
+            }
+
+            else if(student.standard === "9th"){
+
+                tbody =
+
+                    document.getElementById(
+
+                        "students9"
+
+                    );
+
+                count9++;
+
+                count = count9;
+
+            }
+
+            else{
+
+                return;
+
+            }
+
+
+
+            /* =================================================
+               ROW
+               ================================================= */
+
+
+            const row =
+
+                document.createElement(
+
+                    "tr"
+
+                );
+
+
+            row.innerHTML = `
+
+                <td>
+
+                    ${count}
+
+                </td>
+
+
+                <td>
+
+                    ${escapeStudentName(
+
+                        student.name
+
+                    )}
+
+                </td>
+
+
+                <td>
+
+                    <span
+
+                        class="${statusClass}">
+
+                        ${statusText}
+
+                    </span>
+
+                </td>
+
+            `;
+
+
+            tbody.appendChild(
+
+                row
+
+            );
+
+        }
+
+    );
+
+
+
+    /* =====================================================
+       SHOW CLASS SECTIONS
+       ===================================================== */
+
 
     if(count7 > 0){
 
         document.getElementById(
+
             "class7"
-        ).style.display = "block";
+
+        ).style.display =
+
+            "block";
 
     }
 
@@ -2322,8 +3927,12 @@ async function loadPublicStudents(){
     if(count8 > 0){
 
         document.getElementById(
+
             "class8"
-        ).style.display = "block";
+
+        ).style.display =
+
+            "block";
 
     }
 
@@ -2331,8 +3940,12 @@ async function loadPublicStudents(){
     if(count9 > 0){
 
         document.getElementById(
+
             "class9"
-        ).style.display = "block";
+
+        ).style.display =
+
+            "block";
 
     }
 
@@ -2342,15 +3955,24 @@ async function loadPublicStudents(){
        NO STUDENTS
        ===================================================== */
 
+
     if(
+
         count7 === 0 &&
+
         count8 === 0 &&
+
         count9 === 0
+
     ){
 
-        loading.style.display = "block";
+        loading.style.display =
+
+            "block";
+
 
         loading.innerHTML =
+
             "No student records available.";
 
     }
@@ -2360,16 +3982,24 @@ async function loadPublicStudents(){
 
 
 /* =========================================================
-   SECURITY
+   STUDENT NAME SECURITY
    ========================================================= */
+
 
 function escapeStudentName(name){
 
+
     const div =
-        document.createElement("div");
+
+        document.createElement(
+
+            "div"
+
+        );
 
 
     div.textContent =
+
         name || "";
 
 
@@ -2380,16 +4010,19 @@ function escapeStudentName(name){
 
 
 /* =========================================================
-   START
+   START BOTH SYSTEMS
    ========================================================= */
 
+
+loadStudyMaterials();
+
 loadPublicStudents();
+
 
 </script>
 
 
-
 </body>
+
 </html>
 ```
-
