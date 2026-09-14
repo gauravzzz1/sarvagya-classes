@@ -1,18 +1,16 @@
-```html
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sarvagya Classes | Admin</title>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
 
 <style>
 
@@ -22,7 +20,6 @@ content="width=device-width, initial-scale=1.0">
     padding:0;
 }
 
-
 body{
     font-family:Arial,Helvetica,sans-serif;
     background:#f4f7fb;
@@ -30,12 +27,10 @@ body{
     padding:20px;
 }
 
-
 .container{
-    max-width:700px;
+    max-width:900px;
     margin:auto;
 }
-
 
 .header{
     background:#172033;
@@ -46,18 +41,15 @@ body{
     margin-bottom:20px;
 }
 
-
 .header h1{
     font-size:25px;
     margin-bottom:5px;
 }
 
-
 .header p{
     font-size:13px;
     opacity:.8;
 }
-
 
 .card{
     background:white;
@@ -67,12 +59,10 @@ body{
     margin-bottom:20px;
 }
 
-
 .card h2{
     margin-bottom:20px;
     font-size:21px;
 }
-
 
 label{
     display:block;
@@ -80,7 +70,6 @@ label{
     font-size:14px;
     margin-bottom:7px;
 }
-
 
 input,
 select{
@@ -99,7 +88,6 @@ select{
 
 }
 
-
 input:focus,
 select:focus{
 
@@ -109,6 +97,64 @@ select:focus{
 
 }
 
+.button-row{
+    display:flex;
+    gap:10px;
+}
+
+.main-btn{
+
+    flex:1;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:7px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+.main-btn:hover{
+    background:#1d4ed8;
+}
+
+.cancel-btn{
+
+    display:none;
+
+    flex:1;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:7px;
+
+    background:#64748b;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+.cancel-btn:hover{
+    background:#475569;
+}
 
 .upload-btn{
 
@@ -132,22 +178,14 @@ select:focus{
 
 }
 
-
 .upload-btn:hover{
-
     background:#1d4ed8;
-
 }
-
 
 .upload-btn:disabled{
-
     background:#94a3b8;
-
     cursor:not-allowed;
-
 }
-
 
 .message{
 
@@ -163,7 +201,6 @@ select:focus{
 
 }
 
-
 .success{
 
     display:block;
@@ -173,7 +210,6 @@ select:focus{
     color:#166534;
 
 }
-
 
 .error{
 
@@ -186,12 +222,161 @@ select:focus{
 }
 
 
-.material-list{
+/* STUDENT LIST */
+
+.student-item{
+
+    border:1px solid #e2e8f0;
+
+    border-radius:10px;
+
+    padding:15px;
+
+    margin-bottom:12px;
+
+}
+
+.student-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.student-name{
+
+    font-weight:bold;
+
+    font-size:16px;
+
+}
+
+.student-details{
+
+    color:#64748b;
+
+    font-size:13px;
+
+    margin-top:6px;
+
+}
+
+.fee-details{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
 
     margin-top:10px;
 
 }
 
+.fee-box{
+
+    background:#f8fafc;
+
+    border:1px solid #e2e8f0;
+
+    padding:8px 10px;
+
+    border-radius:6px;
+
+    font-size:12px;
+
+}
+
+.status-paid{
+    color:#166534;
+    font-weight:bold;
+}
+
+.status-partial{
+    color:#92400e;
+    font-weight:bold;
+}
+
+.status-pending{
+    color:#991b1b;
+    font-weight:bold;
+}
+
+.student-actions{
+
+    display:flex;
+
+    gap:7px;
+
+    margin-top:12px;
+
+}
+
+.edit-btn{
+
+    background:#f59e0b;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 12px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    font-size:12px;
+
+}
+
+.edit-btn:hover{
+    background:#d97706;
+}
+
+.delete-btn{
+
+    background:#dc2626;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 12px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    font-size:12px;
+
+}
+
+.delete-btn:hover{
+    background:#b91c1c;
+}
+
+.loading{
+
+    text-align:center;
+
+    color:#64748b;
+
+    padding:15px;
+
+}
+
+
+/* MATERIAL */
+
+.material-list{
+    margin-top:10px;
+}
 
 .material{
 
@@ -213,13 +398,9 @@ select:focus{
 
 }
 
-
 .material-info{
-
     flex:1;
-
 }
-
 
 .material-title{
 
@@ -228,7 +409,6 @@ select:focus{
     font-size:14px;
 
 }
-
 
 .material-details{
 
@@ -239,7 +419,6 @@ select:focus{
     margin-top:4px;
 
 }
-
 
 .material-file{
 
@@ -253,7 +432,6 @@ select:focus{
 
 }
 
-
 .action-area{
 
     display:flex;
@@ -263,7 +441,6 @@ select:focus{
     flex-wrap:wrap;
 
 }
-
 
 .open-btn{
 
@@ -287,25 +464,9 @@ select:focus{
 
 }
 
-
-.delete-btn{
-
-    background:#dc2626;
-
-    color:white;
-
-    border:none;
-
-    padding:8px 12px;
-
-    border-radius:5px;
-
-    cursor:pointer;
-
-    font-size:12px;
-
+.open-btn:hover{
+    background:#1d4ed8;
 }
-
 
 .home-btn{
 
@@ -323,57 +484,67 @@ select:focus{
 
 }
 
+.section-title{
 
-.loading{
+    margin-top:5px;
 
-    text-align:center;
+    margin-bottom:15px;
+
+    font-size:14px;
 
     color:#64748b;
 
-    padding:15px;
+    font-weight:bold;
 
 }
 
+hr{
 
-@media(max-width:500px){
+    border:none;
+
+    border-top:1px solid #e2e8f0;
+
+    margin:20px 0;
+
+}
+
+@media(max-width:600px){
 
     body{
-
         padding:10px;
-
     }
-
 
     .card{
-
         padding:18px;
-
     }
 
+    .student-top{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .student-actions{
+        width:100%;
+    }
+
+    .edit-btn,
+    .delete-btn{
+        flex:1;
+    }
 
     .material{
-
         flex-direction:column;
-
         align-items:stretch;
-
     }
-
 
     .action-area{
-
         width:100%;
-
     }
-
 
     .open-btn,
     .delete-btn{
-
         flex:1;
-
         text-align:center;
-
     }
 
 }
@@ -382,363 +553,1005 @@ select:focus{
 
 </head>
 
-
 <body>
-
 
 <div class="container">
 
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-    <!-- HEADER -->
+<div class="header">
 
-    <div class="header">
+```
+<h1>SARVAGYA CLASSES</h1>
 
-        <h1>SARVAGYA CLASSES</h1>
+<p>Admin Management Panel</p>
+```
 
-        <p>Study Material Admin Panel</p>
+</div>
 
-    </div>
+<!-- =====================================================
+     STUDENT MANAGEMENT
+===================================================== -->
 
+<div class="card">
 
+```
+<h2>👨‍🎓 Student Management</h2>
 
-    <!-- UPLOAD CARD -->
+<div class="section-title">
+    Add or Update Student
+</div>
 
-    <div class="card">
 
-        <h2>📤 Upload Study Material</h2>
+<!-- STUDENT NAME -->
 
+<label>
+    Student Name
+</label>
 
-        <!-- STANDARD -->
+<input
+    type="text"
+    id="studentName"
+    placeholder="Enter student name"
+>
 
-        <label>
 
-            Standard
+<!-- STANDARD -->
 
-        </label>
+<label>
+    Standard
+</label>
 
+<select id="studentStandard">
 
-        <select id="standard">
+    <option value="7th">
+        7th Standard
+    </option>
 
-            <option value="7th">
+    <option value="8th">
+        8th Standard
+    </option>
 
-                7th Standard
+    <option value="9th">
+        9th Standard
+    </option>
 
-            </option>
+</select>
 
 
-            <option value="8th">
+<!-- BATCH -->
 
-                8th Standard
+<label>
+    Batch
+</label>
 
-            </option>
+<input
+    type="text"
+    id="studentBatch"
+    placeholder="Example: Morning / Evening"
+>
 
 
-            <option value="9th">
+<!-- TOTAL FEE -->
 
-                9th Standard
+<label>
+    Total Fee (₹)
+</label>
 
-            </option>
+<input
+    type="number"
+    id="totalFee"
+    placeholder="Enter total fee"
+    min="0"
+>
 
-        </select>
 
+<!-- PAID FEE -->
 
+<label>
+    Paid Fee (₹)
+</label>
 
-        <!-- SUBJECT -->
+<input
+    type="number"
+    id="paidFee"
+    placeholder="Enter paid fee"
+    min="0"
+>
 
-        <label>
 
-            Subject
+<div class="button-row">
 
-        </label>
-
-
-        <select id="subject">
-
-            <option value="Mathematics">
-
-                Mathematics
-
-            </option>
-
-
-            <option value="Science">
-
-                Science
-
-            </option>
-
-
-            <option value="Test Paper">
-
-                Test Paper
-
-            </option>
-
-
-            <option value="Other">
-
-                Other
-
-            </option>
-
-        </select>
-
-
-
-        <!-- TITLE -->
-
-        <label>
-
-            Material Name
-
-        </label>
-
-
-        <input
-
-            type="text"
-
-            id="title"
-
-            placeholder="Example: Chapter 3 Test Paper"
-
-        >
-
-
-
-        <!-- FILE -->
-
-        <label>
-
-            Select PDF / DOCX
-
-        </label>
-
-
-        <input
-
-            type="file"
-
-            id="file"
-
-            accept=".pdf,.doc,.docx"
-
-        >
-
-
-
-        <!-- UPLOAD BUTTON -->
-
-        <button
-
-            class="upload-btn"
-
-            id="uploadBtn"
-
-            onclick="uploadMaterial()"
-
-        >
-
-            📤 UPLOAD MATERIAL
-
-        </button>
-
-
-
-        <!-- MESSAGE -->
-
-        <div
-
-            id="message"
-
-            class="message"
-
-        >
-
-        </div>
-
-    </div>
-
-
-
-    <!-- MATERIAL LIST -->
-
-    <div class="card">
-
-        <h2>
-
-            📚 Uploaded Materials
-
-        </h2>
-
-
-        <div
-
-            id="materialList"
-
-            class="material-list"
-
-        >
-
-            <div class="loading">
-
-                Loading...
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- HOME -->
-
-    <a
-
-        href="./index.html"
-
-        class="home-btn"
-
+    <button
+        class="main-btn"
+        id="studentBtn"
+        onclick="saveStudent()"
     >
+        ➕ ADD STUDENT
+    </button>
 
-        ← Back to Website
-
-    </a>
-
+    <button
+        class="cancel-btn"
+        id="cancelBtn"
+        onclick="cancelEdit()"
+    >
+        CANCEL
+    </button>
 
 </div>
 
 
+<div
+    id="studentMessage"
+    class="message"
+></div>
+```
+
+</div>
+
+<!-- =====================================================
+     STUDENT LIST
+===================================================== -->
+
+<div class="card">
+
+```
+<h2>📋 Student Records</h2>
+
+<div
+    id="studentList"
+    class="loading"
+>
+    Loading students...
+</div>
+```
+
+</div>
+
+<!-- =====================================================
+     STUDY MATERIAL UPLOAD
+===================================================== -->
+
+<div class="card">
+
+```
+<h2>📚 Upload Study Material</h2>
+
+
+<!-- STANDARD -->
+
+<label>
+    Standard
+</label>
+
+<select id="standard">
+
+    <option value="7th">
+        7th Standard
+    </option>
+
+    <option value="8th">
+        8th Standard
+    </option>
+
+    <option value="9th">
+        9th Standard
+    </option>
+
+</select>
+
+
+<!-- SUBJECT -->
+
+<label>
+    Subject
+</label>
+
+<select id="subject">
+
+    <option value="Mathematics">
+        Mathematics
+    </option>
+
+    <option value="Science">
+        Science
+    </option>
+
+    <option value="Test Paper">
+        Test Paper
+    </option>
+
+    <option value="Other">
+        Other
+    </option>
+
+</select>
+
+
+<!-- TITLE -->
+
+<label>
+    Material Name
+</label>
+
+<input
+    type="text"
+    id="title"
+    placeholder="Example: Chapter 3 Test Paper"
+>
+
+
+<!-- FILE -->
+
+<label>
+    Select PDF / DOCX
+</label>
+
+<input
+    type="file"
+    id="file"
+    accept=".pdf,.doc,.docx"
+>
+
+
+<!-- UPLOAD -->
+
+<button
+    class="upload-btn"
+    id="uploadBtn"
+    onclick="uploadMaterial()"
+>
+    📤 UPLOAD MATERIAL
+</button>
+
+
+<div
+    id="message"
+    class="message"
+></div>
+```
+
+</div>
+
+<!-- =====================================================
+     MATERIAL LIST
+===================================================== -->
+
+<div class="card">
+
+```
+<h2>
+    📖 Uploaded Materials
+</h2>
+
+<div
+    id="materialList"
+    class="material-list"
+>
+
+    <div class="loading">
+        Loading...
+    </div>
+
+</div>
+```
+
+</div>
+
+<!-- HOME -->
+
+<a
+href="./index.html"
+class="home-btn"
+
+>
+
+```
+← Back to Website
+```
+
+</a>
+
+</div>
 
 <script>
 
-
 /* =====================================================
    SUPABASE CONFIGURATION
-   ===================================================== */
-
+===================================================== */
 
 const SUPABASE_URL =
-
 "https://dosftayxhqvwqnutrbge.supabase.co";
 
-
 const SUPABASE_KEY =
-
 "sb_publishable_saemaeefPQJTpEPLztTw4w_jY0WQLhS";
 
-
 const BUCKET_NAME =
-
 "study material";
 
-
-const TABLE_NAME =
-
+const MATERIAL_TABLE =
 "study_materials";
+
+const STUDENT_TABLE =
+"students";
 
 
 const supabaseClient =
-
 window.supabase.createClient(
-
     SUPABASE_URL,
-
     SUPABASE_KEY
-
 );
 
+
+/* =====================================================
+   EDITING STUDENT ID
+===================================================== */
+
+let editingStudentId = null;
+
+
+/* =====================================================
+   SAVE STUDENT
+===================================================== */
+
+async function saveStudent(){
+
+    const name =
+        document.getElementById("studentName")
+        .value.trim();
+
+    const standard =
+        document.getElementById("studentStandard")
+        .value;
+
+    const batch =
+        document.getElementById("studentBatch")
+        .value.trim();
+
+    const totalFee =
+        Number(
+            document.getElementById("totalFee").value
+        );
+
+    const paidFee =
+        Number(
+            document.getElementById("paidFee").value
+        );
+
+    const message =
+        document.getElementById("studentMessage");
+
+
+    message.className = "message";
+    message.innerHTML = "";
+
+
+    /* CHECK NAME */
+
+    if(!name){
+
+        message.className =
+            "message error";
+
+        message.innerHTML =
+            "Please enter student name.";
+
+        return;
+    }
+
+
+    /* CHECK FEE */
+
+    if(totalFee < 0 || paidFee < 0){
+
+        message.className =
+            "message error";
+
+        message.innerHTML =
+            "Fee cannot be negative.";
+
+        return;
+    }
+
+
+    if(paidFee > totalFee){
+
+        message.className =
+            "message error";
+
+        message.innerHTML =
+            "Paid fee cannot be greater than total fee.";
+
+        return;
+    }
+
+
+    try{
+
+        const studentData = {
+
+            name:name,
+
+            standard:standard,
+
+            batch:batch,
+
+            total_fee:totalFee,
+
+            paid_fee:paidFee
+
+        };
+
+
+        let error;
+
+
+        /* =================================================
+           UPDATE
+        ================================================= */
+
+        if(editingStudentId){
+
+            const result =
+                await supabaseClient
+
+                .from(STUDENT_TABLE)
+
+                .update(studentData)
+
+                .eq(
+                    "id",
+                    editingStudentId
+                );
+
+            error = result.error;
+
+        }
+
+
+        /* =================================================
+           ADD
+        ================================================= */
+
+        else{
+
+            const result =
+                await supabaseClient
+
+                .from(STUDENT_TABLE)
+
+                .insert(studentData);
+
+            error = result.error;
+
+        }
+
+
+        if(error){
+
+            throw error;
+
+        }
+
+
+        /* SUCCESS */
+
+        message.className =
+            "message success";
+
+        message.innerHTML =
+            editingStudentId
+            ? "✅ Student updated successfully!"
+            : "✅ Student added successfully!";
+
+
+        clearStudentForm();
+
+        await loadStudents();
+
+
+    }
+    catch(error){
+
+        console.log(
+            "STUDENT ERROR:",
+            error
+        );
+
+        message.className =
+            "message error";
+
+        message.innerHTML =
+            "❌ Operation failed: " +
+            error.message;
+
+    }
+
+}
+
+
+/* =====================================================
+   LOAD STUDENTS
+===================================================== */
+
+async function loadStudents(){
+
+    const list =
+        document.getElementById(
+            "studentList"
+        );
+
+
+    list.innerHTML =
+        '<div class="loading">Loading students...</div>';
+
+
+    const {
+        data,
+        error
+    } = await supabaseClient
+
+        .from(STUDENT_TABLE)
+
+        .select(
+            "id,name,standard,batch,total_fee,paid_fee,created_at"
+        )
+
+        .order(
+            "created_at",
+            {
+                ascending:true
+            }
+        );
+
+
+    if(error){
+
+        console.log(
+            "STUDENT LOAD ERROR:",
+            error
+        );
+
+        list.innerHTML =
+
+            '<div class="loading">' +
+            'Unable to load students.<br><br>' +
+            escapeHTML(error.message) +
+            '</div>';
+
+        return;
+    }
+
+
+    if(!data || data.length === 0){
+
+        list.innerHTML =
+            '<div class="loading">' +
+            'No students added yet.' +
+            '</div>';
+
+        return;
+    }
+
+
+    list.innerHTML = "";
+
+
+    data.forEach(
+        function(student,index){
+
+            const total =
+                Number(student.total_fee || 0);
+
+            const paid =
+                Number(student.paid_fee || 0);
+
+            const remaining =
+                total - paid;
+
+
+            let status;
+            let statusClass;
+
+
+            if(remaining <= 0){
+
+                status = "PAID";
+                statusClass = "status-paid";
+
+            }
+            else if(paid > 0){
+
+                status = "PARTIAL";
+                statusClass = "status-partial";
+
+            }
+            else{
+
+                status = "PENDING";
+                statusClass = "status-pending";
+
+            }
+
+
+            const div =
+                document.createElement("div");
+
+
+            div.className =
+                "student-item";
+
+
+            div.innerHTML = `
+
+                <div class="student-top">
+
+                    <div>
+
+                        <div class="student-name">
+
+                            ${index + 1}.
+                            ${escapeHTML(student.name)}
+
+                        </div>
+
+                        <div class="student-details">
+
+                            ${escapeHTML(student.standard || "")}
+
+                            ${student.batch
+                                ? " • " + escapeHTML(student.batch)
+                                : ""
+                            }
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="fee-details">
+
+                    <div class="fee-box">
+
+                        Total:
+                        <strong>
+                            ₹${total}
+                        </strong>
+
+                    </div>
+
+
+                    <div class="fee-box">
+
+                        Paid:
+                        <strong>
+                            ₹${paid}
+                        </strong>
+
+                    </div>
+
+
+                    <div class="fee-box">
+
+                        Remaining:
+                        <strong>
+                            ₹${remaining}
+                        </strong>
+
+                    </div>
+
+
+                    <div class="fee-box ${statusClass}">
+
+                        ${status}
+
+                    </div>
+
+                </div>
+
+
+                <div class="student-actions">
+
+                    <button
+                        class="edit-btn"
+                        onclick="editStudent('${student.id}')"
+                    >
+                        ✏️ EDIT
+                    </button>
+
+
+                    <button
+                        class="delete-btn"
+                        onclick="deleteStudent('${student.id}')"
+                    >
+                        🗑️ DELETE
+                    </button>
+
+                </div>
+
+            `;
+
+
+            list.appendChild(div);
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   EDIT STUDENT
+===================================================== */
+
+async function editStudent(id){
+
+    const {
+        data,
+        error
+    } = await supabaseClient
+
+        .from(STUDENT_TABLE)
+
+        .select("*")
+
+        .eq(
+            "id",
+            id
+        )
+
+        .single();
+
+
+    if(error){
+
+        alert(
+            "Unable to load student: " +
+            error.message
+        );
+
+        return;
+    }
+
+
+    editingStudentId =
+        data.id;
+
+
+    document.getElementById(
+        "studentName"
+    ).value =
+        data.name || "";
+
+
+    document.getElementById(
+        "studentStandard"
+    ).value =
+        data.standard || "7th";
+
+
+    document.getElementById(
+        "studentBatch"
+    ).value =
+        data.batch || "";
+
+
+    document.getElementById(
+        "totalFee"
+    ).value =
+        data.total_fee || 0;
+
+
+    document.getElementById(
+        "paidFee"
+    ).value =
+        data.paid_fee || 0;
+
+
+    document.getElementById(
+        "studentBtn"
+    ).innerHTML =
+        "💾 UPDATE STUDENT";
+
+
+    document.getElementById(
+        "cancelBtn"
+    ).style.display =
+        "block";
+
+
+    document.getElementById(
+        "studentName"
+    ).focus();
+
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =====================================================
+   CANCEL EDIT
+===================================================== */
+
+function cancelEdit(){
+
+    clearStudentForm();
+
+}
+
+
+/* =====================================================
+   CLEAR STUDENT FORM
+===================================================== */
+
+function clearStudentForm(){
+
+    editingStudentId = null;
+
+
+    document.getElementById(
+        "studentName"
+    ).value = "";
+
+
+    document.getElementById(
+        "studentBatch"
+    ).value = "";
+
+
+    document.getElementById(
+        "totalFee"
+    ).value = "";
+
+
+    document.getElementById(
+        "paidFee"
+    ).value = "";
+
+
+    document.getElementById(
+        "studentStandard"
+    ).value = "7th";
+
+
+    document.getElementById(
+        "studentBtn"
+    ).innerHTML =
+        "➕ ADD STUDENT";
+
+
+    document.getElementById(
+        "cancelBtn"
+    ).style.display =
+        "none";
+
+}
+
+
+/* =====================================================
+   DELETE STUDENT
+===================================================== */
+
+async function deleteStudent(id){
+
+    if(!confirm(
+        "Are you sure you want to delete this student?"
+    )){
+
+        return;
+    }
+
+
+    try{
+
+        const {
+            error
+        } = await supabaseClient
+
+            .from(STUDENT_TABLE)
+
+            .delete()
+
+            .eq(
+                "id",
+                id
+            );
+
+
+        if(error){
+
+            throw error;
+
+        }
+
+
+        await loadStudents();
+
+
+    }
+    catch(error){
+
+        console.log(
+            "DELETE STUDENT ERROR:",
+            error
+        );
+
+        alert(
+            "Delete failed: " +
+            error.message
+        );
+
+    }
+
+}
 
 
 /* =====================================================
    UPLOAD MATERIAL
-   ===================================================== */
-
+===================================================== */
 
 async function uploadMaterial(){
 
-
     const standard =
-
         document.getElementById(
-
             "standard"
-
         ).value;
 
 
     const subject =
-
         document.getElementById(
-
             "subject"
-
         ).value;
 
 
     const title =
-
         document.getElementById(
-
             "title"
-
         ).value.trim();
 
 
     const fileInput =
-
         document.getElementById(
-
             "file"
-
         );
 
 
     const file =
-
         fileInput.files[0];
 
 
     const button =
-
         document.getElementById(
-
             "uploadBtn"
-
         );
 
 
     const message =
-
         document.getElementById(
-
             "message"
-
         );
 
 
-
-    /* RESET MESSAGE */
-
     message.className =
-
         "message";
 
     message.innerHTML = "";
 
 
-
-    /* CHECK TITLE */
-
     if(!title){
 
         message.className =
-
             "message error";
 
         message.innerHTML =
-
             "Please enter material name.";
 
         return;
@@ -746,17 +1559,12 @@ async function uploadMaterial(){
     }
 
 
-
-    /* CHECK FILE */
-
     if(!file){
 
         message.className =
-
             "message error";
 
         message.innerHTML =
-
             "Please select a PDF or DOC/DOCX file.";
 
         return;
@@ -764,50 +1572,30 @@ async function uploadMaterial(){
     }
 
 
-
-    /* =================================================
-       CHECK EXTENSION
-       ================================================= */
-
-
     const extension =
-
         file.name
-
         .split(".")
-
         .pop()
-
         .toLowerCase();
 
 
     const allowedExtensions = [
-
         "pdf",
-
         "doc",
-
         "docx"
-
     ];
 
 
     if(
-
         !allowedExtensions.includes(
-
             extension
-
         )
-
     ){
 
         message.className =
-
             "message error";
 
         message.innerHTML =
-
             "Only PDF, DOC and DOCX files are allowed.";
 
         return;
@@ -815,26 +1603,15 @@ async function uploadMaterial(){
     }
 
 
-
-    /* =================================================
-       FILE SIZE
-       ================================================= */
-
-
     if(
-
         file.size >
-
         20 * 1024 * 1024
-
     ){
 
         message.className =
-
             "message error";
 
         message.innerHTML =
-
             "File size must be below 20 MB.";
 
         return;
@@ -842,106 +1619,49 @@ async function uploadMaterial(){
     }
 
 
-
-    /* DISABLE BUTTON */
-
     button.disabled = true;
 
     button.innerHTML =
-
         "⏳ Uploading...";
-
 
 
     try{
 
-
-        /* =================================================
-           CREATE SAFE FILE NAME
-
-           Original filename is NOT used as storage key.
-
-           This prevents errors caused by:
-           Marathi
-           Spaces
-           &
-           Special characters
-           ================================================= */
-
-
         const safeFileName =
-
             Date.now() +
-
             "_" +
-
             Math.random()
-
             .toString(36)
-
             .substring(2,10) +
-
             "." +
-
             extension;
 
 
-
-        /* STORAGE PATH */
-
         const filePath =
-
             standard +
-
             "/" +
-
             safeFileName;
 
 
-
-        console.log(
-
-            "Uploading:",
-
-            filePath
-
-        );
-
-
-
-        /* =================================================
-           UPLOAD FILE TO STORAGE
-           ================================================= */
-
+        /* UPLOAD */
 
         const {
-
             error: uploadError
-
         } = await supabaseClient
 
             .storage
 
             .from(
-
                 BUCKET_NAME
-
             )
 
             .upload(
-
                 filePath,
-
                 file,
-
                 {
-
                     cacheControl:"3600",
-
                     upsert:false
-
                 }
-
             );
 
 
@@ -952,71 +1672,47 @@ async function uploadMaterial(){
         }
 
 
-
-        /* =================================================
-           GET PUBLIC URL
-           ================================================= */
-
+        /* PUBLIC URL */
 
         const {
-
             data: publicData
-
         } = supabaseClient
 
             .storage
 
             .from(
-
                 BUCKET_NAME
-
             )
 
             .getPublicUrl(
-
                 filePath
-
             );
 
 
         if(
-
             !publicData ||
-
             !publicData.publicUrl
-
         ){
 
             throw new Error(
-
                 "Unable to create public URL."
-
             );
 
         }
 
 
         const fileUrl =
-
             publicData.publicUrl;
 
 
-
-        /* =================================================
-           SAVE DATABASE RECORD
-           ================================================= */
-
+        /* DATABASE */
 
         const {
-
             error: dbError
-
         } = await supabaseClient
 
             .from(
-
-                TABLE_NAME
-
+                MATERIAL_TABLE
             )
 
             .insert({
@@ -1034,236 +1730,154 @@ async function uploadMaterial(){
             });
 
 
-        /* =================================================
-           DATABASE ERROR
-           ================================================= */
-
-
         if(dbError){
-
-            /* Remove uploaded file */
 
             await supabaseClient
 
                 .storage
 
                 .from(
-
                     BUCKET_NAME
-
                 )
 
                 .remove([
-
                     filePath
-
                 ]);
-
 
             throw dbError;
 
         }
 
 
-
-        /* =================================================
-           SUCCESS
-           ================================================= */
-
-
         message.className =
-
             "message success";
 
 
         message.innerHTML =
-
             "✅ Material uploaded successfully!";
 
 
-        /* CLEAR TITLE */
-
         document.getElementById(
-
             "title"
-
         ).value = "";
 
-
-        /* CLEAR FILE */
 
         fileInput.value = "";
 
 
-        /* REFRESH LIST */
-
         await loadMaterials();
 
-
     }
-
     catch(error){
 
-
         console.log(
-
             "UPLOAD ERROR:",
-
             error
-
         );
 
 
         message.className =
-
             "message error";
 
 
         message.innerHTML =
-
             "❌ Upload failed: " +
-
             error.message;
-
 
     }
 
 
-
-    /* ENABLE BUTTON */
-
     button.disabled = false;
 
     button.innerHTML =
-
         "📤 UPLOAD MATERIAL";
 
 }
 
 
-
 /* =====================================================
    LOAD MATERIALS
-   ===================================================== */
-
+===================================================== */
 
 async function loadMaterials(){
 
-
     const list =
-
         document.getElementById(
-
             "materialList"
-
         );
 
 
     list.innerHTML =
-
         '<div class="loading">Loading...</div>';
 
 
-
     const {
-
         data,
-
         error
-
     } = await supabaseClient
 
         .from(
-
-            TABLE_NAME
-
+            MATERIAL_TABLE
         )
 
         .select("*")
 
         .order(
-
             "created_at",
-
             {
-
                 ascending:false
-
             }
-
         );
 
-
-
-    /* ERROR */
 
     if(error){
 
         console.log(
-
-            "LOAD ERROR:",
-
+            "MATERIAL LOAD ERROR:",
             error
-
         );
 
 
         list.innerHTML =
-
-            '<div class="loading">Unable to load materials.</div>';
+            '<div class="loading">' +
+            'Unable to load materials.<br><br>' +
+            escapeHTML(error.message) +
+            '</div>';
 
         return;
 
     }
 
 
-
-    /* NO DATA */
-
     if(
-
         !data ||
-
         data.length === 0
-
     ){
 
         list.innerHTML =
-
-            '<div class="loading">No materials uploaded yet.</div>';
+            '<div class="loading">' +
+            'No materials uploaded yet.' +
+            '</div>';
 
         return;
 
     }
 
-
-
-    /* CLEAR */
 
     list.innerHTML = "";
 
 
-
-    /* CREATE ITEMS */
-
     data.forEach(
-
         function(material){
 
-
             const div =
-
                 document.createElement(
-
                     "div"
-
                 );
 
 
             div.className =
-
                 "material";
-
 
 
             div.innerHTML = `
@@ -1272,25 +1886,33 @@ async function loadMaterials(){
 
                     <div class="material-title">
 
-                        ${escapeHTML(material.title)}
+                        ${escapeHTML(
+                            material.title
+                        )}
 
                     </div>
 
 
                     <div class="material-details">
 
-                        ${escapeHTML(material.standard)}
+                        ${escapeHTML(
+                            material.standard
+                        )}
 
                         • 
 
-                        ${escapeHTML(material.subject || "")}
+                        ${escapeHTML(
+                            material.subject || ""
+                        )}
 
                     </div>
 
 
                     <div class="material-file">
 
-                        ${escapeHTML(material.file_name)}
+                        ${escapeHTML(
+                            material.file_name
+                        )}
 
                     </div>
 
@@ -1300,36 +1922,26 @@ async function loadMaterials(){
                 <div class="action-area">
 
                     <a
-
-                        href="${escapeHTML(material.file_url)}"
-
+                        href="${escapeHTML(
+                            material.file_url
+                        )}"
                         target="_blank"
-
                         class="open-btn"
-
                     >
-
                         OPEN
-
                     </a>
 
 
                     <button
-
                         class="delete-btn"
-
                         onclick="deleteMaterial(
-
                             '${material.id}',
-
-                            '${encodeURIComponent(material.file_url)}'
-
+                            '${encodeURIComponent(
+                                material.file_url
+                            )}'
                         )"
-
                     >
-
                         DELETE
-
                     </button>
 
                 </div>
@@ -1338,212 +1950,121 @@ async function loadMaterials(){
 
 
             list.appendChild(
-
                 div
-
             );
 
         }
-
     );
 
 }
 
 
-
 /* =====================================================
    DELETE MATERIAL
-   ===================================================== */
-
+===================================================== */
 
 async function deleteMaterial(
-
     id,
-
     encodedUrl
-
 ){
 
-
-    if(
-
-        !confirm(
-
-            "Are you sure you want to delete this material?"
-
-        )
-
-    ){
+    if(!confirm(
+        "Are you sure you want to delete this material?"
+    )){
 
         return;
 
     }
 
 
-
     try{
 
-
-        /* DECODE URL */
-
         const fileUrl =
-
             decodeURIComponent(
-
                 encodedUrl
-
             );
 
 
         const url =
-
             new URL(
-
                 fileUrl
-
             );
 
 
-        /* =================================================
-           FIND STORAGE PATH
-
-           Example URL:
-
-           /storage/v1/object/public/study%20material/7th/file.pdf
-
-           We extract:
-
-           7th/file.pdf
-           ================================================= */
-
-
-        const pathMarker =
-
-            "/study%20material/";
-
-
         const decodedPath =
-
             decodeURIComponent(
-
                 url.pathname
-
             );
 
 
         const marker =
-
             "/study material/";
 
 
         const markerIndex =
-
             decodedPath.indexOf(
-
                 marker
-
             );
 
 
         if(markerIndex === -1){
 
             throw new Error(
-
                 "Storage file path not found."
-
             );
 
         }
 
 
         const filePath =
-
             decodedPath.substring(
-
                 markerIndex +
-
                 marker.length
-
             );
 
 
-
-        console.log(
-
-            "Deleting:",
-
-            filePath
-
-        );
-
-
-
-        /* =================================================
-           DELETE STORAGE FILE
-           ================================================= */
-
+        /* DELETE STORAGE */
 
         const {
-
             error: storageError
-
         } = await supabaseClient
 
             .storage
 
             .from(
-
                 BUCKET_NAME
-
             )
 
             .remove([
-
                 filePath
-
             ]);
-
 
 
         if(storageError){
 
             console.log(
-
                 "Storage delete error:",
-
                 storageError
-
             );
 
         }
 
 
-
-        /* =================================================
-           DELETE DATABASE RECORD
-           ================================================= */
-
+        /* DELETE DATABASE */
 
         const {
-
             error: dbError
-
         } = await supabaseClient
 
             .from(
-
-                TABLE_NAME
-
+                MATERIAL_TABLE
             )
 
             .delete()
 
             .eq(
-
                 "id",
-
                 id
-
             );
 
 
@@ -1554,32 +2075,20 @@ async function deleteMaterial(
         }
 
 
-
-        /* REFRESH */
-
         await loadMaterials();
 
-
     }
-
     catch(error){
 
-
         console.log(
-
-            "DELETE ERROR:",
-
+            "DELETE MATERIAL ERROR:",
             error
-
         );
 
 
         alert(
-
             "Delete failed: " +
-
             error.message
-
         );
 
     }
@@ -1587,46 +2096,35 @@ async function deleteMaterial(
 }
 
 
-
 /* =====================================================
    ESCAPE HTML
-   ===================================================== */
-
+===================================================== */
 
 function escapeHTML(value){
 
-
     const div =
-
         document.createElement(
-
             "div"
-
         );
 
-
     div.textContent =
-
         value || "";
-
 
     return div.innerHTML;
 
 }
 
 
-
 /* =====================================================
    START
-   ===================================================== */
+===================================================== */
 
+loadStudents();
 
 loadMaterials();
 
 </script>
 
-
 </body>
 
 </html>
-```
