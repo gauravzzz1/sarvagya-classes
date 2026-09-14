@@ -1,29 +1,12 @@
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Sarvagya Classes | Gaurav Shinde Sir</title>
-
-
-<!-- =========================================================
+<title>GS Academy | Gaurav Shinde Sir</title><!-- =========================================================
      SUPABASE
-     ========================================================= -->
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-
-<style>
+     ========================================================= --><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><style>
 
 /* =========================================================
-   SARVAGYA CLASSES
-   COMPLETE RESPONSIVE WEBSITE
+   RESET
    ========================================================= */
 
 *{
@@ -33,10 +16,18 @@ content="width=device-width, initial-scale=1.0">
 }
 
 
+/* =========================================================
+   HTML
+   ========================================================= */
+
 html{
     scroll-behavior:smooth;
 }
 
+
+/* =========================================================
+   BODY
+   ========================================================= */
 
 body{
     font-family:Arial,Helvetica,sans-serif;
@@ -47,7 +38,286 @@ body{
 
 
 /* =========================================================
-   VARIABLES
+   SPLASH SCREEN
+   ========================================================= */
+
+#splashScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100vh;
+
+    background:
+
+    radial-gradient(
+        circle at 50% 30%,
+        rgba(37,99,235,.35),
+        transparent 35%
+    ),
+
+    linear-gradient(
+        135deg,
+        #111827,
+        #26364d,
+        #172033
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    z-index:99999;
+
+    opacity:1;
+
+    visibility:visible;
+
+    transition:
+        opacity .7s ease,
+        visibility .7s ease;
+
+}
+
+
+/* =========================================================
+   SPLASH HIDDEN
+   ========================================================= */
+
+#splashScreen.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+}
+
+
+/* =========================================================
+   SPLASH CONTENT
+   ========================================================= */
+
+.splash-content{
+
+    width:90%;
+
+    max-width:500px;
+
+    animation:
+        splashContent .9s ease forwards;
+
+}
+
+
+/* =========================================================
+   SPLASH GS LOGO
+   ========================================================= */
+
+.splash-logo{
+
+    width:120px;
+
+    height:120px;
+
+    margin:0 auto 25px;
+
+    border-radius:28px;
+
+    background:#ffd43b;
+
+    color:#172033;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:45px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.35);
+
+    animation:
+        splashLogo 1.2s ease infinite alternate;
+
+}
+
+
+/* =========================================================
+   SPLASH TITLE
+   ========================================================= */
+
+.splash-title{
+
+    color:white;
+
+    font-size:38px;
+
+    font-weight:900;
+
+    letter-spacing:3px;
+
+    margin-bottom:5px;
+
+}
+
+
+/* =========================================================
+   SPLASH SUBTITLE
+   ========================================================= */
+
+.splash-subtitle{
+
+    color:#ffd43b;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+
+}
+
+
+/* =========================================================
+   SPLASH TAGLINE
+   ========================================================= */
+
+.splash-tagline{
+
+    color:rgba(255,255,255,.78);
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+}
+
+
+/* =========================================================
+   SPLASH LOADER
+   ========================================================= */
+
+.splash-loader{
+
+    width:180px;
+
+    height:4px;
+
+    background:rgba(255,255,255,.18);
+
+    border-radius:20px;
+
+    margin:30px auto 0;
+
+    overflow:hidden;
+
+}
+
+
+/* =========================================================
+   SPLASH LOADER BAR
+   ========================================================= */
+
+.splash-loader span{
+
+    display:block;
+
+    height:100%;
+
+    width:0%;
+
+    background:#ffd43b;
+
+    border-radius:20px;
+
+    animation:
+        splashLoading 2.3s ease forwards;
+
+}
+
+
+/* =========================================================
+   SPLASH ANIMATIONS
+   ========================================================= */
+
+@keyframes splashContent{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(25px)
+            scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes splashLogo{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+
+@keyframes splashLoading{
+
+    from{
+
+        width:0%;
+
+    }
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+
+
+/* =========================================================
+   ROOT VARIABLES
    ========================================================= */
 
 :root{
@@ -74,7 +344,8 @@ body{
 
     --border:#e2e8f0;
 
-    --shadow:0 10px 30px rgba(15,23,42,.08);
+    --shadow:
+        0 10px 30px rgba(15,23,42,.08);
 
 }
 
@@ -105,10 +376,15 @@ header{
 
     gap:20px;
 
-    box-shadow:0 3px 15px rgba(0,0,0,.15);
+    box-shadow:
+        0 3px 15px rgba(0,0,0,.15);
 
 }
 
+
+/* =========================================================
+   LOGO AREA
+   ========================================================= */
 
 .logo-area{
 
@@ -120,6 +396,10 @@ header{
 
 }
 
+
+/* =========================================================
+   LOGO ICON
+   ========================================================= */
 
 .logo-icon{
 
@@ -146,6 +426,10 @@ header{
 }
 
 
+/* =========================================================
+   LOGO TEXT
+   ========================================================= */
+
 .logo-text h1{
 
     font-size:21px;
@@ -163,6 +447,10 @@ header{
 
 }
 
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 
 nav{
 
@@ -222,39 +510,30 @@ nav a:hover{
     background:
 
     radial-gradient(
-
         circle at 20% 20%,
-
         rgba(37,99,235,.35),
-
         transparent 30%
-
     ),
 
     radial-gradient(
-
         circle at 80% 70%,
-
         rgba(255,212,59,.15),
-
         transparent 25%
-
     ),
 
     linear-gradient(
-
         135deg,
-
         #111827,
-
         #26364d,
-
         #172033
-
     );
 
 }
 
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
 
 .hero-content{
 
@@ -269,7 +548,9 @@ nav a:hover{
 
     padding:8px 16px;
 
-    border:1px solid rgba(255,255,255,.3);
+    border:
+        1px solid
+        rgba(255,255,255,.3);
 
     border-radius:30px;
 
@@ -322,6 +603,10 @@ nav a:hover{
 }
 
 
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
 .hero-buttons{
 
     margin-top:32px;
@@ -372,7 +657,9 @@ nav a:hover{
 
 .btn-outline{
 
-    border:1px solid rgba(255,255,255,.5);
+    border:
+        1px solid
+        rgba(255,255,255,.5);
 
     color:white;
 
@@ -398,6 +685,10 @@ section{
 
 }
 
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
 
 .section-heading{
 
@@ -464,7 +755,8 @@ section{
 
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:
+        repeat(4,1fr);
 
     background:white;
 
@@ -483,7 +775,9 @@ section{
 
     text-align:center;
 
-    border-right:1px solid var(--border);
+    border-right:
+        1px solid
+        var(--border);
 
 }
 
@@ -523,7 +817,8 @@ section{
 
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:
+        repeat(3,1fr);
 
     gap:25px;
 
@@ -542,7 +837,9 @@ section{
 
     transition:.3s;
 
-    border:1px solid transparent;
+    border:
+        1px solid
+        transparent;
 
 }
 
@@ -647,7 +944,8 @@ section{
 
     max-width:1100px;
 
-    margin:0 auto 30px;
+    margin:
+        0 auto 30px;
 
     background:white;
 
@@ -659,6 +957,10 @@ section{
 
 }
 
+
+/* =========================================================
+   MATERIAL TITLE
+   ========================================================= */
 
 .material-title{
 
@@ -672,7 +974,9 @@ section{
 
     padding-bottom:15px;
 
-    border-bottom:1px solid var(--border);
+    border-bottom:
+        1px solid
+        var(--border);
 
 }
 
@@ -705,11 +1009,16 @@ section{
 }
 
 
+/* =========================================================
+   MATERIAL GRID
+   ========================================================= */
+
 .material-grid{
 
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:
+        repeat(2,1fr);
 
     gap:12px;
 
@@ -730,7 +1039,9 @@ section{
 
     background:#f8fafc;
 
-    border:1px solid var(--border);
+    border:
+        1px solid
+        var(--border);
 
     border-radius:9px;
 
@@ -794,6 +1105,10 @@ section{
 }
 
 
+/* =========================================================
+   OPEN BUTTON
+   ========================================================= */
+
 .open-btn{
 
     flex-shrink:0;
@@ -832,7 +1147,8 @@ section{
 
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:
+        repeat(4,1fr);
 
     gap:20px;
 
@@ -900,7 +1216,8 @@ section{
 
     display:grid;
 
-    grid-template-columns:1fr 1.5fr;
+    grid-template-columns:
+        1fr 1.5fr;
 
     gap:45px;
 
@@ -909,17 +1226,18 @@ section{
 }
 
 
+/* =========================================================
+   TEACHER CARD
+   ========================================================= */
+
 .teacher-card{
 
-    background:linear-gradient(
-
-        135deg,
-
-        #172033,
-
-        #34495e
-
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #172033,
+            #34495e
+        );
 
     color:white;
 
@@ -976,6 +1294,10 @@ section{
 
 }
 
+
+/* =========================================================
+   ABOUT TEXT
+   ========================================================= */
 
 .about-text h2{
 
@@ -1070,6 +1392,10 @@ section{
 }
 
 
+/* =========================================================
+   CONTACT BUTTONS
+   ========================================================= */
+
 .contact-buttons{
 
     margin-top:25px;
@@ -1161,7 +1487,7 @@ section{
 
 
 /* =========================================================
-   STUDENTS & FEES
+   STUDENTS
    ========================================================= */
 
 .students-section{
@@ -1175,7 +1501,8 @@ section{
 
     max-width:1100px;
 
-    margin:0 auto 30px;
+    margin:
+        0 auto 30px;
 
     background:white;
 
@@ -1236,7 +1563,9 @@ section{
 
     padding:12px 13px;
 
-    border-bottom:1px solid var(--border);
+    border-bottom:
+        1px solid
+        var(--border);
 
     font-size:14px;
 
@@ -1249,6 +1578,10 @@ section{
 
 }
 
+
+/* =========================================================
+   STATUS
+   ========================================================= */
 
 .paid{
 
@@ -1307,17 +1640,24 @@ section{
 }
 
 
+/* =========================================================
+   NOTE BOX
+   ========================================================= */
+
 .note-box{
 
     max-width:1100px;
 
-    margin:0 auto 35px;
+    margin:
+        0 auto 35px;
 
     padding:15px 20px;
 
     background:#fff7ed;
 
-    border-left:4px solid #f97316;
+    border-left:
+        4px solid
+        #f97316;
 
     border-radius:7px;
 
@@ -1393,7 +1733,7 @@ footer p{
 
 
 /* =========================================================
-   FLOATING WHATSAPP
+   WHATSAPP FLOAT
    ========================================================= */
 
 .whatsapp-float{
@@ -1424,7 +1764,9 @@ footer p{
 
     font-size:28px;
 
-    box-shadow:0 6px 20px rgba(0,0,0,.25);
+    box-shadow:
+        0 6px 20px
+        rgba(0,0,0,.25);
 
     z-index:2000;
 
@@ -1508,7 +1850,8 @@ footer p{
 
     .stats-grid{
 
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+            repeat(2,1fr);
 
     }
 
@@ -1529,7 +1872,8 @@ footer p{
 
     .feature-grid{
 
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+            repeat(2,1fr);
 
     }
 
@@ -1542,6 +1886,10 @@ footer p{
 
 }
 
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media(max-width:650px){
 
@@ -1613,7 +1961,8 @@ footer p{
 
     .stats-grid{
 
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+            repeat(2,1fr);
 
     }
 
@@ -1694,1420 +2043,1354 @@ footer p{
 
     }
 
+
+    /* SPLASH MOBILE */
+
+    .splash-logo{
+
+        width:100px;
+
+        height:100px;
+
+        font-size:38px;
+
+    }
+
+
+    .splash-title{
+
+        font-size:30px;
+
+        letter-spacing:2px;
+
+    }
+
+
+    .splash-subtitle{
+
+        font-size:14px;
+
+    }
+
+
+    .splash-tagline{
+
+        font-size:12px;
+
+    }
+
 }
 
-</style>
-
-</head>
-
-
-<body>
+</style></head><body><!-- =========================================================
+     GS ACADEMY SPLASH SCREEN
+     ========================================================= --><div id="splashScreen"><div class="splash-content">
 
 
-<!-- =========================================================
-     HEADER
-     ========================================================= -->
+    <div class="splash-logo">
 
-<header id="home">
-
-    <div class="logo-area">
-
-        <div class="logo-icon">
-
-            SC
-
-        </div>
-
-
-        <div class="logo-text">
-
-            <h1>
-
-                SARVAGYA CLASSES
-
-            </h1>
-
-
-            <p>
-
-                SINCE 2014 • Gaurav Shinde Sir
-
-            </p>
-
-        </div>
+        GS
 
     </div>
 
 
-    <nav>
+    <div class="splash-title">
 
-        <a href="#home">
+        GS ACADEMY
 
-            Home
-
-        </a>
+    </div>
 
 
-        <a href="#classes">
+    <div class="splash-subtitle">
 
-            Classes
+        MATHEMATICS & SCIENCE
 
-        </a>
-
-
-        <a href="#material">
-
-            Study Material
-
-        </a>
+    </div>
 
 
-        <a href="#about">
+    <div class="splash-tagline">
 
-            About
+        Learn Today • Lead Tomorrow
 
-        </a>
-
-
-        <a href="#contact">
-
-            Contact
-
-        </a>
-
-    </nav>
-
-</header>
+    </div>
 
 
+    <div class="splash-loader">
 
-<!-- =========================================================
+        <span></span>
+
+    </div>
+
+</div>
+
+</div><!-- =========================================================
+     HEADER
+     ========================================================= --><header id="home"><div class="logo-area">
+
+    <div class="logo-icon">
+
+        GS
+
+    </div>
+
+
+    <div class="logo-text">
+
+        <h1>
+
+            GS ACADEMY
+
+        </h1>
+
+
+        <p>
+
+            SINCE 2014 • Gaurav Shinde Sir
+
+        </p>
+
+    </div>
+
+</div>
+
+
+<nav>
+
+    <a href="#home">
+
+        Home
+
+    </a>
+
+
+    <a href="#classes">
+
+        Classes
+
+    </a>
+
+
+    <a href="#material">
+
+        Study Material
+
+    </a>
+
+
+    <a href="#about">
+
+        About
+
+    </a>
+
+
+    <a href="#contact">
+
+        Contact
+
+    </a>
+
+</nav>
+
+</header><!-- =========================================================
      HERO
-     ========================================================= -->
-
-<section class="hero">
-
-    <div class="hero-content">
+     ========================================================= --><section class="hero"><div class="hero-content">
 
 
-        <div class="badge">
+    <div class="badge">
 
-            QUALITY EDUCATION • STRONG CONCEPTS
+        QUALITY EDUCATION • STRONG CONCEPTS
+
+    </div>
+
+
+    <h2>
+
+        Learn Today.<br>
+
+        <span>
+
+            Lead Tomorrow.
+
+        </span>
+
+    </h2>
+
+
+    <h3>
+
+        Mathematics & Science
+
+    </h3>
+
+
+    <p>
+
+        GS Academy provides concept-based learning,
+
+        regular tests and quality study material for
+
+        7th, 8th and 9th standard students.
+
+    </p>
+
+
+    <div class="hero-buttons">
+
+
+        <a
+            href="#material"
+            class="btn btn-primary">
+
+            📚 Study Material
+
+        </a>
+
+
+        <a
+            href="#classes"
+            class="btn btn-outline">
+
+            🎓 View Classes
+
+        </a>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================================
+     STATS
+     ========================================================= --><section class="stats"><div class="stats-grid">
+
+
+    <div class="stat">
+
+        <strong>
+
+            2014
+
+        </strong>
+
+        <span>
+
+            Since
+
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>
+
+            3
+
+        </strong>
+
+        <span>
+
+            Standards
+
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>
+
+            2
+
+        </strong>
+
+        <span>
+
+            Main Subjects
+
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>
+
+            100%
+
+        </strong>
+
+        <span>
+
+            Concept Focus
+
+        </span>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================================
+     CLASSES
+     ========================================================= --><section id="classes"><div class="section-heading">
+
+
+    <div class="small">
+
+        Our Classes
+
+    </div>
+
+
+    <h2>
+
+        Choose Your Standard
+
+    </h2>
+
+
+    <p>
+
+        Mathematics and Science learning for school students.
+
+    </p>
+
+</div>
+
+
+<div class="class-grid">
+
+
+    <div class="class-card">
+
+
+        <div class="class-number">
+
+            07
 
         </div>
 
 
-        <h2>
-
-            Learn Today.<br>
-
-            <span>
-
-                Lead Tomorrow.
-
-            </span>
-
-        </h2>
-
-
         <h3>
 
-            Mathematics & Science
+            7th Standard
 
         </h3>
 
 
         <p>
 
-            Sarvagya Classes provides concept-based learning,
-
-            regular tests and quality study material for
-
-            7th, 8th and 9th standard students.
+            Foundation level learning with clear concepts.
 
         </p>
 
 
-        <div class="hero-buttons">
+        <ul>
 
+            <li>
 
-            <a
-                href="#material"
-                class="btn btn-primary">
+                Mathematics
 
-                📚 Study Material
+            </li>
 
-            </a>
 
+            <li>
 
-            <a
-                href="#classes"
-                class="btn btn-outline">
+                Science
 
-                🎓 View Classes
+            </li>
 
-            </a>
 
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     STATS
-     ========================================================= -->
-
-<section class="stats">
-
-    <div class="stats-grid">
-
-
-        <div class="stat">
-
-            <strong>
-
-                2014
-
-            </strong>
-
-            <span>
-
-                Since
-
-            </span>
-
-        </div>
-
-
-        <div class="stat">
-
-            <strong>
-
-                3
-
-            </strong>
-
-            <span>
-
-                Standards
-
-            </span>
-
-        </div>
-
-
-        <div class="stat">
-
-            <strong>
-
-                2
-
-            </strong>
-
-            <span>
-
-                Main Subjects
-
-            </span>
-
-        </div>
-
-
-        <div class="stat">
-
-            <strong>
-
-                100%
-
-            </strong>
-
-            <span>
-
-                Concept Focus
-
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CLASSES
-     ========================================================= -->
-
-<section id="classes">
-
-
-    <div class="section-heading">
-
-
-        <div class="small">
-
-            Our Classes
-
-        </div>
-
-
-        <h2>
-
-            Choose Your Standard
-
-        </h2>
-
-
-        <p>
-
-            Mathematics and Science learning for school students.
-
-        </p>
-
-    </div>
-
-
-
-    <div class="class-grid">
-
-
-        <div class="class-card">
-
-
-            <div class="class-number">
-
-                07
-
-            </div>
-
-
-            <h3>
-
-                7th Standard
-
-            </h3>
-
-
-            <p>
-
-                Foundation level learning with clear concepts.
-
-            </p>
-
-
-            <ul>
-
-                <li>
-
-                    Mathematics
-
-                </li>
-
-
-                <li>
-
-                    Science
-
-                </li>
-
-
-                <li>
-
-                    Regular Tests
-
-                </li>
-
-
-                <li>
-
-                    Practice Material
-
-                </li>
-
-            </ul>
-
-        </div>
-
-
-
-        <div class="class-card">
-
-
-            <div class="class-number">
-
-                08
-
-            </div>
-
-
-            <h3>
-
-                8th Standard
-
-            </h3>
-
-
-            <p>
-
-                Strong conceptual preparation for higher classes.
-
-            </p>
-
-
-            <ul>
-
-                <li>
-
-                    Mathematics
-
-                </li>
-
-
-                <li>
-
-                    Science
-
-                </li>
-
-
-                <li>
-
-                    Regular Tests
-
-                </li>
-
-
-                <li>
-
-                    Practice Material
-
-                </li>
-
-            </ul>
-
-        </div>
-
-
-
-        <div class="class-card">
-
-
-            <div class="class-number">
-
-                09
-
-            </div>
-
-
-            <h3>
-
-                9th Standard
-
-            </h3>
-
-
-            <p>
-
-                Exam-oriented learning with strong fundamentals.
-
-            </p>
-
-
-            <ul>
-
-                <li>
-
-                    Mathematics
-
-                </li>
-
-
-                <li>
-
-                    Science
-
-                </li>
-
-
-                <li>
-
-                    Regular Tests
-
-                </li>
-
-
-                <li>
-
-                    Exam Preparation
-
-                </li>
-
-            </ul>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     DYNAMIC STUDY MATERIAL
-     ========================================================= -->
-
-<section
-    id="material"
-    class="material-section">
-
-
-    <div class="section-heading">
-
-
-        <div class="small">
-
-            Study Material
-
-        </div>
-
-
-        <h2>
-
-            Books & Test Papers
-
-        </h2>
-
-
-        <p>
-
-            New study material is added regularly.
-
-        </p>
-
-    </div>
-
-
-
-    <!-- =====================================================
-         7TH STANDARD MATERIAL
-         ===================================================== -->
-
-    <div
-        class="material-class"
-        id="material7">
-
-
-        <div class="material-title">
-
-
-            <div class="material-icon">
-
-                📘
-
-            </div>
-
-
-            <h3>
-
-                7th Standard
-
-            </h3>
-
-
-        </div>
-
-
-        <div
-            id="materials7"
-            class="material-grid">
-
-            <div class="material-loading">
-
-                Loading materials...
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =====================================================
-         8TH STANDARD MATERIAL
-         ===================================================== -->
-
-    <div
-        class="material-class"
-        id="material8">
-
-
-        <div class="material-title">
-
-
-            <div class="material-icon">
-
-                📗
-
-            </div>
-
-
-            <h3>
-
-                8th Standard
-
-            </h3>
-
-
-        </div>
-
-
-        <div
-            id="materials8"
-            class="material-grid">
-
-            <div class="material-loading">
-
-                Loading materials...
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =====================================================
-         9TH STANDARD MATERIAL
-         ===================================================== -->
-
-    <div
-        class="material-class"
-        id="material9">
-
-
-        <div class="material-title">
-
-
-            <div class="material-icon">
-
-                📕
-
-
-            </div>
-
-
-            <h3>
-
-                9th Standard
-
-            </h3>
-
-        </div>
-
-
-        <div
-            id="materials9"
-            class="material-grid">
-
-            <div class="material-loading">
-
-                Loading materials...
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     WHY SARVAGYA
-     ========================================================= -->
-
-<section>
-
-
-    <div class="section-heading">
-
-
-        <div class="small">
-
-            Why Sarvagya Classes
-
-        </div>
-
-
-        <h2>
-
-            Learning That Builds Confidence
-
-        </h2>
-
-    </div>
-
-
-
-    <div class="feature-grid">
-
-
-        <div class="feature">
-
-
-            <div class="feature-icon">
-
-                🎯
-
-            </div>
-
-
-            <h3>
-
-                Strong Concepts
-
-            </h3>
-
-
-            <p>
-
-                Focus on understanding concepts instead of memorising.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="feature">
-
-
-            <div class="feature-icon">
-
-                📝
-
-            </div>
-
-
-            <h3>
+            <li>
 
                 Regular Tests
 
-            </h3>
+            </li>
 
 
-            <p>
+            <li>
 
-                Regular practice helps students prepare confidently.
+                Practice Material
 
-            </p>
+            </li>
 
-        </div>
-
-
-
-        <div class="feature">
-
-
-            <div class="feature-icon">
-
-                📚
-
-            </div>
-
-
-            <h3>
-
-                Study Material
-
-            </h3>
-
-
-            <p>
-
-                Useful books, tests and practice material in one place.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="feature">
-
-
-            <div class="feature-icon">
-
-                👨‍🏫
-
-            </div>
-
-
-            <h3>
-
-                Personal Guidance
-
-            </h3>
-
-
-            <p>
-
-                Proper guidance for Mathematics and Science.
-
-            </p>
-
-        </div>
-
+        </ul>
 
     </div>
 
-</section>
+
+    <div class="class-card">
 
 
+        <div class="class-number">
 
-<!-- =========================================================
-     ABOUT
-     ========================================================= -->
-
-<section
-    id="about"
-    class="about">
-
-
-    <div class="about-grid">
-
-
-        <div class="teacher-card">
-
-
-            <div class="teacher-avatar">
-
-                GS
-
-            </div>
-
-
-            <h3>
-
-                Gaurav Shinde Sir
-
-            </h3>
-
-
-            <p>
-
-                Mathematics & Science Teacher
-
-            </p>
-
-
-            <p>
-
-                Sarvagya Classes
-
-            </p>
+            08
 
         </div>
-
-
-
-        <div class="about-text">
-
-
-            <h2>
-
-                About Sarvagya Classes
-
-            </h2>
-
-
-            <p>
-
-                Sarvagya Classes is focused on providing
-
-                quality Mathematics and Science education
-
-                for school students.
-
-            </p>
-
-
-            <p>
-
-                Our aim is to make difficult concepts simple,
-
-                improve problem-solving ability and develop
-
-                confidence through regular practice.
-
-            </p>
-
-
-            <ul class="about-list">
-
-
-                <li>
-
-                    7th, 8th and 9th Standard
-
-                </li>
-
-
-                <li>
-
-                    Mathematics & Science
-
-                </li>
-
-
-                <li>
-
-                    Concept-based teaching
-
-                </li>
-
-
-                <li>
-
-                    Regular tests and practice
-
-                </li>
-
-
-                <li>
-
-                    Quality study material
-
-                </li>
-
-
-            </ul>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     LOCATION
-     ========================================================= -->
-
-<section>
-
-
-    <div class="section-heading">
-
-
-        <div class="small">
-
-            Our Location
-
-        </div>
-
-
-        <h2>
-
-            Sarvagya Classes
-
-        </h2>
-
-    </div>
-
-
-    <div class="location-box">
-
-
-        <p style="text-align:center;">
-
-            📍 <strong>
-
-                Nimgaon Khalu, Shrigonda
-
-            </strong>
-
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CONTACT
-     ========================================================= -->
-
-<section
-    id="contact"
-    class="contact">
-
-
-    <div class="section-heading">
-
-
-        <div class="small">
-
-            Contact
-
-        </div>
-
-
-        <h2>
-
-            Get In Touch
-
-        </h2>
-
-
-        <p>
-
-            For admission and class information, contact us.
-
-        </p>
-
-    </div>
-
-
-
-    <div class="contact-box">
-
-
-        <h2>
-
-            Gaurav Shinde Sir
-
-        </h2>
-
-
-        <p>
-
-            Mathematics & Science
-
-        </p>
-
-
-        <p>
-
-            📍 Nimgaon Khalu, Shrigonda
-
-        </p>
-
-
-        <p>
-
-            📞 <strong>
-
-                8262055677
-
-            </strong>
-
-        </p>
-
-
-
-        <div class="contact-buttons">
-
-
-            <a
-                href="tel:8262055677"
-                class="call-btn">
-
-                📞 Call Now
-
-            </a>
-
-
-            <a
-                href="https://wa.me/918262055677?text=Hello%20Gaurav%20Shinde%20Sir%2C%20I%20want%20information%20about%20Sarvagya%20Classes."
-                target="_blank"
-                rel="noopener"
-                class="whatsapp-btn">
-
-                💬 WhatsApp
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     STUDENT RECORDS
-     ========================================================= -->
-
-<section
-    id="students"
-    class="students-section">
-
-
-    <div class="section-heading">
-
-
-        <div class="small">
-
-            Student Records
-
-        </div>
-
-
-        <h2>
-
-            Students & Fees Status
-
-        </h2>
-
-
-        <p>
-
-            Students enrolled at Sarvagya Classes.
-
-        </p>
-
-    </div>
-
-
-
-    <div
-        id="studentLoading"
-        class="note-box"
-        style="text-align:center;">
-
-        Loading student records...
-
-    </div>
-
-
-
-    <!-- 7TH -->
-
-    <div
-        class="student-class"
-        id="class7"
-        style="display:none;">
 
 
         <h3>
 
-            📘 7th Standard
+            8th Standard
 
         </h3>
 
 
-        <div class="student-table-wrapper">
+        <p>
+
+            Strong conceptual preparation for higher classes.
+
+        </p>
 
 
-            <table class="student-table">
+        <ul>
+
+            <li>
+
+                Mathematics
+
+            </li>
 
 
-                <thead>
+            <li>
 
-                    <tr>
+                Science
 
-                        <th>
-
-                            Sr. No.
-
-                        </th>
+            </li>
 
 
-                        <th>
+            <li>
 
-                            Student Name
+                Regular Tests
 
-                        </th>
-
-
-                        <th>
-
-                            Fees Status
-
-                        </th>
-
-                    </tr>
-
-                </thead>
+            </li>
 
 
-                <tbody id="students7">
+            <li>
 
-                </tbody>
+                Practice Material
 
+            </li>
 
-            </table>
-
-        </div>
+        </ul>
 
     </div>
 
 
+    <div class="class-card">
 
-    <!-- 8TH -->
 
-    <div
-        class="student-class"
-        id="class8"
-        style="display:none;">
+        <div class="class-number">
+
+            09
+
+        </div>
 
 
         <h3>
 
-            📗 8th Standard
+            9th Standard
 
         </h3>
 
 
-        <div class="student-table-wrapper">
+        <p>
+
+            Exam-oriented learning with strong fundamentals.
+
+        </p>
 
 
-            <table class="student-table">
+        <ul>
+
+            <li>
+
+                Mathematics
+
+            </li>
 
 
-                <thead>
+            <li>
 
-                    <tr>
+                Science
 
-                        <th>
-
-                            Sr. No.
-
-                        </th>
+            </li>
 
 
-                        <th>
+            <li>
 
-                            Student Name
+                Regular Tests
 
-                        </th>
-
-
-                        <th>
-
-                            Fees Status
-
-                        </th>
-
-                    </tr>
-
-                </thead>
+            </li>
 
 
-                <tbody id="students8">
+            <li>
 
-                </tbody>
+                Exam Preparation
 
+            </li>
 
-            </table>
-
-        </div>
+        </ul>
 
     </div>
 
 
+</div>
 
-    <!-- 9TH -->
-
-    <div
-        class="student-class"
-        id="class9"
-        style="display:none;">
-
-
-        <h3>
-
-            📕 9th Standard
-
-        </h3>
+</section><!-- =========================================================
+     STUDY MATERIAL
+     ========================================================= --><section
+    id="material"
+    class="material-section"><div class="section-heading">
 
 
-        <div class="student-table-wrapper">
+    <div class="small">
 
-
-            <table class="student-table">
-
-
-                <thead>
-
-                    <tr>
-
-                        <th>
-
-                            Sr. No.
-
-                        </th>
-
-
-                        <th>
-
-                            Student Name
-
-                        </th>
-
-
-                        <th>
-
-                            Fees Status
-
-                        </th>
-
-                    </tr>
-
-                </thead>
-
-
-                <tbody id="students9">
-
-                </tbody>
-
-
-            </table>
-
-        </div>
+        Study Material
 
     </div>
 
 
-</section>
+    <h2>
 
+        Books & Test Papers
 
-
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
-
-<footer>
-
-
-    <div class="footer-logo">
-
-        SARVAGYA CLASSES
-
-    </div>
+    </h2>
 
 
     <p>
 
-        Gaurav Shinde Sir • Mathematics & Science
+        New study material is added regularly.
 
     </p>
 
-
-    <div class="footer-links">
-
-
-        <a href="#home">
-
-            Home
-
-        </a>
+</div>
 
 
-        <a href="#classes">
+<!-- 7TH -->
 
-            Classes
+<div
+    class="material-class"
+    id="material7">
 
-        </a>
+
+    <div class="material-title">
 
 
-        <a href="#material">
+        <div class="material-icon">
+
+            📘
+
+        </div>
+
+
+        <h3>
+
+            7th Standard
+
+        </h3>
+
+
+    </div>
+
+
+    <div
+        id="materials7"
+        class="material-grid">
+
+        <div class="material-loading">
+
+            Loading materials...
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- 8TH -->
+
+<div
+    class="material-class"
+    id="material8">
+
+
+    <div class="material-title">
+
+
+        <div class="material-icon">
+
+            📗
+
+        </div>
+
+
+        <h3>
+
+            8th Standard
+
+        </h3>
+
+
+    </div>
+
+
+    <div
+        id="materials8"
+        class="material-grid">
+
+        <div class="material-loading">
+
+            Loading materials...
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- 9TH -->
+
+<div
+    class="material-class"
+    id="material9">
+
+
+    <div class="material-title">
+
+
+        <div class="material-icon">
+
+            📕
+
+
+        </div>
+
+
+        <h3>
+
+            9th Standard
+
+        </h3>
+
+    </div>
+
+
+    <div
+        id="materials9"
+        class="material-grid">
+
+        <div class="material-loading">
+
+            Loading materials...
+
+        </div>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================================
+     WHY GS ACADEMY
+     ========================================================= --><section><div class="section-heading">
+
+
+    <div class="small">
+
+        Why GS Academy
+
+    </div>
+
+
+    <h2>
+
+        Learning That Builds Confidence
+
+    </h2>
+
+</div>
+
+
+<div class="feature-grid">
+
+
+    <div class="feature">
+
+
+        <div class="feature-icon">
+
+            🎯
+
+        </div>
+
+
+        <h3>
+
+            Strong Concepts
+
+        </h3>
+
+
+        <p>
+
+            Focus on understanding concepts instead of memorising.
+
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+
+        <div class="feature-icon">
+
+            📝
+
+        </div>
+
+
+        <h3>
+
+            Regular Tests
+
+        </h3>
+
+
+        <p>
+
+            Regular practice helps students prepare confidently.
+
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+
+        <div class="feature-icon">
+
+            📚
+
+        </div>
+
+
+        <h3>
 
             Study Material
 
+        </h3>
+
+
+        <p>
+
+            Useful books, tests and practice material in one place.
+
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+
+        <div class="feature-icon">
+
+            👨‍🏫
+
+        </div>
+
+
+        <h3>
+
+            Personal Guidance
+
+        </h3>
+
+
+        <p>
+
+            Proper guidance for Mathematics and Science.
+
+        </p>
+
+    </div>
+
+
+</div>
+
+</section><!-- =========================================================
+     ABOUT
+     ========================================================= --><section
+    id="about"
+    class="about"><div class="about-grid">
+
+
+    <div class="teacher-card">
+
+
+        <div class="teacher-avatar">
+
+            GS
+
+        </div>
+
+
+        <h3>
+
+            Gaurav Shinde Sir
+
+        </h3>
+
+
+        <p>
+
+            Mathematics & Science Teacher
+
+        </p>
+
+
+        <p>
+
+            GS Academy
+
+        </p>
+
+    </div>
+
+
+    <div class="about-text">
+
+
+        <h2>
+
+            About GS Academy
+
+        </h2>
+
+
+        <p>
+
+            GS Academy is focused on providing
+
+            quality Mathematics and Science education
+
+            for school students.
+
+        </p>
+
+
+        <p>
+
+            Our aim is to make difficult concepts simple,
+
+            improve problem-solving ability and develop
+
+            confidence through regular practice.
+
+        </p>
+
+
+        <ul class="about-list">
+
+
+            <li>
+
+                7th, 8th and 9th Standard
+
+            </li>
+
+
+            <li>
+
+                Mathematics & Science
+
+            </li>
+
+
+            <li>
+
+                Concept-based teaching
+
+            </li>
+
+
+            <li>
+
+                Regular tests and practice
+
+            </li>
+
+
+            <li>
+
+                Quality study material
+
+            </li>
+
+
+        </ul>
+
+    </div>
+
+
+</div>
+
+</section><!-- =========================================================
+     LOCATION
+     ========================================================= --><section><div class="section-heading">
+
+
+    <div class="small">
+
+        Our Location
+
+    </div>
+
+
+    <h2>
+
+        GS Academy
+
+    </h2>
+
+</div>
+
+
+<div class="location-box">
+
+
+    <p style="text-align:center;">
+
+        📍 <strong>
+
+            Nimgaon Khalu, Shrigonda
+
+        </strong>
+
+    </p>
+
+</div>
+
+</section><!-- =========================================================
+     CONTACT
+     ========================================================= --><section
+    id="contact"
+    class="contact"><div class="section-heading">
+
+
+    <div class="small">
+
+        Contact
+
+    </div>
+
+
+    <h2>
+
+        Get In Touch
+
+    </h2>
+
+
+    <p>
+
+        For admission and class information, contact us.
+
+    </p>
+
+</div>
+
+
+<div class="contact-box">
+
+
+    <h2>
+
+        Gaurav Shinde Sir
+
+    </h2>
+
+
+    <p>
+
+        Mathematics & Science
+
+    </p>
+
+
+    <p>
+
+        📍 Nimgaon Khalu, Shrigonda
+
+    </p>
+
+
+    <p>
+
+        📞 <strong>
+
+            8262055677
+
+        </strong>
+
+    </p>
+
+
+    <div class="contact-buttons">
+
+
+        <a
+            href="tel:8262055677"
+            class="call-btn">
+
+            📞 Call Now
+
         </a>
 
 
-        <a href="#about">
+        <a
+            href="https://wa.me/918262055677?text=Hello%20Gaurav%20Shinde%20Sir%2C%20I%20want%20information%20about%20GS%20Academy."
+            target="_blank"
+            rel="noopener"
+            class="whatsapp-btn">
 
-            About
-
-        </a>
-
-
-        <a href="#contact">
-
-            Contact
+            💬 WhatsApp
 
         </a>
 
     </div>
 
+</div>
+
+</section><!-- =========================================================
+     STUDENT RECORDS
+     ========================================================= --><section
+    id="students"
+    class="students-section"><div class="section-heading">
+
+
+    <div class="small">
+
+        Student Records
+
+    </div>
+
+
+    <h2>
+
+        Students & Fees Status
+
+    </h2>
+
 
     <p>
 
-        © 2026 Sarvagya Classes. All Rights Reserved.
+        Students enrolled at GS Academy.
 
     </p>
 
-
-    <p>
-
-        Nimgaon Khalu, Shrigonda
-
-    </p>
-
-</footer>
+</div>
 
 
+<div
+    id="studentLoading"
+    class="note-box"
+    style="text-align:center;">
 
-<!-- =========================================================
-     WHATSAPP
-     ========================================================= -->
+    Loading student records...
 
-<a
-    href="https://wa.me/918262055677?text=Hello%20Gaurav%20Shinde%20Sir%2C%20I%20want%20information%20about%20Sarvagya%20Classes."
-    target="_blank"
-    rel="noopener"
-    class="whatsapp-float"
-    aria-label="WhatsApp">
-
-    💬
-
-</a>
+</div>
 
 
+<!-- 7TH -->
 
-<!-- =========================================================
+<div
+    class="student-class"
+    id="class7"
+    style="display:none;">
+
+
+    <h3>
+
+        📘 7th Standard
+
+    </h3>
+
+
+    <div class="student-table-wrapper">
+
+
+        <table class="student-table">
+
+
+            <thead>
+
+                <tr>
+
+                    <th>
+
+                        Sr. No.
+
+                    </th>
+
+
+                    <th>
+
+                        Student Name
+
+                    </th>
+
+
+                    <th>
+
+                        Fees Status
+
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="students7">
+
+            </tbody>
+
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<!-- 8TH -->
+
+<div
+    class="student-class"
+    id="class8"
+    style="display:none;">
+
+
+    <h3>
+
+        📗 8th Standard
+
+    </h3>
+
+
+    <div class="student-table-wrapper">
+
+
+        <table class="student-table">
+
+
+            <thead>
+
+                <tr>
+
+                    <th>
+
+                        Sr. No.
+
+                    </th>
+
+
+                    <th>
+
+                        Student Name
+
+                    </th>
+
+
+                    <th>
+
+                        Fees Status
+
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="students8">
+
+            </tbody>
+
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<!-- 9TH -->
+
+<div
+    class="student-class"
+    id="class9"
+    style="display:none;">
+
+
+    <h3>
+
+        📕 9th Standard
+
+    </h3>
+
+
+    <div class="student-table-wrapper">
+
+
+        <table class="student-table">
+
+
+            <thead>
+
+                <tr>
+
+                    <th>
+
+                        Sr. No.
+
+                    </th>
+
+
+                    <th>
+
+                        Student Name
+
+                    </th>
+
+
+                    <th>
+
+                        Fees Status
+
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="students9">
+
+            </tbody>
+
+
+        </table>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================================
+     FOOTER
+     ========================================================= --><footer><div class="footer-logo">
+
+    GS ACADEMY
+
+</div>
+
+
+<p>
+
+    Gaurav Shinde Sir • Mathematics & Science
+
+</p>
+
+
+<div class="footer-links">
+
+
+    <a href="#home">
+
+        Home
+
+    </a>
+
+
+    <a href="#classes">
+
+        Classes
+
+    </a>
+
+
+    <a href="#material">
+
+        Study Material
+
+    </a>
+
+
+    <a href="#about">
+
+        About
+
+    </a>
+
+
+    <a href="#contact">
+
+        Contact
+
+    </a>
+
+
+</div>
+
+
+<p>
+
+    © 2026 GS Academy. All Rights Reserved.
+
+</p>
+
+
+<p>
+
+    Nimgaon Khalu, Shrigonda
+
+</p>
+
+</footer><!-- =========================================================
+     WHATSAPP FLOATING BUTTON
+     ========================================================= --><a
+href="https://wa.me/918262055677?text=Hello%20Gaurav%20Shinde%20Sir%2C%20I%20want%20information%20about%20GS%20Academy."
+target="_blank"
+rel="noopener"
+class="whatsapp-float"
+aria-label="WhatsApp">
+
+💬
+
+</a><!-- =========================================================
      BACK TO TOP
-     ========================================================= -->
+     ========================================================= --><a
+href="#home"
+class="top-btn"
+aria-label="Back to top">
 
-<a
-    href="#home"
-    class="top-btn"
-    aria-label="Back to top">
+↑
 
-    ↑
-
-</a>
-
-
-
-<!-- =========================================================
+</a><!-- =========================================================
      SUPABASE SYSTEM
-     ========================================================= -->
-
-<script>
+     ========================================================= --><script>
 
 
 /* =========================================================
    SUPABASE CONFIG
    ========================================================= */
-
 
 const SUPABASE_URL =
 
@@ -3130,11 +3413,49 @@ window.supabase.createClient(
 );
 
 
+/* =========================================================
+   SPLASH SCREEN
+   ========================================================= */
+
+window.addEventListener(
+
+    "load",
+
+    function(){
+
+        setTimeout(
+
+            function(){
+
+                const splash =
+
+                    document.getElementById(
+                        "splashScreen"
+                    );
+
+
+                if(splash){
+
+                    splash.classList.add(
+                        "hide"
+                    );
+
+                }
+
+            },
+
+            2500
+
+        );
+
+    }
+
+);
+
 
 /* =========================================================
    LOAD STUDY MATERIAL
    ========================================================= */
-
 
 async function loadStudyMaterials(){
 
@@ -3153,25 +3474,19 @@ async function loadStudyMaterials(){
     };
 
 
-    /* SHOW LOADING */
-
     containers["7th"].innerHTML =
 
         '<div class="material-loading">Loading materials...</div>';
+
 
     containers["8th"].innerHTML =
 
         '<div class="material-loading">Loading materials...</div>';
 
+
     containers["9th"].innerHTML =
 
         '<div class="material-loading">Loading materials...</div>';
-
-
-
-    /* =====================================================
-       GET MATERIALS FROM SUPABASE
-       ===================================================== */
 
 
     const {
@@ -3203,12 +3518,6 @@ async function loadStudyMaterials(){
         );
 
 
-
-    /* =====================================================
-       ERROR
-       ===================================================== */
-
-
     if(error){
 
         console.log(
@@ -3224,9 +3533,11 @@ async function loadStudyMaterials(){
 
             '<div class="material-empty">Unable to load materials.</div>';
 
+
         containers["8th"].innerHTML =
 
             '<div class="material-empty">Unable to load materials.</div>';
+
 
         containers["9th"].innerHTML =
 
@@ -3235,12 +3546,6 @@ async function loadStudyMaterials(){
         return;
 
     }
-
-
-
-    /* =====================================================
-       EMPTY
-       ===================================================== */
 
 
     if(
@@ -3255,9 +3560,11 @@ async function loadStudyMaterials(){
 
             '<div class="material-empty">No study material available yet.</div>';
 
+
         containers["8th"].innerHTML =
 
             '<div class="material-empty">No study material available yet.</div>';
+
 
         containers["9th"].innerHTML =
 
@@ -3268,9 +3575,6 @@ async function loadStudyMaterials(){
     }
 
 
-
-    /* CLEAR */
-
     containers["7th"].innerHTML = "";
 
     containers["8th"].innerHTML = "";
@@ -3278,20 +3582,11 @@ async function loadStudyMaterials(){
     containers["9th"].innerHTML = "";
 
 
-
-    /* COUNTERS */
-
     let count7 = 0;
 
     let count8 = 0;
 
     let count9 = 0;
-
-
-
-    /* =====================================================
-       LOOP
-       ===================================================== */
 
 
     data.forEach(
@@ -3304,8 +3599,6 @@ async function loadStudyMaterials(){
                 material.standard;
 
 
-            /* IGNORE OTHER STANDARDS */
-
             if(
 
                 !containers[standard]
@@ -3315,12 +3608,6 @@ async function loadStudyMaterials(){
                 return;
 
             }
-
-
-
-            /* =================================================
-               CREATE MATERIAL CARD
-               ================================================= */
 
 
             const item =
@@ -3335,12 +3622,6 @@ async function loadStudyMaterials(){
             item.className =
 
                 "material-item";
-
-
-
-            /* =================================================
-               FILE TYPE
-               ================================================= */
 
 
             let fileType =
@@ -3370,23 +3651,11 @@ async function loadStudyMaterials(){
             }
 
 
-
-            /* =================================================
-               SUBJECT
-               ================================================= */
-
-
             const subject =
 
                 material.subject ||
 
                 "Study Material";
-
-
-
-            /* =================================================
-               SAFE HTML
-               ================================================= */
 
 
             const safeTitle =
@@ -3425,16 +3694,9 @@ async function loadStudyMaterials(){
                 );
 
 
-
-            /* =================================================
-               CARD HTML
-               ================================================= */
-
-
             item.innerHTML = `
 
                 <div class="material-info">
-
 
                     <div class="material-name">
 
@@ -3442,19 +3704,17 @@ async function loadStudyMaterials(){
 
                     </div>
 
-
                     <div class="material-type">
 
                         ${safeFileType}
 
                         •
+
                         ${safeSubject}
 
                     </div>
 
-
                 </div>
-
 
                 <a
 
@@ -3473,16 +3733,12 @@ async function loadStudyMaterials(){
             `;
 
 
-
             containers[standard].appendChild(
 
                 item
 
             );
 
-
-
-            /* COUNTERS */
 
             if(standard === "7th"){
 
@@ -3507,12 +3763,6 @@ async function loadStudyMaterials(){
         }
 
     );
-
-
-
-    /* =====================================================
-       EMPTY STANDARD MESSAGE
-       ===================================================== */
 
 
     if(count7 === 0){
@@ -3544,11 +3794,9 @@ async function loadStudyMaterials(){
 }
 
 
-
 /* =========================================================
    ESCAPE MATERIAL HTML
    ========================================================= */
-
 
 function escapeMaterialHTML(value){
 
@@ -3572,11 +3820,9 @@ function escapeMaterialHTML(value){
 }
 
 
-
 /* =========================================================
    LOAD STUDENTS
    ========================================================= */
-
 
 async function loadPublicStudents(){
 
@@ -3619,9 +3865,6 @@ async function loadPublicStudents(){
         );
 
 
-
-    /* ERROR */
-
     if(error){
 
         loading.style.display =
@@ -3648,16 +3891,10 @@ async function loadPublicStudents(){
     }
 
 
-
-    /* HIDE LOADING */
-
     loading.style.display =
 
         "none";
 
-
-
-    /* CLEAR TABLES */
 
     document.getElementById(
 
@@ -3680,20 +3917,32 @@ async function loadPublicStudents(){
     ).innerHTML = "";
 
 
+    document.getElementById(
 
-    /* COUNTERS */
+        "class7"
+
+    ).style.display = "none";
+
+
+    document.getElementById(
+
+        "class8"
+
+    ).style.display = "none";
+
+
+    document.getElementById(
+
+        "class9"
+
+    ).style.display = "none";
+
 
     let count7 = 0;
 
     let count8 = 0;
 
     let count9 = 0;
-
-
-
-    /* =====================================================
-       STUDENTS LOOP
-       ===================================================== */
 
 
     data.forEach(
@@ -3728,12 +3977,6 @@ async function loadPublicStudents(){
                     0
 
                 );
-
-
-
-            /* =================================================
-               FEE STATUS
-               ================================================= */
 
 
             let statusText;
@@ -3776,12 +4019,6 @@ async function loadPublicStudents(){
                     "pending";
 
             }
-
-
-
-            /* =================================================
-               STANDARD
-               ================================================= */
 
 
             let tbody;
@@ -3844,12 +4081,6 @@ async function loadPublicStudents(){
             }
 
 
-
-            /* =================================================
-               ROW
-               ================================================= */
-
-
             const row =
 
                 document.createElement(
@@ -3867,7 +4098,6 @@ async function loadPublicStudents(){
 
                 </td>
 
-
                 <td>
 
                     ${escapeStudentName(
@@ -3877,7 +4107,6 @@ async function loadPublicStudents(){
                     )}
 
                 </td>
-
 
                 <td>
 
@@ -3903,12 +4132,6 @@ async function loadPublicStudents(){
         }
 
     );
-
-
-
-    /* =====================================================
-       SHOW CLASS SECTIONS
-       ===================================================== */
 
 
     if(count7 > 0){
@@ -3950,12 +4173,6 @@ async function loadPublicStudents(){
     }
 
 
-
-    /* =====================================================
-       NO STUDENTS
-       ===================================================== */
-
-
     if(
 
         count7 === 0 &&
@@ -3980,11 +4197,9 @@ async function loadPublicStudents(){
 }
 
 
-
 /* =========================================================
    STUDENT NAME SECURITY
    ========================================================= */
-
 
 function escapeStudentName(name){
 
@@ -4008,21 +4223,13 @@ function escapeStudentName(name){
 }
 
 
-
 /* =========================================================
-   START BOTH SYSTEMS
+   START SYSTEMS
    ========================================================= */
-
 
 loadStudyMaterials();
 
 loadPublicStudents();
 
 
-</script>
-
-
-</body>
-
-</html>
-```
+</script></body></html>
