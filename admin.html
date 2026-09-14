@@ -32,17 +32,82 @@ body{
     margin:auto;
 }
 
+/* LOGIN */
+
+.login-box{
+    max-width:420px;
+    margin:60px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(15,23,42,.10);
+}
+
+.login-box h1{
+    text-align:center;
+    color:#172033;
+    margin-bottom:7px;
+}
+
+.login-subtitle{
+    text-align:center;
+    color:#64748b;
+    font-size:13px;
+    margin-bottom:25px;
+}
+
+.login-btn{
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:7px;
+    background:#2563eb;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.login-btn:hover{
+    background:#1d4ed8;
+}
+
+.login-btn:disabled{
+    background:#94a3b8;
+    cursor:not-allowed;
+}
+
+.login-message{
+    margin-top:15px;
+    padding:12px;
+    border-radius:7px;
+    display:none;
+    font-size:14px;
+}
+
+.login-error{
+    display:block;
+    background:#fee2e2;
+    color:#991b1b;
+}
+
+
+/* HEADER */
+
 .header{
     background:#172033;
     color:white;
-    padding:25px;
+    padding:22px;
     border-radius:15px;
-    text-align:center;
     margin-bottom:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
 }
 
 .header h1{
-    font-size:25px;
+    font-size:24px;
     margin-bottom:5px;
 }
 
@@ -50,6 +115,23 @@ body{
     font-size:13px;
     opacity:.8;
 }
+
+.logout-btn{
+    background:#dc2626;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:7px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.logout-btn:hover{
+    background:#b91c1c;
+}
+
+
+/* CARD */
 
 .card{
     background:white;
@@ -73,29 +155,22 @@ label{
 
 input,
 select{
-
     width:100%;
-
     padding:12px;
-
     border:1px solid #dbe2ea;
-
     border-radius:7px;
-
     font-size:14px;
-
     margin-bottom:18px;
-
 }
 
 input:focus,
 select:focus{
-
     outline:none;
-
     border-color:#2563eb;
-
 }
+
+
+/* BUTTONS */
 
 .button-row{
     display:flex;
@@ -103,25 +178,15 @@ select:focus{
 }
 
 .main-btn{
-
     flex:1;
-
     padding:13px;
-
     border:none;
-
     border-radius:7px;
-
     background:#2563eb;
-
     color:white;
-
     font-size:15px;
-
     font-weight:bold;
-
     cursor:pointer;
-
 }
 
 .main-btn:hover{
@@ -129,167 +194,82 @@ select:focus{
 }
 
 .cancel-btn{
-
     display:none;
-
     flex:1;
-
     padding:13px;
-
     border:none;
-
     border-radius:7px;
-
     background:#64748b;
-
     color:white;
-
     font-size:15px;
-
     font-weight:bold;
-
     cursor:pointer;
-
 }
 
-.cancel-btn:hover{
-    background:#475569;
-}
 
-.upload-btn{
-
-    width:100%;
-
-    padding:14px;
-
-    border:none;
-
-    border-radius:7px;
-
-    background:#2563eb;
-
-    color:white;
-
-    font-size:15px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-}
-
-.upload-btn:hover{
-    background:#1d4ed8;
-}
-
-.upload-btn:disabled{
-    background:#94a3b8;
-    cursor:not-allowed;
-}
+/* MESSAGE */
 
 .message{
-
     margin-top:15px;
-
     padding:12px;
-
     border-radius:7px;
-
     display:none;
-
     font-size:14px;
-
 }
 
 .success{
-
     display:block;
-
     background:#dcfce7;
-
     color:#166534;
-
 }
 
 .error{
-
     display:block;
-
     background:#fee2e2;
-
     color:#991b1b;
-
 }
 
 
-/* STUDENT LIST */
+/* STUDENTS */
 
 .student-item{
-
     border:1px solid #e2e8f0;
-
     border-radius:10px;
-
     padding:15px;
-
     margin-bottom:12px;
-
 }
 
 .student-top{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     gap:10px;
-
 }
 
 .student-name{
-
     font-weight:bold;
-
     font-size:16px;
-
 }
 
 .student-details{
-
     color:#64748b;
-
     font-size:13px;
-
     margin-top:6px;
-
 }
 
 .fee-details{
-
     display:flex;
-
     flex-wrap:wrap;
-
     gap:8px;
-
     margin-top:10px;
-
 }
 
 .fee-box{
-
     background:#f8fafc;
-
     border:1px solid #e2e8f0;
-
     padding:8px 10px;
-
     border-radius:6px;
-
     font-size:12px;
-
 }
 
 .status-paid{
@@ -308,67 +288,29 @@ select:focus{
 }
 
 .student-actions{
-
     display:flex;
-
     gap:7px;
-
     margin-top:12px;
-
 }
 
 .edit-btn{
-
     background:#f59e0b;
-
     color:white;
-
     border:none;
-
     padding:8px 12px;
-
     border-radius:5px;
-
     cursor:pointer;
-
     font-size:12px;
-
-}
-
-.edit-btn:hover{
-    background:#d97706;
 }
 
 .delete-btn{
-
     background:#dc2626;
-
     color:white;
-
     border:none;
-
     padding:8px 12px;
-
     border-radius:5px;
-
     cursor:pointer;
-
     font-size:12px;
-
-}
-
-.delete-btn:hover{
-    background:#b91c1c;
-}
-
-.loading{
-
-    text-align:center;
-
-    color:#64748b;
-
-    padding:15px;
-
 }
 
 
@@ -379,23 +321,14 @@ select:focus{
 }
 
 .material{
-
     padding:15px;
-
     border:1px solid #e2e8f0;
-
     border-radius:8px;
-
     margin-bottom:10px;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     gap:10px;
-
 }
 
 .material-info{
@@ -403,109 +336,61 @@ select:focus{
 }
 
 .material-title{
-
     font-weight:bold;
-
     font-size:14px;
-
 }
 
 .material-details{
-
     color:#64748b;
-
     font-size:12px;
-
     margin-top:4px;
-
 }
 
 .material-file{
-
     color:#94a3b8;
-
     font-size:11px;
-
     margin-top:5px;
-
     word-break:break-all;
-
 }
 
 .action-area{
-
     display:flex;
-
     gap:5px;
-
     flex-wrap:wrap;
-
 }
 
 .open-btn{
-
     background:#2563eb;
-
     color:white;
-
     border:none;
-
     padding:8px 12px;
-
     border-radius:5px;
-
     cursor:pointer;
-
     font-size:12px;
-
     text-decoration:none;
-
     display:inline-block;
-
 }
 
-.open-btn:hover{
-    background:#1d4ed8;
+.loading{
+    text-align:center;
+    color:#64748b;
+    padding:15px;
 }
 
 .home-btn{
-
     display:block;
-
     text-align:center;
-
     margin-top:15px;
-
     color:#2563eb;
-
     text-decoration:none;
-
     font-size:14px;
-
 }
 
 .section-title{
-
-    margin-top:5px;
-
     margin-bottom:15px;
-
     font-size:14px;
-
     color:#64748b;
-
     font-weight:bold;
-
-}
-
-hr{
-
-    border:none;
-
-    border-top:1px solid #e2e8f0;
-
-    margin:20px 0;
-
 }
 
 @media(max-width:600px){
@@ -516,6 +401,15 @@ hr{
 
     .card{
         padding:18px;
+    }
+
+    .header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .logout-btn{
+        width:100%;
     }
 
     .student-top{
@@ -555,18 +449,94 @@ hr{
 
 <body>
 
-<div class="container">
+<!-- =====================================================
+     LOGIN SCREEN
+===================================================== -->
+
+<div id="loginScreen">
+
+```
+<div class="login-box">
+
+    <h1>🔐 Admin Login</h1>
+
+    <div class="login-subtitle">
+        Sarvagya Classes Management Panel
+    </div>
+
+
+    <label>
+        Email
+    </label>
+
+    <input
+        type="email"
+        id="loginEmail"
+        placeholder="Enter admin email"
+    >
+
+
+    <label>
+        Password
+    </label>
+
+    <input
+        type="password"
+        id="loginPassword"
+        placeholder="Enter password"
+    >
+
+
+    <button
+        class="login-btn"
+        id="loginBtn"
+        onclick="loginAdmin()"
+    >
+        🔐 LOGIN
+    </button>
+
+
+    <div
+        id="loginMessage"
+        class="login-message"
+    ></div>
+
+</div>
+```
+
+</div>
 
 <!-- =====================================================
-     HEADER
+     ADMIN PANEL
 ===================================================== -->
+
+<div
+    id="adminPanel"
+    style="display:none;"
+>
+
+<div class="container">
+
+<!-- HEADER -->
 
 <div class="header">
 
 ```
-<h1>SARVAGYA CLASSES</h1>
+<div>
 
-<p>Admin Management Panel</p>
+    <h1>SARVAGYA CLASSES</h1>
+
+    <p>Admin Management Panel</p>
+
+</div>
+
+
+<button
+    class="logout-btn"
+    onclick="logoutAdmin()"
+>
+    🚪 LOGOUT
+</button>
 ```
 
 </div>
@@ -585,8 +555,6 @@ hr{
 </div>
 
 
-<!-- STUDENT NAME -->
-
 <label>
     Student Name
 </label>
@@ -597,8 +565,6 @@ hr{
     placeholder="Enter student name"
 >
 
-
-<!-- STANDARD -->
 
 <label>
     Standard
@@ -621,8 +587,6 @@ hr{
 </select>
 
 
-<!-- BATCH -->
-
 <label>
     Batch
 </label>
@@ -633,8 +597,6 @@ hr{
     placeholder="Example: Morning / Evening"
 >
 
-
-<!-- TOTAL FEE -->
 
 <label>
     Total Fee (₹)
@@ -647,8 +609,6 @@ hr{
     min="0"
 >
 
-
-<!-- PAID FEE -->
 
 <label>
     Paid Fee (₹)
@@ -691,9 +651,7 @@ hr{
 
 </div>
 
-<!-- =====================================================
-     STUDENT LIST
-===================================================== -->
+<!-- STUDENT LIST -->
 
 <div class="card">
 
@@ -711,7 +669,7 @@ hr{
 </div>
 
 <!-- =====================================================
-     STUDY MATERIAL UPLOAD
+     STUDY MATERIAL
 ===================================================== -->
 
 <div class="card">
@@ -719,8 +677,6 @@ hr{
 ```
 <h2>📚 Upload Study Material</h2>
 
-
-<!-- STANDARD -->
 
 <label>
     Standard
@@ -742,8 +698,6 @@ hr{
 
 </select>
 
-
-<!-- SUBJECT -->
 
 <label>
     Subject
@@ -770,8 +724,6 @@ hr{
 </select>
 
 
-<!-- TITLE -->
-
 <label>
     Material Name
 </label>
@@ -782,8 +734,6 @@ hr{
     placeholder="Example: Chapter 3 Test Paper"
 >
 
-
-<!-- FILE -->
 
 <label>
     Select PDF / DOCX
@@ -796,10 +746,8 @@ hr{
 >
 
 
-<!-- UPLOAD -->
-
 <button
-    class="upload-btn"
+    class="main-btn"
     id="uploadBtn"
     onclick="uploadMaterial()"
 >
@@ -815,9 +763,7 @@ hr{
 
 </div>
 
-<!-- =====================================================
-     MATERIAL LIST
-===================================================== -->
+<!-- MATERIAL LIST -->
 
 <div class="card">
 
@@ -840,8 +786,6 @@ hr{
 
 </div>
 
-<!-- HOME -->
-
 <a
 href="./index.html"
 class="home-btn"
@@ -853,6 +797,8 @@ class="home-btn"
 ```
 
 </a>
+
+</div>
 
 </div>
 
@@ -885,11 +831,212 @@ window.supabase.createClient(
 );
 
 
+let editingStudentId = null;
+
+
 /* =====================================================
-   EDITING STUDENT ID
+   CHECK LOGIN SESSION
 ===================================================== */
 
-let editingStudentId = null;
+async function checkSession(){
+
+    const {
+        data
+    } = await supabaseClient
+        .auth
+        .getSession();
+
+
+    if(
+        data &&
+        data.session
+    ){
+
+        showAdminPanel();
+
+    }
+    else{
+
+        showLogin();
+
+    }
+
+}
+
+
+/* =====================================================
+   SHOW LOGIN
+===================================================== */
+
+function showLogin(){
+
+    document.getElementById(
+        "loginScreen"
+    ).style.display = "block";
+
+
+    document.getElementById(
+        "adminPanel"
+    ).style.display = "none";
+
+}
+
+
+/* =====================================================
+   SHOW ADMIN
+===================================================== */
+
+async function showAdminPanel(){
+
+    document.getElementById(
+        "loginScreen"
+    ).style.display = "none";
+
+
+    document.getElementById(
+        "adminPanel"
+    ).style.display = "block";
+
+
+    await loadStudents();
+
+    await loadMaterials();
+
+}
+
+
+/* =====================================================
+   LOGIN
+===================================================== */
+
+async function loginAdmin(){
+
+    const email =
+        document.getElementById(
+            "loginEmail"
+        ).value.trim();
+
+
+    const password =
+        document.getElementById(
+            "loginPassword"
+        ).value;
+
+
+    const message =
+        document.getElementById(
+            "loginMessage"
+        );
+
+
+    const button =
+        document.getElementById(
+            "loginBtn"
+        );
+
+
+    message.className =
+        "login-message";
+
+
+    message.innerHTML = "";
+
+
+    if(!email || !password){
+
+        message.className =
+            "login-message login-error";
+
+        message.innerHTML =
+            "Please enter email and password.";
+
+        return;
+
+    }
+
+
+    button.disabled = true;
+
+    button.innerHTML =
+        "⏳ LOGGING IN...";
+
+
+    const {
+        data,
+        error
+    } = await supabaseClient
+
+        .auth
+
+        .signInWithPassword({
+
+            email:email,
+
+            password:password
+
+        });
+
+
+    if(error){
+
+        console.log(
+            "LOGIN ERROR:",
+            error
+        );
+
+
+        message.className =
+            "login-message login-error";
+
+        message.innerHTML =
+            "❌ " +
+            error.message;
+
+
+        button.disabled = false;
+
+        button.innerHTML =
+            "🔐 LOGIN";
+
+        return;
+
+    }
+
+
+    if(data.session){
+
+        showAdminPanel();
+
+    }
+
+
+    button.disabled = false;
+
+    button.innerHTML =
+        "🔐 LOGIN";
+
+}
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+async function logoutAdmin(){
+
+    await supabaseClient
+        .auth
+        .signOut();
+
+
+    showLogin();
+
+
+    document.getElementById(
+        "loginPassword"
+    ).value = "";
+
+}
 
 
 /* =====================================================
@@ -899,36 +1046,50 @@ let editingStudentId = null;
 async function saveStudent(){
 
     const name =
-        document.getElementById("studentName")
-        .value.trim();
+        document.getElementById(
+            "studentName"
+        ).value.trim();
+
 
     const standard =
-        document.getElementById("studentStandard")
-        .value;
+        document.getElementById(
+            "studentStandard"
+        ).value;
+
 
     const batch =
-        document.getElementById("studentBatch")
-        .value.trim();
+        document.getElementById(
+            "studentBatch"
+        ).value.trim();
+
 
     const totalFee =
         Number(
-            document.getElementById("totalFee").value
+            document.getElementById(
+                "totalFee"
+            ).value
         );
+
 
     const paidFee =
         Number(
-            document.getElementById("paidFee").value
+            document.getElementById(
+                "paidFee"
+            ).value
         );
 
+
     const message =
-        document.getElementById("studentMessage");
+        document.getElementById(
+            "studentMessage"
+        );
 
 
-    message.className = "message";
+    message.className =
+        "message";
+
     message.innerHTML = "";
 
-
-    /* CHECK NAME */
 
     if(!name){
 
@@ -939,10 +1100,9 @@ async function saveStudent(){
             "Please enter student name.";
 
         return;
+
     }
 
-
-    /* CHECK FEE */
 
     if(totalFee < 0 || paidFee < 0){
 
@@ -953,6 +1113,7 @@ async function saveStudent(){
             "Fee cannot be negative.";
 
         return;
+
     }
 
 
@@ -965,32 +1126,29 @@ async function saveStudent(){
             "Paid fee cannot be greater than total fee.";
 
         return;
+
     }
+
+
+    const studentData = {
+
+        name:name,
+
+        standard:standard,
+
+        batch:batch,
+
+        total_fee:totalFee,
+
+        paid_fee:paidFee
+
+    };
 
 
     try{
 
-        const studentData = {
-
-            name:name,
-
-            standard:standard,
-
-            batch:batch,
-
-            total_fee:totalFee,
-
-            paid_fee:paidFee
-
-        };
-
-
         let error;
 
-
-        /* =================================================
-           UPDATE
-        ================================================= */
 
         if(editingStudentId){
 
@@ -1009,12 +1167,6 @@ async function saveStudent(){
             error = result.error;
 
         }
-
-
-        /* =================================================
-           ADD
-        ================================================= */
-
         else{
 
             const result =
@@ -1036,10 +1188,9 @@ async function saveStudent(){
         }
 
 
-        /* SUCCESS */
-
         message.className =
             "message success";
+
 
         message.innerHTML =
             editingStudentId
@@ -1051,7 +1202,6 @@ async function saveStudent(){
 
         await loadStudents();
 
-
     }
     catch(error){
 
@@ -1060,8 +1210,10 @@ async function saveStudent(){
             error
         );
 
+
         message.className =
             "message error";
+
 
         message.innerHTML =
             "❌ Operation failed: " +
@@ -1082,6 +1234,9 @@ async function loadStudents(){
         document.getElementById(
             "studentList"
         );
+
+
+    if(!list) return;
 
 
     list.innerHTML =
@@ -1114,14 +1269,15 @@ async function loadStudents(){
             error
         );
 
-        list.innerHTML =
 
+        list.innerHTML =
             '<div class="loading">' +
             'Unable to load students.<br><br>' +
             escapeHTML(error.message) +
             '</div>';
 
         return;
+
     }
 
 
@@ -1133,6 +1289,7 @@ async function loadStudents(){
             '</div>';
 
         return;
+
     }
 
 
@@ -1143,10 +1300,16 @@ async function loadStudents(){
         function(student,index){
 
             const total =
-                Number(student.total_fee || 0);
+                Number(
+                    student.total_fee || 0
+                );
+
 
             const paid =
-                Number(student.paid_fee || 0);
+                Number(
+                    student.paid_fee || 0
+                );
+
 
             const remaining =
                 total - paid;
@@ -1159,25 +1322,33 @@ async function loadStudents(){
             if(remaining <= 0){
 
                 status = "PAID";
-                statusClass = "status-paid";
+
+                statusClass =
+                    "status-paid";
 
             }
             else if(paid > 0){
 
                 status = "PARTIAL";
-                statusClass = "status-partial";
+
+                statusClass =
+                    "status-partial";
 
             }
             else{
 
                 status = "PENDING";
-                statusClass = "status-pending";
+
+                statusClass =
+                    "status-pending";
 
             }
 
 
             const div =
-                document.createElement("div");
+                document.createElement(
+                    "div"
+                );
 
 
             div.className =
@@ -1193,16 +1364,24 @@ async function loadStudents(){
                         <div class="student-name">
 
                             ${index + 1}.
-                            ${escapeHTML(student.name)}
+                            ${escapeHTML(
+                                student.name
+                            )}
 
                         </div>
 
                         <div class="student-details">
 
-                            ${escapeHTML(student.standard || "")}
+                            ${escapeHTML(
+                                student.standard || ""
+                            )}
 
-                            ${student.batch
-                                ? " • " + escapeHTML(student.batch)
+                            ${
+                                student.batch
+                                ? " • " +
+                                  escapeHTML(
+                                      student.batch
+                                  )
                                 : ""
                             }
 
@@ -1315,6 +1494,7 @@ async function editStudent(id){
         );
 
         return;
+
     }
 
 
@@ -1362,11 +1542,6 @@ async function editStudent(id){
         "cancelBtn"
     ).style.display =
         "block";
-
-
-    document.getElementById(
-        "studentName"
-    ).focus();
 
 
     window.scrollTo({
@@ -1447,6 +1622,7 @@ async function deleteStudent(id){
     )){
 
         return;
+
     }
 
 
@@ -1475,7 +1651,6 @@ async function deleteStudent(id){
 
         await loadStudents();
 
-
     }
     catch(error){
 
@@ -1483,6 +1658,7 @@ async function deleteStudent(id){
             "DELETE STUDENT ERROR:",
             error
         );
+
 
         alert(
             "Delete failed: " +
@@ -1643,8 +1819,6 @@ async function uploadMaterial(){
             safeFileName;
 
 
-        /* UPLOAD */
-
         const {
             error: uploadError
         } = await supabaseClient
@@ -1671,8 +1845,6 @@ async function uploadMaterial(){
 
         }
 
-
-        /* PUBLIC URL */
 
         const {
             data: publicData
@@ -1704,8 +1876,6 @@ async function uploadMaterial(){
         const fileUrl =
             publicData.publicUrl;
 
-
-        /* DATABASE */
 
         const {
             error: dbError
@@ -1807,6 +1977,9 @@ async function loadMaterials(){
         );
 
 
+    if(!list) return;
+
+
     list.innerHTML =
         '<div class="loading">Loading...</div>';
 
@@ -1899,7 +2072,7 @@ async function loadMaterials(){
                             material.standard
                         )}
 
-                        • 
+                        •
 
                         ${escapeHTML(
                             material.subject || ""
@@ -1949,9 +2122,7 @@ async function loadMaterials(){
             `;
 
 
-            list.appendChild(
-                div
-            );
+            list.appendChild(div);
 
         }
     );
@@ -2023,8 +2194,6 @@ async function deleteMaterial(
             );
 
 
-        /* DELETE STORAGE */
-
         const {
             error: storageError
         } = await supabaseClient
@@ -2049,8 +2218,6 @@ async function deleteMaterial(
 
         }
 
-
-        /* DELETE DATABASE */
 
         const {
             error: dbError
@@ -2116,12 +2283,34 @@ function escapeHTML(value){
 
 
 /* =====================================================
+   AUTH STATE
+===================================================== */
+
+supabaseClient
+    .auth
+    .onAuthStateChange(
+        function(event,session){
+
+            if(session){
+
+                showAdminPanel();
+
+            }
+            else{
+
+                showLogin();
+
+            }
+
+        }
+    );
+
+
+/* =====================================================
    START
 ===================================================== */
 
-loadStudents();
-
-loadMaterials();
+checkSession();
 
 </script>
 
